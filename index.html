@@ -93,7 +93,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjgejnyaq00000tjhi2gsypzi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjgettugd0000rdjhyp1542fe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li></ul>
@@ -136,7 +136,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjgejnyay00010tjhlk30hzz5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjgettugx0009rdjhjkn24zlt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
@@ -174,26 +174,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Sorting-list-Dic-with-lambda"><a href="#Sorting-list-Dic-with-lambda" class="headerlink" title="Sorting list/Dic with lambda"></a>Sorting list/Dic with lambda</h1><h3 id="1-Basic"><a href="#1-Basic" class="headerlink" title="1. Basic"></a>1. Basic</h3><p><code>sorted</code></p>
+        <h1 id="Sorting-list-Dic-with-lambda"><a href="#Sorting-list-Dic-with-lambda" class="headerlink" title="Sorting list/Dic with lambda"></a>Sorting list/Dic with lambda</h1><h3 id="1-Sort-a-List"><a href="#1-Sort-a-List" class="headerlink" title="1. Sort a List"></a>1. Sort a List</h3><p><code>sorted</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted(iterable[,key][,reverse])</span><br></pre></td></tr></table></figure>
-<h4 id="Sort-a-List"><a href="#Sort-a-List" class="headerlink" title="Sort a List"></a>Sort a List</h4><p><code>list.sort()</code>—&gt; sort the list</p>
+<h4 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h4><p><code>list.sort()</code>—&gt; sort the list</p>
 <p><code>sorted(list)</code>—&gt; return a sorted list</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Original list</span></span><br><span class="line">L = [<span class="string">'c'</span>,<span class="string">'a'</span>,<span class="string">'b'</span>]</span><br><span class="line"></span><br><span class="line">l2 = sorted(list)</span><br><span class="line"><span class="comment"># return a sorted list, but original list is not changed</span></span><br><span class="line"><span class="comment"># L2:['a', 'b', 'c']</span></span><br><span class="line"></span><br><span class="line">l3 = sorted(list,reverse = <span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># L3: ['c','b','a']</span></span><br><span class="line"></span><br><span class="line">L.sort()</span><br><span class="line"><span class="comment"># L itself has been sorted</span></span><br></pre></td></tr></table></figure>
-<h4 id="Sort-a-dict"><a href="#Sort-a-dict" class="headerlink" title="Sort a dict?"></a>Sort a dict?</h4><p>Actually you cannot sort a dictionary, itself has no order.</p>
+<h3 id="2-Sort-a-dict"><a href="#2-Sort-a-dict" class="headerlink" title="2. Sort a dict?"></a>2. Sort a dict?</h3><p>Actually you cannot sort a dictionary, itself has no order.</p>
 <p>But you can return a new sorted list</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;<span class="string">'c'</span>:<span class="number">1</span>, <span class="string">'b'</span>:<span class="number">2</span>,<span class="string">'a'</span>:<span class="number">3</span>&#125;</span><br><span class="line"></span><br><span class="line">L = sorted(dic)</span><br><span class="line"><span class="comment"># L: ['a', 'b', 'c']</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-Use-lambda"><a href="#2-Use-lambda" class="headerlink" title="2. Use lambda"></a>2. Use lambda</h3><p>For iterables: </p>
-<p><strong>Example: </strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;<span class="string">'c'</span>:<span class="number">1</span>, <span class="string">'b'</span>:<span class="number">2</span>,<span class="string">'a'</span>:<span class="number">3</span>&#125;</span><br><span class="line"></span><br><span class="line">L1 = sorted(dic)</span><br><span class="line"><span class="comment"># L1: ['a', 'b', 'c']</span></span><br><span class="line"><span class="comment"># sorted by key values and return to a list of keys</span></span><br><span class="line"></span><br><span class="line">L2 = sorted(dic.values())</span><br><span class="line"><span class="comment"># L2:[1,2,3]</span></span><br><span class="line"></span><br><span class="line">L3 = sorted(dic.items())</span><br><span class="line"><span class="comment"># L3: [('a', 3), ('b', 2), ('c', 1)]</span></span><br><span class="line"><span class="comment"># Return the list of the item tuples</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-Use-lambda"><a href="#2-Use-lambda" class="headerlink" title="2. Use lambda"></a>2. Use lambda</h3><h4 id="Sort-a-list"><a href="#Sort-a-list" class="headerlink" title="Sort a list"></a>Sort a list</h4><p><strong>Example: </strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">L = [</span><br><span class="line">    &#123;<span class="string">'x'</span>: <span class="number">3</span>, <span class="string">'y'</span>: <span class="number">2</span>, <span class="string">'z'</span>: <span class="number">1</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'x'</span>: <span class="number">2</span>, <span class="string">'y'</span>: <span class="number">1</span>, <span class="string">'z'</span>: <span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">3</span>, <span class="string">'z'</span>: <span class="number">2</span>&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">#此处dic的意义：Every element in the list</span></span><br><span class="line">L2 = sorted(L,key = <span class="keyword">lambda</span> dic:dic[<span class="string">'y'</span>])</span><br><span class="line"><span class="comment"># L2: [&#123;'x': 2, 'y': 1, 'z': 3&#125;, &#123;'x': 3, 'y': 2, 'z': 1&#125;, &#123;'x': 1, 'y': 3, 'z': 2&#125;]</span></span><br><span class="line"></span><br><span class="line">L.sort(key=<span class="keyword">lambda</span> dic: dic[z])</span><br><span class="line"><span class="comment"># L:</span></span><br></pre></td></tr></table></figure>
+<h4 id="Sort-a-dict-return-a-list"><a href="#Sort-a-dict-return-a-list" class="headerlink" title="Sort a dict (return a list)"></a>Sort a dict (return a list)</h4><p><strong>Example</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;</span><br><span class="line">    <span class="string">'a'</span>: &#123;<span class="string">'x'</span>: <span class="number">3</span>, <span class="string">'y'</span>: <span class="number">2</span>, <span class="string">'z'</span>: <span class="number">1</span>&#125;,</span><br><span class="line">    <span class="string">'b'</span>: &#123;<span class="string">'x'</span>: <span class="number">2</span>, <span class="string">'y'</span>: <span class="number">1</span>, <span class="string">'z'</span>: <span class="number">3</span>&#125;,</span><br><span class="line">    <span class="string">'c'</span>: &#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">3</span>, <span class="string">'z'</span>: <span class="number">2</span>&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">L = sorted(dic, key = <span class="keyword">lambda</span> k: dic[k][<span class="string">'y'</span>])</span><br><span class="line"><span class="comment"># 推测：k是指every key value</span></span><br><span class="line"><span class="comment"># L:['b', 'a', 'c']</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/sorting-with-lambda/" data-id="cjgejnyb300050tjh54thgxjd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/sorting-with-lambda/" data-id="cjgettugu0005rdjhxhjbvd24" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/list/">list</a></li></ul>
 
     </footer>
   </div>
@@ -240,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjgejnyb100040tjhn50u9lew" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjgettugw0006rdjh27cnj0q2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -270,7 +271,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/list/">list</a></li></ul>
     </div>
   </div>
 
@@ -280,7 +281,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a>
+      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
     </div>
   </div>
 
