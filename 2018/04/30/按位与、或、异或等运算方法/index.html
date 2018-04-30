@@ -5,19 +5,19 @@
   
 
   
-  <title>Hello World | Hexo</title>
+  <title>按位与、或、异或等二进制运算方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="与 &amp;amp; AND运算规则0 &amp;amp; 0 = 0 0 &amp;amp; 1 = 0 1 &amp;amp; 0 = 0 1 &amp;amp; 1 = 1 ExampleCalculate 3 &amp;amp; 5: 3:       0011 5:       0101 3&amp;amp;5:  0001 负数负数按补码参与按位与运算。 或 | OR运算规则0 | 0 = 0 0 | 1 = 1 1 | 0 = 0 1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/04/24/hello-world/index.html">
+<meta property="og:title" content="按位与、或、异或等二进制运算方法">
+<meta property="og:url" content="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="与 &amp;amp; AND运算规则0 &amp;amp; 0 = 0 0 &amp;amp; 1 = 0 1 &amp;amp; 0 = 0 1 &amp;amp; 1 = 1 ExampleCalculate 3 &amp;amp; 5: 3:       0011 5:       0101 3&amp;amp;5:  0001 负数负数按补码参与按位与运算。 或 | OR运算规则0 | 0 = 0 0 | 1 = 1 1 | 0 = 0 1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-25T08:26:39.622Z">
+<meta property="og:updated_time" content="2018-04-30T09:28:22.635Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="按位与、或、异或等二进制运算方法">
+<meta name="twitter:description" content="与 &amp;amp; AND运算规则0 &amp;amp; 0 = 0 0 &amp;amp; 1 = 0 1 &amp;amp; 0 = 0 1 &amp;amp; 1 = 1 ExampleCalculate 3 &amp;amp; 5: 3:       0011 5:       0101 3&amp;amp;5:  0001 负数负数按补码参与按位与运算。 或 | OR运算规则0 | 0 = 0 0 | 1 = 1 1 | 0 = 0 1">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,14 +64,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-按位与、或、异或等运算方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/24/hello-world/" class="article-date">
-  <time datetime="2018-04-24T13:33:22.918Z" itemprop="datePublished">2018-04-24</time>
+    <a href="/2018/04/30/按位与、或、异或等运算方法/" class="article-date">
+  <time datetime="2018-04-30T09:07:01.000Z" itemprop="datePublished">2018-04-30</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    <a class="article-category-link" href="/categories/Bit-Manipulation/">Bit Manipulation</a>
   </div>
 
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      按位与、或、异或等二进制运算方法
     </h1>
   
 
@@ -90,20 +90,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="与-amp-AND"><a href="#与-amp-AND" class="headerlink" title="与 &amp; AND"></a>与 &amp; AND</h2><h3 id="运算规则"><a href="#运算规则" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 &amp; 0 = 0</p>
+<p>0 &amp; 1 = 0</p>
+<p>1 &amp; 0 = 0</p>
+<p>1 &amp; 1 = 1</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 &amp; 5:</p>
+<p>3:       0011</p>
+<p>5:       0101</p>
+<p>3&amp;5:  0001</p>
+<h3 id="负数"><a href="#负数" class="headerlink" title="负数"></a>负数</h3><p>负数按补码参与按位与运算。</p>
+<h2 id="或-OR"><a href="#或-OR" class="headerlink" title="或 | OR"></a>或 | OR</h2><h3 id="运算规则-1"><a href="#运算规则-1" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 | 0 = 0</p>
+<p>0 | 1 = 1</p>
+<p>1 | 0 = 0</p>
+<p>1 | 1 = 1</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 | 5:</p>
+<p>3:       0011</p>
+<p>5:       0101</p>
+<p>3|5:   0111</p>
+<h2 id="异或-XOR"><a href="#异或-XOR" class="headerlink" title="异或 ^ XOR"></a>异或 ^ XOR</h2><h3 id="运算规则-2"><a href="#运算规则-2" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 ^ 0 = 0</p>
+<p>0 ^ 1 = 1</p>
+<p>1 ^ 0 = 0</p>
+<p>1 ^ 1 = 0</p>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 ^ 5:</p>
+<p>3:       0011</p>
+<p>5:       0101</p>
+<p>3^5:   0110</p>
+<h2 id="取反-NOT"><a href="#取反-NOT" class="headerlink" title="取反 ~ NOT"></a>取反 ~ NOT</h2><h3 id="运算规则-3"><a href="#运算规则-3" class="headerlink" title="运算规则"></a>运算规则</h3><p>~ 0 = 1</p>
+<p>~ 1 = 0</p>
+<h2 id="左移-lt-lt-，右移-gt-gt"><a href="#左移-lt-lt-，右移-gt-gt" class="headerlink" title="左移 &lt;&lt;，右移 &gt;&gt;"></a>左移 &lt;&lt;，右移 &gt;&gt;</h2><h3 id="运算规则-4"><a href="#运算规则-4" class="headerlink" title="运算规则"></a>运算规则</h3><p>按二进制左/右移 N位</p>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example"></a>Example</h3><p>1 &lt;&lt; 3</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	0001 &lt;&lt; 3 </span><br><span class="line">=	1000</span><br></pre></td></tr></table></figure>
+<p>10 &gt;&gt; 2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	1010 &gt;&gt; 2 </span><br><span class="line">=	0010</span><br></pre></td></tr></table></figure>
+<h2 id="EX-Leetcode371-Sum-of-Two-Integers"><a href="#EX-Leetcode371-Sum-of-Two-Integers" class="headerlink" title="EX: Leetcode371. Sum of Two Integers"></a>EX: Leetcode371. Sum of Two Integers</h2><blockquote>
+<p>Calculate the sum of two integers <em>a</em> and <em>b</em>, but you are <strong>not allowed</strong> to use the operator <code>+</code> and <code>-</code>.</p>
+<p><strong>Example:</strong><br>Given <em>a</em> = 1 and <em>b</em> = 2, return 3.</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjgm1kaio000essjjwruqi3g4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgm1kail000assjjrqs1hcv0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -112,15 +139,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/04/24/Set-Example/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Set Example
-        
-      </div>
-    </a>
   
+    <a href="/2018/04/29/136-Single-Number/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">136. Single Number</div>
+    </a>
   
 </nav>
 

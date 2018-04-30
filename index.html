@@ -62,6 +62,82 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-按位与、或、异或等运算方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/30/按位与、或、异或等运算方法/" class="article-date">
+  <time datetime="2018-04-30T09:07:01.000Z" itemprop="datePublished">2018-04-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Bit-Manipulation/">Bit Manipulation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/30/按位与、或、异或等运算方法/">按位与、或、异或等二进制运算方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="与-amp-AND"><a href="#与-amp-AND" class="headerlink" title="与 &amp; AND"></a>与 &amp; AND</h2><h3 id="运算规则"><a href="#运算规则" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 &amp; 0 = 0</p>
+<p>0 &amp; 1 = 0</p>
+<p>1 &amp; 0 = 0</p>
+<p>1 &amp; 1 = 1</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 &amp; 5:</p>
+<p>3:       0011</p>
+<p>5:       0101</p>
+<p>3&amp;5:  0001</p>
+<h3 id="负数"><a href="#负数" class="headerlink" title="负数"></a>负数</h3><p>负数按补码参与按位与运算。</p>
+<h2 id="或-OR"><a href="#或-OR" class="headerlink" title="或 | OR"></a>或 | OR</h2><h3 id="运算规则-1"><a href="#运算规则-1" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 | 0 = 0</p>
+<p>0 | 1 = 1</p>
+<p>1 | 0 = 0</p>
+<p>1 | 1 = 1</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 | 5:</p>
+<p>3:       0011</p>
+<p>5:       0101</p>
+<p>3|5:   0111</p>
+<h2 id="异或-XOR"><a href="#异或-XOR" class="headerlink" title="异或 ^ XOR"></a>异或 ^ XOR</h2><h3 id="运算规则-2"><a href="#运算规则-2" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 ^ 0 = 0</p>
+<p>0 ^ 1 = 1</p>
+<p>1 ^ 0 = 0</p>
+<p>1 ^ 1 = 0</p>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 ^ 5:</p>
+<p>3:       0011</p>
+<p>5:       0101</p>
+<p>3^5:   0110</p>
+<h2 id="取反-NOT"><a href="#取反-NOT" class="headerlink" title="取反 ~ NOT"></a>取反 ~ NOT</h2><h3 id="运算规则-3"><a href="#运算规则-3" class="headerlink" title="运算规则"></a>运算规则</h3><p>~ 0 = 1</p>
+<p>~ 1 = 0</p>
+<h2 id="左移-lt-lt-，右移-gt-gt"><a href="#左移-lt-lt-，右移-gt-gt" class="headerlink" title="左移 &lt;&lt;，右移 &gt;&gt;"></a>左移 &lt;&lt;，右移 &gt;&gt;</h2><h3 id="运算规则-4"><a href="#运算规则-4" class="headerlink" title="运算规则"></a>运算规则</h3><p>按二进制左/右移 N位</p>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example"></a>Example</h3><p>1 &lt;&lt; 3</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	0001 &lt;&lt; 3 </span><br><span class="line">=	1000</span><br></pre></td></tr></table></figure>
+<p>10 &gt;&gt; 2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	1010 &gt;&gt; 2 </span><br><span class="line">=	0010</span><br></pre></td></tr></table></figure>
+<h2 id="EX-Leetcode371-Sum-of-Two-Integers"><a href="#EX-Leetcode371-Sum-of-Two-Integers" class="headerlink" title="EX: Leetcode371. Sum of Two Integers"></a>EX: Leetcode371. Sum of Two Integers</h2><blockquote>
+<p>Calculate the sum of two integers <em>a</em> and <em>b</em>, but you are <strong>not allowed</strong> to use the operator <code>+</code> and <code>-</code>.</p>
+<p><strong>Example:</strong><br>Given <em>a</em> = 1 and <em>b</em> = 2, return 3.</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgm1kail000assjjrqs1hcv0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-136-Single-Number" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/29/136-Single-Number/" class="article-date">
@@ -111,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjgkjkv340000trjj8z63qjux" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjgm1kaie0001ssjj7jnipc9q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XOR/">XOR</a></li></ul>
@@ -149,9 +225,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="XOR"><a href="#XOR" class="headerlink" title="XOR"></a>XOR</h1><h2 id="一般表示"><a href="#一般表示" class="headerlink" title="一般表示"></a>一般表示</h2><p>$a⊕b$ </p>
-<h2 id="In-Python-C"><a href="#In-Python-C" class="headerlink" title="In Python/ C++"></a>In Python/ C++</h2><p><code>a^b</code></p>
-<h2 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h2><ol>
+        <h2 id="XOR-异或"><a href="#XOR-异或" class="headerlink" title="XOR 异或"></a>XOR 异或</h2><h3 id="一般表示"><a href="#一般表示" class="headerlink" title="一般表示"></a>一般表示</h3><p>$a⊕b$ </p>
+<h3 id="In-Python-C"><a href="#In-Python-C" class="headerlink" title="In Python/ C++"></a>In Python/ C++</h3><p><code>a^b</code></p>
+<h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><ol>
 <li>交换律 ：$A ⊕ B = B ⊕ A$</li>
 <li>结合律：$A ⊕ (B ⊕ C) = (A ⊕ B) ⊕ C$</li>
 <li>恒等律：$A ⊕ 0 = A$</li>
@@ -162,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjgkjkv3c0005trjjpf1ey35m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjgm1kaij0005ssjjoo239k87" class="article-share-link">Share</a>
       
       
     </footer>
@@ -202,7 +278,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/擅用排序/" data-id="cjgkjkv3v000ktrjjhdx260sf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/擅用排序/" data-id="cjgm1kaip000hssjjc6ewhldc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题目灵感/">题目灵感</a></li></ul>
@@ -234,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjgkjkv380001trjjlshhcipx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjgm1kaii0004ssjjgsgoqchs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -287,7 +363,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjgkjkv3q000ftrjj7qywmyxk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjgm1kain000bssjjt18spimc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/list/">list</a></li></ul>
@@ -345,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjgkjkv3p000etrjjv1xctsmb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjgm1kaik0006ssjj9qfgin8r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -386,7 +462,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjgkjkv3b0004trjj7g7a9nx6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjgm1kaia0000ssjjrw7ydtqb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li></ul>
@@ -429,7 +505,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjgkjkv3s000htrjjwi58jazo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjgm1kaiq000kssjjyn0uplze" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
@@ -480,7 +556,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjgkjkv3t000jtrjjxgxhoie0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjgm1kaio000essjjwruqi3g4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -500,7 +576,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bit-Manipulation/">Bit Manipulation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li></ul>
     </div>
   </div>
 
@@ -542,6 +618,10 @@
       <ul>
         
           <li>
+            <a href="/2018/04/30/按位与、或、异或等运算方法/">按位与、或、异或等二进制运算方法</a>
+          </li>
+        
+          <li>
             <a href="/2018/04/29/136-Single-Number/">136. Single Number</a>
           </li>
         
@@ -555,10 +635,6 @@
         
           <li>
             <a href="/2018/04/26/Graph/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/25/sorting-with-lambda/">Sorting with lambda</a>
           </li>
         
       </ul>
