@@ -62,6 +62,164 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-476-Number-Complement" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/02/476-Number-Complement/" class="article-date">
+  <time datetime="2018-05-01T17:58:39.000Z" itemprop="datePublished">2018-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/02/476-Number-Complement/">476. Number Complement</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="476-Number-Complement"><a href="#476-Number-Complement" class="headerlink" title="476. Number Complement"></a>476. Number Complement</h1><blockquote>
+<p>Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.</p>
+<p><strong>Note:</strong></p>
+<ol>
+<li>The given integer is guaranteed to fit within the range of a 32-bit signed integer.</li>
+<li>You could assume no leading zero bit in the integer’s binary representation.</li>
+</ol>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: 5</span><br><span class="line">&gt; Output: 2</span><br><span class="line">&gt; Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: 1</span><br><span class="line">&gt; Output: 0</span><br><span class="line">&gt; Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="Method1"><a href="#Method1" class="headerlink" title="Method1:"></a>Method1:</h2><h4 id="阶段1"><a href="#阶段1" class="headerlink" title="阶段1"></a>阶段1</h4><p>1 ^ 1 = 0</p>
+<p>0 ^ 1 = 1</p>
+<p>==&gt; 11111 ^ 10101 = 01010  —&gt; The answer</p>
+<p>==&gt; <strong>Target:</strong> Establish 1111111 (len == num的二进制数字）</p>
+<h4 id="阶段2"><a href="#阶段2" class="headerlink" title="阶段2"></a>阶段2</h4><p><code>n = len(bin(num))-2</code> 设定num的二进制长度n 为 6</p>
+<p>6个1: $111111 —&gt; 2^0 + 2^1 + 2^2 + 2^3 + 2^4 + 2^5= 2^6 -1$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">findComplement</span><span class="params">(self, num)</span>:</span></span><br><span class="line">        n = len(bin(num))<span class="number">-2</span></span><br><span class="line">        temp = <span class="number">2</span>**n <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> num ^ temp</span><br></pre></td></tr></table></figure>
+<h2 id="Method2"><a href="#Method2" class="headerlink" title="Method2:"></a>Method2:</h2><h4 id="Step1-翻转-Target"><a href="#Step1-翻转-Target" class="headerlink" title="Step1. 翻转, Target"></a>Step1. 翻转, Target</h4><p>设定为5</p>
+<table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>2进制</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>…000101</td>
+<td></td>
+</tr>
+<tr>
+<td>~5</td>
+<td>…111010</td>
+<td>010部分为ans</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>…111000</td>
+<td>Target^ ~num为ans</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Step2"><a href="#Step2" class="headerlink" title="Step2"></a>Step2</h4><p>Target: …..111000</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mask = ~<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(bin(num))<span class="number">-2</span>):</span><br><span class="line">    mask &lt;&lt; <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">findComplement</span><span class="params">(self, num)</span>:</span></span><br><span class="line">		<span class="comment"># Find mask</span></span><br><span class="line">        mask = ~<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(bin(num))<span class="number">-2</span>):</span><br><span class="line">            mask &lt;&lt;= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">		<span class="comment"># Get ans</span></span><br><span class="line">        <span class="keyword">return</span> ~num ^ mask</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjgo0d6mi00012ojj38tfaw6a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-二进制十进制转换-bin()-int(String,2)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/" class="article-date">
+  <time datetime="2018-05-01T17:06:11.000Z" itemprop="datePublished">2018-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/">二进制十进制转换 bin() int(String,2)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="二进制十进制转换"><a href="#二进制十进制转换" class="headerlink" title="二进制十进制转换"></a>二进制十进制转换</h1><h2 id="1-十进制—-gt-二进制-bin-函数-in-Python"><a href="#1-十进制—-gt-二进制-bin-函数-in-Python" class="headerlink" title="1. 十进制—&gt;二进制  bin() 函数 in Python"></a>1. 十进制—&gt;二进制  <code>bin()</code> 函数 in Python</h2><p><strong>Input type:</strong>  int/ long int</p>
+<p><strong>Return type:</strong> String</p>
+<p>将int/ long int 转换为：二进制表示的<strong>String</strong>, 数字前面+ <strong>“0b”</strong>, 表示二进制</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">S = bin(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># S = '0b10'</span></span><br><span class="line"><span class="comment">#'0b'--&gt;表示二进制， '10'--&gt;2的二进制表示方法</span></span><br></pre></td></tr></table></figure>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>既然返回值为String，就可以用String的方式来使用</p>
+<p>EX：<code>ans = bin(2^3).count(&quot;1&quot;)</code></p>
+<p><code>bin(2^3)</code> —&gt; <code>0b111</code></p>
+<p><code>&quot;0b111&quot;.count(&quot;1&quot;)</code>—&gt;<code>3</code></p>
+<h2 id="2-二进制-—-gt-十进制-int-函数-in-Python"><a href="#2-二进制-—-gt-十进制-int-函数-in-Python" class="headerlink" title="2. 二进制 —&gt; 十进制: int(,)函数 in Python"></a>2. 二进制 —&gt; 十进制: <code>int(,)</code>函数 in Python</h2><p><code>int(String 二进制表示，2)</code></p>
+<p>The Input String can directly be the number, or the <code>bin()</code> represents</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">I1 = int(<span class="string">'11'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment"># I1 = 3</span></span><br><span class="line"></span><br><span class="line">I1 = int(<span class="string">'0b11'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment"># I1 = 3</span></span><br></pre></td></tr></table></figure>
+<h2 id="EX-Leetcode-461-Hamming-Distance"><a href="#EX-Leetcode-461-Hamming-Distance" class="headerlink" title="EX: Leetcode 461. Hamming Distance"></a>EX: Leetcode 461. Hamming Distance</h2><blockquote>
+<p>The <a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank" rel="noopener">Hamming distance</a> between two integers is the number of positions at which the corresponding bits are different.</p>
+<p>Given two integers <code>x</code> and <code>y</code>, calculate the Hamming distance.</p>
+<p><strong>Note:</strong><br>0 ≤ <code>x</code>, <code>y</code> &lt; 231.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: x = 1, y = 4</span><br><span class="line">&gt;</span><br><span class="line">&gt; Output: 2</span><br><span class="line">&gt;</span><br><span class="line">&gt; Explanation:</span><br><span class="line">&gt; 1   (0 0 0 1)</span><br><span class="line">&gt; 4   (0 1 0 0)</span><br><span class="line">&gt;        ↑   ↑</span><br><span class="line">&gt;</span><br><span class="line">&gt; The above arrows point to positions where the corresponding bits are different.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingDistance</span><span class="params">(self, x, y)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :type y: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">return</span> bin(x^y).count(<span class="string">"1"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjgo0d6ni000o2ojj98gfauvt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-按位与、或、异或等运算方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/30/按位与、或、异或等运算方法/" class="article-date">
@@ -69,7 +227,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Bit-Manipulation/">Bit Manipulation</a>
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
   </div>
 
   </div>
@@ -124,15 +282,17 @@
 <p>Calculate the sum of two integers <em>a</em> and <em>b</em>, but you are <strong>not allowed</strong> to use the operator <code>+</code> and <code>-</code>.</p>
 <p><strong>Example:</strong><br>Given <em>a</em> = 1 and <em>b</em> = 2, return 3.</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 该用法适用于JAVA，Python负数使用有问题</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSum2</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type a: int</span></span><br><span class="line"><span class="string">        :type b: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">        temp = a ^b</span><br><span class="line">        carry = (a &amp;b )&lt;&lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.getSum(temp, carry)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 该用法适用于JAVA, C++，但Python负数使用有问题</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSum2</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type a: int</span></span><br><span class="line"><span class="string">        :type b: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">        temp = a ^b</span><br><span class="line">        carry = (a &amp;b )&lt;&lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.getSum(temp, carry)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用mask解决负数问题</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">getSum</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">       <span class="string">"""</span></span><br><span class="line"><span class="string">       :type a: int</span></span><br><span class="line"><span class="string">       :type b: int</span></span><br><span class="line"><span class="string">       :rtype: int</span></span><br><span class="line"><span class="string">       """</span></span><br><span class="line">       MAX = <span class="number">0x7FFFFFFF</span></span><br><span class="line">       MIN = <span class="number">0x80000000</span></span><br><span class="line">       mask = <span class="number">0xFFFFFFFF</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">while</span> b !=<span class="number">0</span>:</span><br><span class="line">           a, b = (a^b) &amp; mask, ((a&amp;b)&lt;&lt;<span class="number">1</span>) &amp; mask</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> a <span class="keyword">if</span> a &lt;= MAX <span class="keyword">else</span> ~(a ^ mask)</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgnthas0000hahjjvbntmkyh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgo0d6nm000s2ojjbd39sabd" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
+
     </footer>
   </div>
   
@@ -189,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjgntharj0000ahjjujnch9kq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjgo0d6me00002ojj18u50ilc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XOR/">XOR</a></li></ul>
@@ -208,7 +368,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
   </div>
 
   </div>
@@ -240,50 +400,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjgntharu0006ahjjxxi13z5x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjgo0d6nf000l2ojj2ghf0mg0" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-擅用排序" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/29/擅用排序/" class="article-date">
-  <time datetime="2018-04-29T03:47:22.000Z" itemprop="datePublished">2018-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/29/擅用排序/">擅用排序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/擅用排序/" data-id="cjgnthas1000kahjjcvtapc3j" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/题目灵感/">题目灵感</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
 
     </footer>
   </div>
@@ -312,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjgntharo0001ahjjafz21pdk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjgo0d6n6000b2ojj3dh9i0fw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -365,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjgntharx000bahjjb5qvfihe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjgo0d6nd000k2ojjkpl4xiqt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/list/">list</a></li></ul>
@@ -419,11 +539,14 @@
 <h2 id="详细指南"><a href="#详细指南" class="headerlink" title="详细指南"></a>详细指南</h2><p><a href="https://madongqiang2201.github.io/2016/07/21/Mac%E4%B8%8BHexo%EF%BC%8Bgithub-pages%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">https://madongqiang2201.github.io/2016/07/21/Mac%E4%B8%8BHexo%EF%BC%8Bgithub-pages%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</a></p>
 <h2 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h2><h3 id="1-hexo-s-Error"><a href="#1-hexo-s-Error" class="headerlink" title="1. hexo s Error"></a>1. <code>hexo s</code> Error</h3><p>Error: Port 4000 has been used. Try other port instead.</p>
 <p>Command: <code>sudo hexo s -p 5000</code></p>
+<h3 id="2-上传失败-hexo-d"><a href="#2-上传失败-hexo-d" class="headerlink" title="2. 上传失败 hexo d"></a>2. 上传失败 <code>hexo d</code></h3><p>ERROR</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access &apos;https://github.com/.../&apos;: Could not resolve host: github.com</span><br></pre></td></tr></table></figure>
+<p>问题：不该用代理的时候用了代理，最简单粗暴：断了VPN</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjgnthart0005ahjjnfusqz6f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjgo0d6n8000e2ojjvznu6w18" class="article-share-link">Share</a>
       
       
     </footer>
@@ -464,7 +587,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjgntharr0004ahjj5ygzg2q0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjgo0d6n4000a2ojjxgru9jky" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li></ul>
@@ -507,7 +630,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjgntharw000aahjjo7bxi8oc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjgo0d6na000f2ojjdsioddil" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
@@ -519,56 +642,12 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/24/hello-world/" class="article-date">
-  <time datetime="2018-04-24T13:33:22.918Z" itemprop="datePublished">2018-04-24</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjgntharz000fahjjtqjv3g94" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -578,7 +657,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bit-Manipulation/">Bit Manipulation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li></ul>
     </div>
   </div>
 
@@ -588,7 +667,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XOR/">XOR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/list/">list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/题目灵感/">题目灵感</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XOR/">XOR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/list/">list</a></li></ul>
     </div>
   </div>
 
@@ -598,7 +677,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a> <a href="/tags/题目灵感/" style="font-size: 10px;">题目灵感</a>
+      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 20px;">Bit Manipulation</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
     </div>
   </div>
 
@@ -607,7 +686,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
     </div>
   </div>
 
@@ -620,6 +699,14 @@
       <ul>
         
           <li>
+            <a href="/2018/05/02/476-Number-Complement/">476. Number Complement</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/">二进制十进制转换 bin() int(String,2)</a>
+          </li>
+        
+          <li>
             <a href="/2018/04/30/按位与、或、异或等运算方法/">按位与、或、异或等二进制运算方法</a>
           </li>
         
@@ -629,14 +716,6 @@
         
           <li>
             <a href="/2018/04/29/XOR/">XOR ^</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/29/擅用排序/">擅用排序</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/26/Graph/">(no title)</a>
           </li>
         
       </ul>

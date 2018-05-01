@@ -8,13 +8,14 @@
   <title>按位与、或、异或等二进制运算方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="与 &amp;amp; AND运算规则0 &amp;amp; 0 = 0 0 &amp;amp; 1 = 0 1 &amp;amp; 0 = 0 1 &amp;amp; 1 = 1 ExampleCalculate 3 &amp;amp; 5: 3:       0011 5:       0101 3&amp;amp;5:  0001 负数负数按补码参与按位与运算。 或 | OR运算规则0 | 0 = 0 0 | 1 = 1 1 | 0 = 0 1">
+<meta name="keywords" content="Bit Manipulation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="按位与、或、异或等二进制运算方法">
 <meta property="og:url" content="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="与 &amp;amp; AND运算规则0 &amp;amp; 0 = 0 0 &amp;amp; 1 = 0 1 &amp;amp; 0 = 0 1 &amp;amp; 1 = 1 ExampleCalculate 3 &amp;amp; 5: 3:       0011 5:       0101 3&amp;amp;5:  0001 负数负数按补码参与按位与运算。 或 | OR运算规则0 | 0 = 0 0 | 1 = 1 1 | 0 = 0 1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-01T15:09:56.386Z">
+<meta property="og:updated_time" content="2018-05-01T17:03:23.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="按位与、或、异或等二进制运算方法">
 <meta name="twitter:description" content="与 &amp;amp; AND运算规则0 &amp;amp; 0 = 0 0 &amp;amp; 1 = 0 1 &amp;amp; 0 = 0 1 &amp;amp; 1 = 1 ExampleCalculate 3 &amp;amp; 5: 3:       0011 5:       0101 3&amp;amp;5:  0001 负数负数按补码参与按位与运算。 或 | OR运算规则0 | 0 = 0 0 | 1 = 1 1 | 0 = 0 1">
@@ -71,7 +72,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Bit-Manipulation/">Bit Manipulation</a>
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
   </div>
 
   </div>
@@ -126,20 +127,31 @@
 <p>Calculate the sum of two integers <em>a</em> and <em>b</em>, but you are <strong>not allowed</strong> to use the operator <code>+</code> and <code>-</code>.</p>
 <p><strong>Example:</strong><br>Given <em>a</em> = 1 and <em>b</em> = 2, return 3.</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 该用法适用于JAVA，Python负数使用有问题</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSum2</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type a: int</span></span><br><span class="line"><span class="string">        :type b: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">        temp = a ^b</span><br><span class="line">        carry = (a &amp;b )&lt;&lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.getSum(temp, carry)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 该用法适用于JAVA, C++，但Python负数使用有问题</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSum2</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type a: int</span></span><br><span class="line"><span class="string">        :type b: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">        temp = a ^b</span><br><span class="line">        carry = (a &amp;b )&lt;&lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.getSum(temp, carry)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用mask解决负数问题</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">getSum</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">       <span class="string">"""</span></span><br><span class="line"><span class="string">       :type a: int</span></span><br><span class="line"><span class="string">       :type b: int</span></span><br><span class="line"><span class="string">       :rtype: int</span></span><br><span class="line"><span class="string">       """</span></span><br><span class="line">       MAX = <span class="number">0x7FFFFFFF</span></span><br><span class="line">       MIN = <span class="number">0x80000000</span></span><br><span class="line">       mask = <span class="number">0xFFFFFFFF</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">while</span> b !=<span class="number">0</span>:</span><br><span class="line">           a, b = (a^b) &amp; mask, ((a&amp;b)&lt;&lt;<span class="number">1</span>) &amp; mask</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> a <span class="keyword">if</span> a &lt;= MAX <span class="keyword">else</span> ~(a ^ mask)</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgnthas0000hahjjvbntmkyh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgo0d6nm000s2ojjbd39sabd" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          二进制十进制转换 bin() int(String,2)
+        
+      </div>
+    </a>
   
   
     <a href="/2018/04/29/136-Single-Number/" id="article-nav-older" class="article-nav-link-wrap">
@@ -160,7 +172,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bit-Manipulation/">Bit Manipulation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li></ul>
     </div>
   </div>
 
@@ -170,7 +182,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XOR/">XOR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/list/">list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/题目灵感/">题目灵感</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XOR/">XOR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/list/">list</a></li></ul>
     </div>
   </div>
 
@@ -180,7 +192,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a> <a href="/tags/题目灵感/" style="font-size: 10px;">题目灵感</a>
+      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 20px;">Bit Manipulation</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
     </div>
   </div>
 
@@ -189,7 +201,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
     </div>
   </div>
 
@@ -202,6 +214,14 @@
       <ul>
         
           <li>
+            <a href="/2018/05/02/476-Number-Complement/">476. Number Complement</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/">二进制十进制转换 bin() int(String,2)</a>
+          </li>
+        
+          <li>
             <a href="/2018/04/30/按位与、或、异或等运算方法/">按位与、或、异或等二进制运算方法</a>
           </li>
         
@@ -211,14 +231,6 @@
         
           <li>
             <a href="/2018/04/29/XOR/">XOR ^</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/29/擅用排序/">擅用排序</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/26/Graph/">(no title)</a>
           </li>
         
       </ul>
