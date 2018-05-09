@@ -62,6 +62,98 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Leetcode-经验" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/01/Leetcode-经验/" class="article-date">
+  <time datetime="2018-09-01T07:53:31.000Z" itemprop="datePublished">2018-09-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/01/Leetcode-经验/">Leetcode 经验</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>遇到String 的题目，首先的想法是用指针<code>i, j</code>的方式做题</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjgz8ponz000elgjjiufpbo58" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-203-Remove-Linked-List-Elements" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/09/203-Remove-Linked-List-Elements/" class="article-date">
+  <time datetime="2018-05-09T08:05:11.000Z" itemprop="datePublished">2018-05-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/09/203-Remove-Linked-List-Elements/">203. Remove Linked List Elements</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Remove all elements from a linked list of integers that have value <strong>val</strong>.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input:  1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6</span><br><span class="line">&gt; Output: 1-&gt;2-&gt;3-&gt;4-&gt;5</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>pre —&gt; 通过检验的Node</p>
+<p>dummy —&gt; 标记head pre, 防止head消失</p>
+<p>Note：val相等的情况有可能连续出现，所以只有已验证 != val, 才能pre = pre.next</p>
+<p>Note2: 如果写<code>while pre.next</code>, 前面要有<code>while pre</code></p>
+<p>​    所以: <code>while pre and pre.next</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElements</span><span class="params">(self, head, val)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :type val: int</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        pre = dummy = ListNode(<span class="number">-1</span>)</span><br><span class="line">        dummy.next = head</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> pre <span class="keyword">and</span> pre.next:</span><br><span class="line">            <span class="keyword">if</span> pre.next.val == val:</span><br><span class="line">                pre.next = pre.next.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                pre = pre.next</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/09/203-Remove-Linked-List-Elements/" data-id="cjgz8ponr0005lgjjqrs0e7he" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-69-Sqrt-x" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/08/69-Sqrt-x/" class="article-date">
@@ -96,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/08/69-Sqrt-x/" data-id="cjgxhdzkz00012fjjh4gpoz2m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/08/69-Sqrt-x/" data-id="cjgz8ponp0003lgjj6wfd83au" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/08/float-to-int-float-精度转换/" data-id="cjgxhdzln000t2fjjhw2vl711" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/08/float-to-int-float-精度转换/" data-id="cjgz8poo8000wlgjjuvfrnksc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -200,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/07/math-log-243-3-problem/" data-id="cjgxhdzm9001k2fjj0bodryx1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/07/math-log-243-3-problem/" data-id="cjgz8poo6000rlgjj1mz7jzqu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/03/ASCII-ord-chr/" data-id="cjgxhdzl600062fjjstlny86f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/03/ASCII-ord-chr/" data-id="cjgz8ponh0000lgjjt2r4p2y0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -338,7 +430,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/191-Number-of-1-Bits/" data-id="cjgxhdzl200042fjj5ma0dz37" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/191-Number-of-1-Bits/" data-id="cjgz8poo1000jlgjjtfb0f2iu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -435,7 +527,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjgxhdzl300052fjjxn9m58zg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjgz8ponl0001lgjjsilhgd68" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -496,7 +588,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjgxhdzlt00122fjjhph6ughn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjgz8pook001mlgjjcsm3vcn5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -576,119 +668,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgxhdzlr000y2fjjzeu2xq60" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-136-Single-Number" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/29/136-Single-Number/" class="article-date">
-  <time datetime="2018-04-29T04:13:09.000Z" itemprop="datePublished">2018-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/29/136-Single-Number/">136. Single Number</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="136-Single-Number"><a href="#136-Single-Number" class="headerlink" title="136. Single Number"></a>136. Single Number</h1><p>Given a <strong>non-empty</strong> array of integers, every element appears <em>twice</em> except for one. Find that single one.</p>
-<p><strong>Note:</strong></p>
-<p>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [2,2,1]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [4,1,2,1,2]</span><br><span class="line">Output: 4</span><br></pre></td></tr></table></figure>
-<h2 id="Method1-排序"><a href="#Method1-排序" class="headerlink" title="Method1: 排序"></a>Method1: 排序</h2><p><strong>分析：</strong>要求Run time O(N), Space Complexity: O(1)</p>
-<p>==&gt; 考虑Sort the array</p>
-<p><strong>Note</strong>： Step = 2时，要考虑最后一个数是否可取，确认范围</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        nums.sort()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(nums) - <span class="number">1</span>, <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">if</span> nums[i] != nums[i + <span class="number">1</span>]:</span><br><span class="line">                <span class="keyword">return</span> nums[i]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> nums[<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
-<h2 id="Methos2：Bit-Manipulation-XOR"><a href="#Methos2：Bit-Manipulation-XOR" class="headerlink" title="Methos2：Bit Manipulation(XOR)"></a>Methos2：Bit Manipulation(XOR)</h2><p><strong>分析：</strong></p>
-<ol>
-<li>$a ⊕ 0 = a$</li>
-<li>$a ⊕ a = 0$</li>
-<li>$a ⊕ b ⊕ a = (a ⊕ a) ⊕ b = 0 ⊕ b = b$</li>
-</ol>
-<p>计算nums里面每一个num ⊕ 运算的结果，最后的值就是the Single number</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">singleNumber2</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :type nums: List[int]</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    a = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">        a ^= i</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> a</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjgxhdzkw00002fjjuqmk7nuq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XOR/">XOR</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-XOR" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/29/XOR/" class="article-date">
-  <time datetime="2018-04-29T04:03:27.000Z" itemprop="datePublished">2018-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/29/XOR/">XOR ^</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="XOR-异或"><a href="#XOR-异或" class="headerlink" title="XOR 异或"></a>XOR 异或</h2><h3 id="一般表示"><a href="#一般表示" class="headerlink" title="一般表示"></a>一般表示</h3><p>$a⊕b$ </p>
-<h3 id="In-Python-C"><a href="#In-Python-C" class="headerlink" title="In Python/ C++"></a>In Python/ C++</h3><p><code>a^b</code></p>
-<h4 id="运算性质"><a href="#运算性质" class="headerlink" title="运算性质"></a>运算性质</h4><ol>
-<li>交换律 ：$A ⊕ B = B ⊕ A$</li>
-<li>结合律：$A ⊕ (B ⊕ C) = (A ⊕ B) ⊕ C$</li>
-<li>恒等律：$A ⊕ 0 = A$</li>
-<li>归零率：$A ⊕ A = 0$</li>
-<li>推论：$(B ⊕ A) ⊕ B = A ⊕ (B ⊕ B) = A ⊕ 0 = A$</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjgxhdzlh000m2fjj8v04gnxs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgz8pooa0012lgjj7attu6qk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -744,7 +724,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
     </div>
   </div>
 
@@ -757,6 +737,14 @@
       <ul>
         
           <li>
+            <a href="/2018/09/01/Leetcode-经验/">Leetcode 经验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/09/203-Remove-Linked-List-Elements/">203. Remove Linked List Elements</a>
+          </li>
+        
+          <li>
             <a href="/2018/05/08/69-Sqrt-x/">69. Sqrt(x)</a>
           </li>
         
@@ -766,14 +754,6 @@
         
           <li>
             <a href="/2018/05/07/math-log-243-3-problem/">math.log(243,3) problem</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/03/ASCII-ord-chr/">ASCII ord() chr()</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/02/191-Number-of-1-Bits/">191. Number of 1 Bits</a>
           </li>
         
       </ul>
