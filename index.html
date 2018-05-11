@@ -93,7 +93,95 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjgz8ponz000elgjjiufpbo58" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjh248esc001qcujjhze4ssk2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Tree-Traversals-Inorder-Preorder-and-Postorder" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" class="article-date">
+  <time datetime="2018-05-11T10:45:45.000Z" itemprop="datePublished">2018-05-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/">Tree Traversals (Inorder, Preorder and Postorder)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Object-Binary-Tree"><a href="#Object-Binary-Tree" class="headerlink" title="Object: Binary Tree"></a>Object: Binary Tree</h3><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fr7lcqqw6ag307704cglf.gif" alt="tree12"></p>
+<p><strong>Depth First Traversals:</strong> </p>
+<p>(a) <strong>Inorder</strong> (Left, Root, Right) : 4 2 5 1 3 </p>
+<p>(b) <strong>Preorder</strong> (Root, Left, Right) : 1 2 4 5 3 </p>
+<p>(c) <strong>Postorder</strong> (Left, Right, Root) : 4 5 2 3 1</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" data-id="cjh248erw000ucujjr6pf40hg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-String-Manipulation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/09/String-Manipulation/" class="article-date">
+  <time datetime="2018-05-09T15:10:12.000Z" itemprop="datePublished">2018-05-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/09/String-Manipulation/">String Manipulation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="判断是否为字母-数字-isalnum-isalpha-isnumeric"><a href="#判断是否为字母-数字-isalnum-isalpha-isnumeric" class="headerlink" title="判断是否为字母, 数字 isalnum() isalpha() isnumeric()"></a>判断是否为字母, 数字 <code>isalnum()</code> <code>isalpha()</code> <code>isnumeric()</code></h3><h4 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判断是否整个string都由alpha and numbers 组成</span></span><br><span class="line">str.isalnum()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断是否整个string</span></span><br><span class="line">str.isalpha()</span><br></pre></td></tr></table></figure>
+<h4 id="Return-Type"><a href="#Return-Type" class="headerlink" title="Return Type"></a>Return Type</h4><p>Boolean</p>
+<h4 id="Ex"><a href="#Ex" class="headerlink" title="Ex:"></a>Ex:</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># No space in string</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">"this2018"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str.isalnum()</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Space in string</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">"this is..."</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str.isalnum()</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Check isalpha()</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">"this2018"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str.isalpha()</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/09/String-Manipulation/" data-id="cjh248ers000ocujjydwzuq4k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/09/203-Remove-Linked-List-Elements/" data-id="cjgz8ponr0005lgjjqrs0e7he" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/09/203-Remove-Linked-List-Elements/" data-id="cjh248erc0004cujje5m6jpm0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -188,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/08/69-Sqrt-x/" data-id="cjgz8ponp0003lgjj6wfd83au" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/08/69-Sqrt-x/" data-id="cjh248erj000acujjwpwbxavv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/08/float-to-int-float-精度转换/" data-id="cjgz8poo8000wlgjjuvfrnksc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/08/float-to-int-float-精度转换/" data-id="cjh248ery000ycujjxf89ludf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -292,7 +380,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/07/math-log-243-3-problem/" data-id="cjgz8poo6000rlgjj1mz7jzqu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/07/math-log-243-3-problem/" data-id="cjh248es10014cujjcyupm93a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -349,7 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/03/ASCII-ord-chr/" data-id="cjgz8ponh0000lgjjt2r4p2y0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/03/ASCII-ord-chr/" data-id="cjh248ere0005cujjuli4wr1b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -430,7 +518,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/191-Number-of-1-Bits/" data-id="cjgz8poo1000jlgjjtfb0f2iu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/191-Number-of-1-Bits/" data-id="cjh248er20000cujj4n7i5a6e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -527,148 +615,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjgz8ponl0001lgjjsilhgd68" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-二进制十进制转换-bin()-int(String,2)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/" class="article-date">
-  <time datetime="2018-05-01T17:06:11.000Z" itemprop="datePublished">2018-05-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/">二进制十进制转换 bin() int(String,2)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="二进制十进制转换"><a href="#二进制十进制转换" class="headerlink" title="二进制十进制转换"></a>二进制十进制转换</h1><h2 id="1-十进制—-gt-二进制-bin-函数-in-Python"><a href="#1-十进制—-gt-二进制-bin-函数-in-Python" class="headerlink" title="1. 十进制—&gt;二进制  bin() 函数 in Python"></a>1. 十进制—&gt;二进制  <code>bin()</code> 函数 in Python</h2><p><strong>Input type:</strong>  int/ long int</p>
-<p><strong>Return type:</strong> String</p>
-<p>将int/ long int 转换为：二进制表示的<strong>String</strong>, 数字前面+ <strong>“0b”</strong>, 表示二进制</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">S = bin(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># S = '0b10'</span></span><br><span class="line"><span class="comment">#'0b'--&gt;表示二进制， '10'--&gt;2的二进制表示方法</span></span><br></pre></td></tr></table></figure>
-<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>既然返回值为String，就可以用String的方式来使用</p>
-<p>EX：<code>ans = bin(2^3).count(&quot;1&quot;)</code></p>
-<p><code>bin(2^3)</code> —&gt; <code>0b111</code></p>
-<p><code>&quot;0b111&quot;.count(&quot;1&quot;)</code>—&gt;<code>3</code></p>
-<h2 id="2-二进制-—-gt-十进制-int-函数-in-Python"><a href="#2-二进制-—-gt-十进制-int-函数-in-Python" class="headerlink" title="2. 二进制 —&gt; 十进制: int(,)函数 in Python"></a>2. 二进制 —&gt; 十进制: <code>int(,)</code>函数 in Python</h2><p><code>int(String 二进制表示，2)</code></p>
-<p>The Input String can directly be the number, or the <code>bin()</code> represents</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">I1 = int(<span class="string">'11'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment"># I1 = 3</span></span><br><span class="line"></span><br><span class="line">I1 = int(<span class="string">'0b11'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment"># I1 = 3</span></span><br></pre></td></tr></table></figure>
-<h2 id="EX-Leetcode-461-Hamming-Distance"><a href="#EX-Leetcode-461-Hamming-Distance" class="headerlink" title="EX: Leetcode 461. Hamming Distance"></a>EX: Leetcode 461. Hamming Distance</h2><blockquote>
-<p>The <a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank" rel="noopener">Hamming distance</a> between two integers is the number of positions at which the corresponding bits are different.</p>
-<p>Given two integers <code>x</code> and <code>y</code>, calculate the Hamming distance.</p>
-<p><strong>Note:</strong><br>0 ≤ <code>x</code>, <code>y</code> &lt; 231.</p>
-<p><strong>Example:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: x = 1, y = 4</span><br><span class="line">&gt;</span><br><span class="line">&gt; Output: 2</span><br><span class="line">&gt;</span><br><span class="line">&gt; Explanation:</span><br><span class="line">&gt; 1   (0 0 0 1)</span><br><span class="line">&gt; 4   (0 1 0 0)</span><br><span class="line">&gt;        ↑   ↑</span><br><span class="line">&gt;</span><br><span class="line">&gt; The above arrows point to positions where the corresponding bits are different.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingDistance</span><span class="params">(self, x, y)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :type y: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">return</span> bin(x^y).count(<span class="string">"1"</span>)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjgz8pook001mlgjjcsm3vcn5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-按位与、或、异或等运算方法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/30/按位与、或、异或等运算方法/" class="article-date">
-  <time datetime="2018-04-30T09:07:01.000Z" itemprop="datePublished">2018-04-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/30/按位与、或、异或等运算方法/">按位与、或、异或等二进制运算方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="与-amp-AND"><a href="#与-amp-AND" class="headerlink" title="与 &amp; AND"></a>与 &amp; AND</h2><h3 id="运算规则"><a href="#运算规则" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 &amp; 0 = 0</p>
-<p>0 &amp; 1 = 0</p>
-<p>1 &amp; 0 = 0</p>
-<p>1 &amp; 1 = 1</p>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 &amp; 5:</p>
-<p>3:       0011</p>
-<p>5:       0101</p>
-<p>3&amp;5:  0001</p>
-<h3 id="负数"><a href="#负数" class="headerlink" title="负数"></a>负数</h3><p>负数按补码参与按位与运算。</p>
-<h2 id="或-OR"><a href="#或-OR" class="headerlink" title="或 | OR"></a>或 | OR</h2><h3 id="运算规则-1"><a href="#运算规则-1" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 | 0 = 0</p>
-<p>0 | 1 = 1</p>
-<p>1 | 0 = 0</p>
-<p>1 | 1 = 1</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 | 5:</p>
-<p>3:       0011</p>
-<p>5:       0101</p>
-<p>3|5:   0111</p>
-<h2 id="异或-XOR"><a href="#异或-XOR" class="headerlink" title="异或 ^ XOR"></a>异或 ^ XOR</h2><h3 id="运算规则-2"><a href="#运算规则-2" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 ^ 0 = 0</p>
-<p>0 ^ 1 = 1</p>
-<p>1 ^ 0 = 0</p>
-<p>1 ^ 1 = 0</p>
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 ^ 5:</p>
-<p>3:       0011</p>
-<p>5:       0101</p>
-<p>3^5:   0110</p>
-<h2 id="取反-NOT"><a href="#取反-NOT" class="headerlink" title="取反 ~ NOT"></a>取反 ~ NOT</h2><h3 id="运算规则-3"><a href="#运算规则-3" class="headerlink" title="运算规则"></a>运算规则</h3><p>~ 0 = 1</p>
-<p>~ 1 = 0</p>
-<h2 id="左移-lt-lt-，右移-gt-gt"><a href="#左移-lt-lt-，右移-gt-gt" class="headerlink" title="左移 &lt;&lt;，右移 &gt;&gt;"></a>左移 &lt;&lt;，右移 &gt;&gt;</h2><h3 id="运算规则-4"><a href="#运算规则-4" class="headerlink" title="运算规则"></a>运算规则</h3><p>按二进制左/右移 N位</p>
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example"></a>Example</h3><p>1 &lt;&lt; 3</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	0001 &lt;&lt; 3 </span><br><span class="line">=	1000</span><br></pre></td></tr></table></figure>
-<p>10 &gt;&gt; 2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	1010 &gt;&gt; 2 </span><br><span class="line">=	0010</span><br></pre></td></tr></table></figure>
-<h2 id="EX-Leetcode371-Sum-of-Two-Integers"><a href="#EX-Leetcode371-Sum-of-Two-Integers" class="headerlink" title="EX: Leetcode371. Sum of Two Integers"></a>EX: Leetcode371. Sum of Two Integers</h2><blockquote>
-<p>Calculate the sum of two integers <em>a</em> and <em>b</em>, but you are <strong>not allowed</strong> to use the operator <code>+</code> and <code>-</code>.</p>
-<p><strong>Example:</strong><br>Given <em>a</em> = 1 and <em>b</em> = 2, return 3.</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 该用法适用于JAVA, C++，但Python负数使用有问题</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSum2</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type a: int</span></span><br><span class="line"><span class="string">        :type b: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">        temp = a ^b</span><br><span class="line">        carry = (a &amp;b )&lt;&lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.getSum(temp, carry)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用mask解决负数问题</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">getSum</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">       <span class="string">"""</span></span><br><span class="line"><span class="string">       :type a: int</span></span><br><span class="line"><span class="string">       :type b: int</span></span><br><span class="line"><span class="string">       :rtype: int</span></span><br><span class="line"><span class="string">       """</span></span><br><span class="line">       MAX = <span class="number">0x7FFFFFFF</span></span><br><span class="line">       MIN = <span class="number">0x80000000</span></span><br><span class="line">       mask = <span class="number">0xFFFFFFFF</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">while</span> b !=<span class="number">0</span>:</span><br><span class="line">           a, b = (a^b) &amp; mask, ((a&amp;b)&lt;&lt;<span class="number">1</span>) &amp; mask</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> a <span class="keyword">if</span> a &lt;= MAX <span class="keyword">else</span> ~(a ^ mask)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjgz8pooa0012lgjj7attu6qk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjh248erg0006cujj0st3zhei" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -741,19 +688,19 @@
           </li>
         
           <li>
+            <a href="/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/">Tree Traversals (Inorder, Preorder and Postorder)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/09/String-Manipulation/">String Manipulation</a>
+          </li>
+        
+          <li>
             <a href="/2018/05/09/203-Remove-Linked-List-Elements/">203. Remove Linked List Elements</a>
           </li>
         
           <li>
             <a href="/2018/05/08/69-Sqrt-x/">69. Sqrt(x)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/08/float-to-int-float-精度转换/">float to int &amp; float 精度转换</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/07/math-log-243-3-problem/">math.log(243,3) problem</a>
           </li>
         
       </ul>
