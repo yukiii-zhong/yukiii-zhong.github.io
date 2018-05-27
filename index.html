@@ -97,11 +97,107 @@
 <p>返回值为最后的最大值</p>
 <p><strong>EXAMPLE：62. Unique Paths</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">uniquePaths2</span><span class="params">(self, m, n)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :type m: int</span></span><br><span class="line"><span class="string">    :type n: int</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    </span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    坐标系</span></span><br><span class="line"><span class="string">    Finish： A[0,0]</span></span><br><span class="line"><span class="string">    Start： A[m-1,n-1]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 预先设定其他的都是[1],那么A[i][0], A[0][j],就不需要进行遍历</span></span><br><span class="line">    A = [[<span class="number">1</span>] * n] * m</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 直接从A[1][1]开始</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, n):</span><br><span class="line">            A[i][j] = A[i - <span class="number">1</span>][j] + A[i][j - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> A[m - <span class="number">1</span>][n - <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="Palindromic-Substring"><a href="#Palindromic-Substring" class="headerlink" title="Palindromic Substring"></a>Palindromic Substring</h2><h4 id="EX-LC5-Longest-Palindromic-Substring"><a href="#EX-LC5-Longest-Palindromic-Substring" class="headerlink" title="EX: LC5: Longest Palindromic Substring"></a>EX: LC5: Longest Palindromic Substring</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;babad&quot;</span><br><span class="line">Output: &quot;bab&quot;</span><br><span class="line">Note: &quot;aba&quot; is also a valid answer.</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Select a center, like “a”, “aa”, “aaa”</li>
+<li>Spread the center</li>
+<li>Use <strong>Middle</strong> to remeber the center, and use <strong>i</strong>, <strong>j</strong> to spread it.</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjhdep3nz000m5kjjvgzpos1q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjhp044a3000pc5jhvebe6p6i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Shell-Command" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/27/Shell-Command/" class="article-date">
+  <time datetime="2018-05-27T08:32:33.000Z" itemprop="datePublished">2018-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/27/Shell-Command/">Shell Command</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Shell-Command"><a href="#Shell-Command" class="headerlink" title="Shell Command"></a>Shell Command</h1><h2 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h2><p>Just like <code>print</code> in Python</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'Hello, World!'</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="Navigating-directories"><a href="#Navigating-directories" class="headerlink" title="Navigating directories"></a>Navigating directories</h2><h3 id="1-cd-Change-Directory"><a href="#1-cd-Change-Directory" class="headerlink" title="1. cd: Change Directory"></a>1. <code>cd</code>: Change Directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> downloads</span></span><br></pre></td></tr></table></figure>
+<h4 id="To-parent-directory"><a href="#To-parent-directory" class="headerlink" title="To parent directory .."></a>To parent directory <code>..</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-ls-list"><a href="#2-ls-list" class="headerlink" title="2. ls: list"></a>2. <code>ls</code>: list</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> Pictures; ls</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> chage directory to <span class="string">'Pictures'</span>, and list it.</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls Pictures</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> list <span class="string">'Pictures'</span> Directory</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls Pictures/../Pictures</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> list current directory</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls ~</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> list home directory</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-2-ls-Other-command"><a href="#2-2-ls-Other-command" class="headerlink" title="2.2 ls Other command"></a>2.2 <code>ls</code> Other command</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -l</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Long information about files</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -l Documents/*.pdf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Long information <span class="keyword">for</span> pdf files <span class="keyword">in</span> Documents folder</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls Sub*</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Show all the files start with <span class="string">'Sub'</span>(Case Sensitive)</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-pwd-print-working-directory"><a href="#3-pwd-print-working-directory" class="headerlink" title="3. pwd print working directory"></a>3. <code>pwd</code> print working directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">pwd</span></span></span><br><span class="line">/Users/yukizhong/Dropbox/02_Coding/Local_Blog (Path)</span><br></pre></td></tr></table></figure>
+<h3 id="4-Directory-names"><a href="#4-Directory-names" class="headerlink" title="4.  Directory names"></a>4.  Directory names</h3><ol>
+<li><code>ls ..</code>: Parent directory</li>
+<li><code>ls .</code>: Current Directory</li>
+<li><code>ls ~</code>: Home Directory</li>
+</ol>
+<h3 id="5-mkdir-make-directory-mv-move"><a href="#5-mkdir-make-directory-mv-move" class="headerlink" title="5. mkdir make directory, mv move"></a>5. <code>mkdir</code> make directory, <code>mv</code> move</h3><p><strong>EX:</strong> Move epub files to ‘Books’ Directory</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir Documents/Books</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv Documents/*.epub Documents/Books</span></span><br></pre></td></tr></table></figure>
+<h2 id="curl-C-URL-—-gt-See-URL"><a href="#curl-C-URL-—-gt-See-URL" class="headerlink" title="curl: C URL —&gt;  See URL"></a><code>curl</code>: C URL —&gt;  See URL</h2><h4 id="1-Download"><a href="#1-Download" class="headerlink" title="1. Download"></a>1. Download</h4><p>to download <code>https://tinyurl.com/zeyq9vc</code> and save it as the file <code>dictionary.txt</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl -o dictionary.txt -L <span class="string">'https://tinyurl.com/zeyq9vc'</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><code>-o</code>  download as</li>
+<li><code>-L</code>  redirect</li>
+</ol>
+<h2 id="cat-Catenate-连接-concatenate-less"><a href="#cat-Catenate-连接-concatenate-less" class="headerlink" title="cat: Catenate (连接) /concatenate; less"></a><code>cat</code>: Catenate (连接) /concatenate; <code>less</code></h2><h3 id="1-Display-Text-Files"><a href="#1-Display-Text-Files" class="headerlink" title="1. Display Text Files"></a>1. Display Text Files</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat dictionary.txt</span></span><br></pre></td></tr></table></figure>
+<p><strong>Multiple files also works</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat mytext.txt mytext2.txt</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-Create-a-new-file"><a href="#2-Create-a-new-file" class="headerlink" title="2. Create a new file"></a>2. Create a new file</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat &gt; filename.txt</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">....(file Content)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 键入回车</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 然后 Ctrl + D 退出</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-合并-复制文件"><a href="#3-合并-复制文件" class="headerlink" title="3. 合并/复制文件"></a>3. 合并/复制文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat file1 file2 &gt; newFile3</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat file4 &gt; newFile5</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-Append-text-file"><a href="#4-Append-text-file" class="headerlink" title="4. Append text file"></a>4. Append text file</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat file1.txt &gt;&gt; To_be_appended_File.txt</span></span><br></pre></td></tr></table></figure>
+<h2 id="rm-remove-rmdir-remove-directory"><a href="#rm-remove-rmdir-remove-directory" class="headerlink" title="rm: remove rmdir: remove directory"></a><code>rm</code>: remove <code>rmdir</code>: remove directory</h2><p><code>$ rm filenme</code> —&gt; 直接删除，可以批量删除</p>
+<p><code>$ rm -i filename</code> —&gt; 删前询问，批量的话每个文件问一遍 (i: interactive)</p>
+<p><strong>EX:</strong></p>
+<ol>
+<li><code>Good File</code></li>
+<li><code>Bad Name Good File</code></li>
+<li><code>Bad File</code></li>
+<li><code>Good Name Bad Face</code></li>
+</ol>
+<p>You want to remove files 3 and 4, while leaving 1 and 2 intact. </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm <span class="string">'Bad File'</span> <span class="string">'Good Name Bad Face'</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm *<span class="string">'Bad F'</span>*</span></span><br></pre></td></tr></table></figure>
+<h2 id="grep-Search-txt-file-wc-word-count"><a href="#grep-Search-txt-file-wc-word-count" class="headerlink" title="grep Search txt file, wc: word count"></a><code>grep</code> Search txt file, <code>wc</code>: word count</h2><ol>
+<li><code>$ grep ibo dictionary.txt</code></li>
+</ol>
+<p>OUTPUT: all the words containing ‘ibo’ in the file</p>
+<ol start="2">
+<li><code>$ grep ibo dictionary.txt | less</code></li>
+</ol>
+<p>Pip to less, show only one page</p>
+<ol start="3">
+<li><code>$ grep -c ibo dictionary.txt</code></li>
+</ol>
+<p>OUTPUT: <strong>Count</strong> how many words containing ‘ibo’</p>
+<ol start="4">
+<li><code>$ curl -L https://tinyurl.com | grep fish | wc -l</code></li>
+</ol>
+<p><strong><code>wc</code></strong>:  Count how many words</p>
+<p><strong><code>-l</code>:</strong> How many lines</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cjhp044a2000mc5jhpfb1ki30" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/15/python程序运行时间/" data-id="cjhdep3o500115kjjlfeqbxph" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/15/python程序运行时间/" data-id="cjhp044ac001ac5jh9idwt8k5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -187,7 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" data-id="cjhdep3nw000i5kjjmociohy4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" data-id="cjhp044a5000uc5jhkqvjqeka" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/09/String-Manipulation/" data-id="cjhdep3o3000v5kjjebnzqxxi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/09/String-Manipulation/" data-id="cjhp044a90013c5jhupvme93q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +377,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/09/203-Remove-Linked-List-Elements/" data-id="cjhdep3nl00015kjj9qtalesg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/09/203-Remove-Linked-List-Elements/" data-id="cjhp0449o0004c5jhvgtt6aop" class="article-share-link">Share</a>
       
       
     </footer>
@@ -325,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/08/69-Sqrt-x/" data-id="cjhdep3nq00065kjj42n40o2t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/08/69-Sqrt-x/" data-id="cjhp0449p0005c5jh8nfiv2nk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -381,7 +477,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/08/float-to-int-float-精度转换/" data-id="cjhdep3o600145kjj23mlf2qe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/08/float-to-int-float-精度转换/" data-id="cjhp044a70010c5jhhboj10su" class="article-share-link">Share</a>
       
       
     </footer>
@@ -429,7 +525,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/07/math-log-243-3-problem/" data-id="cjhdep3o800195kjj2y1q0k3u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/07/math-log-243-3-problem/" data-id="cjhp044ab0018c5jhx4hxj4gg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -486,92 +582,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/03/ASCII-ord-chr/" data-id="cjhdep3nv000f5kjj2yach098" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/03/ASCII-ord-chr/" data-id="cjhp0449u000ac5jhipamotk4" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-191-Number-of-1-Bits" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/02/191-Number-of-1-Bits/" class="article-date">
-  <time datetime="2018-05-02T09:40:01.000Z" itemprop="datePublished">2018-05-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/02/191-Number-of-1-Bits/">191. Number of 1 Bits</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the <a href="http://en.wikipedia.org/wiki/Hamming_weight" target="_blank" rel="noopener">Hamming weight</a>).</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: 11</span><br><span class="line">&gt; Output: 3</span><br><span class="line">&gt; Explanation: Integer 11 has binary representation 00000000000000000000000000001011 </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p><strong>Example 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: 128</span><br><span class="line">&gt; Output: 1</span><br><span class="line">&gt; Explanation: Integer 128 has binary representation 00000000000000000000000010000000</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h2 id="Method1"><a href="#Method1" class="headerlink" title="Method1"></a>Method1</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingWeight</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">return</span> bin(n).count(<span class="string">"1"</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="Method2"><a href="#Method2" class="headerlink" title="Method2"></a>Method2</h2><h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p><code>Int</code>一共32为，每位数字检验是否为1</p>
-<p>具体操作：检验最后一个数字，检验完右移，一共32次</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingWeight2</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">32</span>):</span><br><span class="line">            ans += n &amp; <span class="number">1</span></span><br><span class="line">            n &gt;&gt;= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
-<h2 id="Method3"><a href="#Method3" class="headerlink" title="Method3"></a>Method3</h2><h3 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h3><p><strong><code>N = N &amp; (N-1)</code>可以消除N的二进制表示的最后一个1</strong></p>
-<table>
-<thead>
-<tr>
-<th>N</th>
-<th>N-1</th>
-<th>N &amp; (N-1)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1011</td>
-<td>1010</td>
-<td>1010</td>
-</tr>
-<tr>
-<td>1010</td>
-<td>1001</td>
-<td>1000</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>0111</td>
-<td>0000</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">hammingWeight3</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> n != <span class="number">0</span>:</span><br><span class="line">            n = n &amp; (n<span class="number">-1</span>)</span><br><span class="line">            count +=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> count</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/191-Number-of-1-Bits/" data-id="cjhdep3no00045kjj1ifzn0z8" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
-
     </footer>
   </div>
   
@@ -640,6 +653,10 @@
           </li>
         
           <li>
+            <a href="/2018/05/27/Shell-Command/">Shell Command</a>
+          </li>
+        
+          <li>
             <a href="/2018/05/15/python程序运行时间/">python程序运行时间</a>
           </li>
         
@@ -649,10 +666,6 @@
         
           <li>
             <a href="/2018/05/09/String-Manipulation/">String Manipulation</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/09/203-Remove-Linked-List-Elements/">203. Remove Linked List Elements</a>
           </li>
         
       </ul>

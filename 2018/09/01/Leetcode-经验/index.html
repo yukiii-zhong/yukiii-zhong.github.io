@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="String遇到String 的题目，首先的想法是用指针i, j的方式做题 两种视角Recursion：从顶端找底端用Recursion的方式，如果会有重复的部分，新建一个Helper，存储所有见过的计算结果 EXAMPLE：62. Unique Paths 12345678910111213141516171819202122232425class Solution:    def unique">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-15T18:11:27.915Z">
+<meta property="og:updated_time" content="2018-05-19T13:24:57.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode 经验">
 <meta name="twitter:description" content="String遇到String 的题目，首先的想法是用指针i, j的方式做题 两种视角Recursion：从顶端找底端用Recursion的方式，如果会有重复的部分，新建一个Helper，存储所有见过的计算结果 EXAMPLE：62. Unique Paths 12345678910111213141516171819202122232425class Solution:    def unique">
@@ -99,11 +99,17 @@
 <p>返回值为最后的最大值</p>
 <p><strong>EXAMPLE：62. Unique Paths</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">uniquePaths2</span><span class="params">(self, m, n)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    :type m: int</span></span><br><span class="line"><span class="string">    :type n: int</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    </span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    坐标系</span></span><br><span class="line"><span class="string">    Finish： A[0,0]</span></span><br><span class="line"><span class="string">    Start： A[m-1,n-1]</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 预先设定其他的都是[1],那么A[i][0], A[0][j],就不需要进行遍历</span></span><br><span class="line">    A = [[<span class="number">1</span>] * n] * m</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 直接从A[1][1]开始</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, n):</span><br><span class="line">            A[i][j] = A[i - <span class="number">1</span>][j] + A[i][j - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> A[m - <span class="number">1</span>][n - <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="Palindromic-Substring"><a href="#Palindromic-Substring" class="headerlink" title="Palindromic Substring"></a>Palindromic Substring</h2><h4 id="EX-LC5-Longest-Palindromic-Substring"><a href="#EX-LC5-Longest-Palindromic-Substring" class="headerlink" title="EX: LC5: Longest Palindromic Substring"></a>EX: LC5: Longest Palindromic Substring</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;babad&quot;</span><br><span class="line">Output: &quot;bab&quot;</span><br><span class="line">Note: &quot;aba&quot; is also a valid answer.</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Select a center, like “a”, “aa”, “aaa”</li>
+<li>Spread the center</li>
+<li>Use <strong>Middle</strong> to remeber the center, and use <strong>i</strong>, <strong>j</strong> to spread it.</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjhdep3nz000m5kjjvgzpos1q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjhp044a3000pc5jhvebe6p6i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -113,9 +119,9 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/05/15/python程序运行时间/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/05/27/Shell-Command/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">python程序运行时间</div>
+      <div class="article-nav-title">Shell Command</div>
     </a>
   
 </nav>
@@ -177,6 +183,10 @@
           </li>
         
           <li>
+            <a href="/2018/05/27/Shell-Command/">Shell Command</a>
+          </li>
+        
+          <li>
             <a href="/2018/05/15/python程序运行时间/">python程序运行时间</a>
           </li>
         
@@ -186,10 +196,6 @@
         
           <li>
             <a href="/2018/05/09/String-Manipulation/">String Manipulation</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/09/203-Remove-Linked-List-Elements/">203. Remove Linked List Elements</a>
           </li>
         
       </ul>
