@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Shell CommandechoJust like print in Python 1$ echo &apos;Hello, World!&apos; Navigating directories1. cd: Change Directory1$ cd downloads To parent directory ..1$ cd .. 2. ls: list123456789101112131415$ cd Pict">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-27T15:47:18.355Z">
+<meta property="og:updated_time" content="2018-05-29T02:59:44.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell Command">
 <meta name="twitter:description" content="Shell CommandechoJust like print in Python 1$ echo &apos;Hello, World!&apos; Navigating directories1. cd: Change Directory1$ cd downloads To parent directory ..1$ cd .. 2. ls: list123456789101112131415$ cd Pict">
@@ -140,11 +140,24 @@
 </ol>
 <p><strong><code>wc</code></strong>:  Count how many words</p>
 <p><strong><code>-l</code>:</strong> How many lines</p>
+<h2 id="Shell-and-environment-variables"><a href="#Shell-and-environment-variables" class="headerlink" title="Shell and environment variables"></a>Shell and environment variables</h2><p><code>$Variable</code>  distinguish it</p>
+<h3 id="1-Establish-variable"><a href="#1-Establish-variable" class="headerlink" title="1. Establish variable"></a>1. Establish variable</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> num=<span class="string">'1,2,3'</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$num</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="2-Shell-Variable"><a href="#2-Shell-Variable" class="headerlink" title="2. Shell Variable"></a>2. Shell Variable</h3><p>Shell Variable is all about fixed for shell</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$LINES</span> x <span class="variable">$COLUMNS</span></span></span><br></pre></td></tr></table></figure>
+<p>OUTPUT: <strong>12 x 80</strong> </p>
+<h3 id="3-Environment-variable"><a href="#3-Environment-variable" class="headerlink" title="3. Environment variable"></a>3. Environment variable</h3><p>Change in diff environments</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$PATH</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">.....</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> PATH=<span class="variable">$PATH</span>:/new/dir/here</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> add new directories <span class="keyword">in</span> the path</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$PWD</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="Aliases"><a href="#Aliases" class="headerlink" title="Aliases"></a>Aliases</h2><ol>
+<li>You can use Aliases just as common commands</li>
+<li>Aliases only work in this terminal window.</li>
+<li>If you hope to keep alias work for all terminal, keep it in ‘.bash_profile’</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Give <span class="built_in">alias</span> to a <span class="built_in">command</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">alias</span> ll=<span class="string">'ls -la'</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Run <span class="string">'ls -la'</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ll</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Show all <span class="built_in">alias</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">alias</span></span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cjhp044a2000mc5jhpfb1ki30" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cjhr54hdh000pn0jhbjzf67bi" class="article-share-link">Share</a>
       
       
     </footer>
