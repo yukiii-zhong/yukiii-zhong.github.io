@@ -5,24 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>49. Group Anagrams | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GraphBasic Concepts Simplification: Integer Vertices Graph API">
+  <meta name="description" content="Given an array of strings, group anagrams together. Example: 12345678&amp;gt; Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;],&amp;gt; Output:&amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2018/04/26/Graph/index.html">
+<meta property="og:title" content="49. Group Anagrams">
+<meta property="og:url" content="http://yoursite.com/2018/05/29/49-Group-Anagrams/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="GraphBasic Concepts Simplification: Integer Vertices Graph API">
+<meta property="og:description" content="Given an array of strings, group anagrams together. Example: 12345678&amp;gt; Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;],&amp;gt; Output:&amp;gt">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/Users/yukizhong/Desktop/屏幕快照%202018-04-26%20上午12.39.49.png">
-<meta property="og:image" content="http://yoursite.com/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005730989.png">
-<meta property="og:image" content="http://yoursite.com/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005346623.png">
-<meta property="og:image" content="http://yoursite.com/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005535592.png">
-<meta property="og:updated_time" content="2018-04-25T16:57:32.034Z">
+<meta property="og:updated_time" content="2018-05-29T09:25:30.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="GraphBasic Concepts Simplification: Integer Vertices Graph API">
-<meta name="twitter:image" content="http://yoursite.com/Users/yukizhong/Desktop/屏幕快照%202018-04-26%20上午12.39.49.png">
+<meta name="twitter:title" content="49. Group Anagrams">
+<meta name="twitter:description" content="Given an array of strings, group anagrams together. Example: 12345678&amp;gt; Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;],&amp;gt; Output:&amp;gt">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,27 +64,61 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Graph" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-49-Group-Anagrams" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/26/Graph/" class="article-date">
-  <time datetime="2018-04-25T16:50:03.810Z" itemprop="datePublished">2018-04-26</time>
+    <a href="/2018/05/29/49-Group-Anagrams/" class="article-date">
+  <time datetime="2018-05-29T09:11:20.000Z" itemprop="datePublished">2018-05-29</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      49. Group Anagrams
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h1><h3 id="Basic-Concepts"><a href="#Basic-Concepts" class="headerlink" title="Basic Concepts"></a>Basic Concepts</h3><p><img src="/Users/yukizhong/Desktop/屏幕快照 2018-04-26 上午12.39.49.png" alt="屏幕快照 2018-04-26 上午12.39.49"></p>
-<h3 id="Simplification-Integer-Vertices"><a href="#Simplification-Integer-Vertices" class="headerlink" title="Simplification: Integer Vertices"></a>Simplification: Integer Vertices</h3><p><img src="/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005730989.png" alt="image-20180426005730989"></p>
-<h2 id="Graph-API"><a href="#Graph-API" class="headerlink" title="Graph API"></a>Graph API</h2><p><img src="/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005346623.png" alt="image-20180426005346623"></p>
-<p><img src="/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005535592.png" alt="image-20180426005535592"></p>
+        <blockquote>
+<p>Given an array of strings, group anagrams together.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: [&quot;eat&quot;, &quot;tea&quot;, &quot;tan&quot;, &quot;ate&quot;, &quot;nat&quot;, &quot;bat&quot;],</span><br><span class="line">&gt; Output:</span><br><span class="line">&gt; [</span><br><span class="line">&gt;   [&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;],</span><br><span class="line">&gt;   [&quot;nat&quot;,&quot;tan&quot;],</span><br><span class="line">&gt;   [&quot;bat&quot;]</span><br><span class="line">&gt; ]</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li>All inputs will be in lowercase.</li>
+<li>The order of your output does not matter.</li>
+</ul>
+</blockquote>
+<ol>
+<li><p><code>sorted(String)</code>:</p>
+<p>return a sorted list of String</p>
+<p>EX: <code>sorted(&#39;tae&#39;)</code> —&gt; return <code>[&#39;a&#39;, &#39;e&#39;, &#39;t&#39;]</code></p>
+</li>
+<li><p>如果要反复访问，用<code>map</code>,比用<code>list</code> 遍历要快得多</p>
+</li>
+<li><p><code>list(dic.values())</code></p>
+</li>
+</ol>
+<p><strong>RES</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">groupAnagrams</span><span class="params">(self, strs)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type strs: List[str]</span></span><br><span class="line"><span class="string">        :rtype: List[List[str]]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        mapp = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> s <span class="keyword">in</span> strs:</span><br><span class="line">            temp = <span class="string">''</span>.join(sorted(s))</span><br><span class="line">            <span class="keyword">if</span> temp <span class="keyword">not</span> <span class="keyword">in</span> mapp:</span><br><span class="line">                mapp[temp] = [s]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                mapp[temp].append(s)</span><br><span class="line">        <span class="keyword">return</span> list(mapp.values())</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjhutc54t000bcajh0lbkjrvw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cjhutc54n0006cajhym3pdo2j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -98,19 +127,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/04/29/XOR/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/05/29/Move-and-Rename/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          XOR ^
+          Move and Rename
         
       </div>
     </a>
   
   
-    <a href="/2018/04/25/sorting-with-lambda/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/05/27/Shell-Command/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Sorting with lambda</div>
+      <div class="article-nav-title">Shell Command</div>
     </a>
   
 </nav>
