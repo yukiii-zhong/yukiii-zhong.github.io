@@ -5,20 +5,19 @@
   
 
   
-  <title>ArrayList Example | Hexo</title>
+  <title>Git | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Basic Use Example12345678910111213141516171819202122class Solution &amp;#123;    public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; generate(int numRows) &amp;#123;        List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; ans = new ArrayL">
-<meta name="keywords" content="ArrayList">
+  <meta name="description" content="Create A Git repo1. Create A Repo From Scratch 手动Create你的项目文件夹 the_Repo 运行：  12$ cd the_Repo$ git init 2. Clone An Existing Repo一下命令将会在定位Directory下，新建子Repo 1$ git clone https://github.com/udacity/cour">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ArrayList Example">
-<meta property="og:url" content="http://yoursite.com/2018/04/24/ArrayList-Example/index.html">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="http://yoursite.com/2018/06/02/Git/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Basic Use Example12345678910111213141516171819202122class Solution &amp;#123;    public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; generate(int numRows) &amp;#123;        List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; ans = new ArrayL">
+<meta property="og:description" content="Create A Git repo1. Create A Repo From Scratch 手动Create你的项目文件夹 the_Repo 运行：  12$ cd the_Repo$ git init 2. Clone An Existing Repo一下命令将会在定位Directory下，新建子Repo 1$ git clone https://github.com/udacity/cour">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-24T14:54:02.946Z">
+<meta property="og:updated_time" content="2018-06-02T13:38:00.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ArrayList Example">
-<meta name="twitter:description" content="Basic Use Example12345678910111213141516171819202122class Solution &amp;#123;    public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; generate(int numRows) &amp;#123;        List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; ans = new ArrayL">
+<meta name="twitter:title" content="Git">
+<meta name="twitter:description" content="Create A Git repo1. Create A Repo From Scratch 手动Create你的项目文件夹 the_Repo 运行：  12$ cd the_Repo$ git init 2. Clone An Existing Repo一下命令将会在定位Directory下，新建子Repo 1$ git clone https://github.com/udacity/cour">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -65,14 +64,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-ArrayList-Example" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Git" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/24/ArrayList-Example/" class="article-date">
-  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
+    <a href="/2018/06/02/Git/" class="article-date">
+  <time datetime="2018-06-02T13:29:26.000Z" itemprop="datePublished">2018-06-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
+    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
   </div>
 
   </div>
@@ -83,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ArrayList Example
+      Git
     </h1>
   
 
@@ -91,35 +90,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Basic-Use-Example"><a href="#Basic-Use-Example" class="headerlink" title="Basic Use Example"></a>Basic Use Example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; generate(<span class="keyword">int</span> numRows) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">0</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        List&lt;Integer&gt; row1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        row1.add(<span class="number">1</span>);</span><br><span class="line">        ans.add(row1);</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">1</span>) <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            List&lt;Integer&gt; theRow = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            List&lt;Integer&gt; prevRow = ans.get(i-<span class="number">1</span>);</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt;i;j++) &#123;</span><br><span class="line">                theRow.add(prevRow.get(j-<span class="number">1</span>) + prevRow.get(j));</span><br><span class="line">            &#125;</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            ans.add(theRow);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="Create-A-Git-repo"><a href="#Create-A-Git-repo" class="headerlink" title="Create A Git repo"></a>Create A Git repo</h2><h3 id="1-Create-A-Repo-From-Scratch"><a href="#1-Create-A-Repo-From-Scratch" class="headerlink" title="1. Create A Repo From Scratch"></a>1. Create A Repo From Scratch</h3><ol>
+<li>手动Create你的项目文件夹 <code>the_Repo</code></li>
+<li>运行：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd the_Repo</span><br><span class="line"><span class="meta">$</span> git init</span><br></pre></td></tr></table></figure>
+<h3 id="2-Clone-An-Existing-Repo"><a href="#2-Clone-An-Existing-Repo" class="headerlink" title="2. Clone An Existing Repo"></a>2. Clone An Existing Repo</h3><p>一下命令将会在定位Directory下，新建子Repo</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/udacity/course-git-blog-project</span><br></pre></td></tr></table></figure>
+<h4 id="如果需要Rename-the-project"><a href="#如果需要Rename-the-project" class="headerlink" title="如果需要Rename the project"></a>如果需要Rename the project</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/udacity/course-git-blog-project Project_Name</span><br></pre></td></tr></table></figure>
+<h3 id="3-Determine-A-Repo’s-Status"><a href="#3-Determine-A-Repo’s-Status" class="headerlink" title="3. Determine A Repo’s Status"></a>3. Determine A Repo’s Status</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjhxg0dly000hq4jhul0qeslu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/Git/" data-id="cjhxg0dlt0008q4jh38lv1h49" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2018/04/24/Set-Example/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/09/01/Leetcode-经验/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Set Example
+          Leetcode 经验
         
       </div>
     </a>
   
   
-    <a href="/2018/04/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/06/01/unInstall-with-command/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">unInstall with command</div>
     </a>
   
 </nav>
