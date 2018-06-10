@@ -16,7 +16,7 @@
 <meta property="og:description" content="1. create the Repo1$ git init new-git-project 2. move to correct project1$ cd new* 3. Chek Status (IMPORTANT!)1$ git status 4. Make Changes (Create Files)12$ touch index.html$ open -a /Applications/Su">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fs647h6g46j31kw0ztwke.jpg">
-<meta property="og:updated_time" content="2018-06-10T08:23:21.611Z">
+<meta property="og:updated_time" content="2018-06-10T10:21:42.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" Add Commits To A Repo">
 <meta name="twitter:description" content="1. create the Repo1$ git init new-git-project 2. move to correct project1$ cd new* 3. Chek Status (IMPORTANT!)1$ git status 4. Make Changes (Create Files)12$ touch index.html$ open -a /Applications/Su">
@@ -103,11 +103,34 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git config --global core.editor &lt;your-editor's-config-went-here&gt;</span><br></pre></td></tr></table></figure>
 <p>Commit it </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git commit</span><br></pre></td></tr></table></figure>
+<p>Then open it in the code editor,  <strong>Edit, save and close</strong> the file, then return back to the terminal</p>
+<h4 id="Note-you-can-directly-add-message-with-m"><a href="#Note-you-can-directly-add-message-with-m" class="headerlink" title="Note: you can directly add message with -m"></a>Note: you can directly add message with <code>-m</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git commit -m 'Initial commit'</span><br></pre></td></tr></table></figure>
+<h3 id="Git-Commit-Recap"><a href="#Git-Commit-Recap" class="headerlink" title="Git Commit Recap"></a>Git Commit Recap</h3><p>The <code>git commit</code> command takes files from the Staging Index and saves them in the repository.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git commit</span><br></pre></td></tr></table></figure>
+<p>This command:</p>
+<ul>
+<li>will open the code editor that is specified in your configuration<ul>
+<li>(check out the Git configuration step from the first lesson to configure your editor)</li>
+</ul>
+</li>
+</ul>
+<p>Inside the code editor:</p>
+<ul>
+<li>a commit message must be supplied</li>
+<li>lines that start with a <code>#</code> are comments and will not be recorded</li>
+<li>save the file after adding a commit message</li>
+<li>close the editor to make the commit</li>
+</ul>
+<p>Then, use <code>git log</code> to review the commit you just made!</p>
+<h2 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a><code>git diff</code></h2><p>see changes that have been made but haven’t been committed, yet:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git diff</span><br></pre></td></tr></table></figure>
+<h2 id="Commit-Message"><a href="#Commit-Message" class="headerlink" title="Commit Message"></a>Commit Message</h2><p><a href="https://classroom.udacity.com/nanodegrees/nd004/parts/f05dd1a8-5cb0-44ce-b9e9-b30fc274bcdc/modules/6b870a4f-94d1-4e8b-986c-0ace411d63e7/lessons/5f584ce7-1b7b-4848-80c1-b559739ea363/concepts/0186fd0c-3929-4f0d-82bf-999ab24df61b" target="_blank" rel="noopener">书写建议</a></p>
+<p><a href="https://udacity.github.io/git-styleguide/" target="_blank" rel="noopener">Udacity Style (For reference)</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cji8kh5bh000i9vjh6y678513" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cji8oiriq000a4sjh4l4h1ppe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
