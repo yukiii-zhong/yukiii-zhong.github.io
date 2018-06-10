@@ -107,9 +107,61 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cji8ezxe7000e35jhovexzvae" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cji8kh5bq000s9vjhxxoa3smx" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Add-Commits-To-A-Repo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/10/Add-Commits-To-A-Repo/" class="article-date">
+  <time datetime="2018-06-10T07:17:15.000Z" itemprop="datePublished">2018-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/10/Add-Commits-To-A-Repo/"> Add Commits To A Repo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-create-the-Repo"><a href="#1-create-the-Repo" class="headerlink" title="1. create the Repo"></a>1. create the Repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git init new-git-project</span><br></pre></td></tr></table></figure>
+<h2 id="2-move-to-correct-project"><a href="#2-move-to-correct-project" class="headerlink" title="2. move to correct project"></a>2. move to correct project</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd new*</span><br></pre></td></tr></table></figure>
+<h2 id="3-Chek-Status-IMPORTANT"><a href="#3-Chek-Status-IMPORTANT" class="headerlink" title="3. Chek Status (IMPORTANT!)"></a>3. Chek Status (IMPORTANT!)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
+<h2 id="4-Make-Changes-Create-Files"><a href="#4-Make-Changes-Create-Files" class="headerlink" title="4. Make Changes (Create Files)"></a>4. Make Changes (Create Files)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> touch index.html</span><br><span class="line"><span class="meta">$</span> open -a /Applications/Subli* index.html</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir css</span><br><span class="line"><span class="meta">$</span> touch css/app.css</span><br></pre></td></tr></table></figure>
+<h2 id="5-Check-Status-Again"><a href="#5-Check-Status-Again" class="headerlink" title="5. Check Status Again"></a>5. Check Status Again</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fs647h6g46j31kw0ztwke.jpg" alt="img"></p>
+<h2 id="6-Staging-Files-git-add"><a href="#6-Staging-Files-git-add" class="headerlink" title="6. Staging Files(git add)"></a>6. Staging Files(<code>git add</code>)</h2><h3 id="6-1-Staging-all-files-and-directories"><a href="#6-1-Staging-all-files-and-directories" class="headerlink" title="6.1 Staging all files and directories"></a>6.1 Staging all files and directories</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git add .</span><br></pre></td></tr></table></figure>
+<h3 id="6-2-Staging-specific-files"><a href="#6-2-Staging-specific-files" class="headerlink" title="6.2 Staging specific files"></a>6.2 Staging specific files</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git add &lt;file1&gt; &lt;file2&gt; ... &lt;fileN&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> git add index* css/app.css js/app.js</span><br></pre></td></tr></table></figure>
+<h2 id="7-Check-Status"><a href="#7-Check-Status" class="headerlink" title="7. Check Status"></a>7. Check Status</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
+<h2 id="8-Make-a-Commitment"><a href="#8-Make-a-Commitment" class="headerlink" title="8. Make a Commitment"></a>8. Make a Commitment</h2><p>If not configured, configure it first</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git config --global core.editor &lt;your-editor's-config-went-here&gt;</span><br></pre></td></tr></table></figure>
+<p>Commit it </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git commit</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cji8kh5bh000i9vjh6y678513" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
     </footer>
   </div>
   
@@ -143,8 +195,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-when-Return-a-repo-Check-status"><a href="#1-when-Return-a-repo-Check-status" class="headerlink" title="1. when Return a repo, Check status"></a>1. when Return a repo, Check status</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
-<h2 id="2-Display-commits"><a href="#2-Display-commits" class="headerlink" title="2. Display commits"></a>2. Display commits</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log</span><br></pre></td></tr></table></figure>
+        <h2 id="1-when-Return-a-repo-Check-status"><a href="#1-when-Return-a-repo-Check-status" class="headerlink" title="1. when Return a repo, Check status"></a>1. when Return a repo, Check status</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git status</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-Display-commits"><a href="#2-Display-commits" class="headerlink" title="2. Display commits"></a>2. Display commits</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span></span></span><br></pre></td></tr></table></figure>
 <p>Display the SHA, Auother, Date, and content</p>
 <h3 id="Navigating-The-Log"><a href="#Navigating-The-Log" class="headerlink" title="Navigating The Log"></a>Navigating The Log</h3><p>Navigating in <a href="https://en.wikipedia.org/wiki/Less_(Unix" target="_blank" rel="noopener">Less</a>) </p>
 <ul>
@@ -167,10 +219,10 @@
 </li>
 </ul>
 <h3 id="Search-commits-by-message"><a href="#Search-commits-by-message" class="headerlink" title="Search commits by message"></a>Search commits by message</h3><p>EX: Message <code>Set article timestamp color</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --grep='Set article timestamp color'</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --grep=<span class="string">'Set article timestamp color'</span></span></span><br></pre></td></tr></table></figure>
 <p>OUTPUT:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">commit 5de135ab4ca51b7d86b53ea1f81bca100c6eeb40</span><br><span class="line">Author: Richard Kalehoff &lt;richardkalehoff@gmail.com&gt;</span><br><span class="line">Date:   Sat Dec 3 15:42:07 2016 -0500</span><br><span class="line"></span><br><span class="line">    Set article timestamp color</span><br></pre></td></tr></table></figure>
-<h3 id="Display-commits-in-oneline"><a href="#Display-commits-in-oneline" class="headerlink" title="Display commits in oneline"></a>Display commits in oneline</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --oneline</span><br></pre></td></tr></table></figure>
+<h3 id="Display-commits-in-oneline"><a href="#Display-commits-in-oneline" class="headerlink" title="Display commits in oneline"></a>Display commits in oneline</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --oneline</span></span><br></pre></td></tr></table></figure>
 <p>This command:</p>
 <ul>
 <li>lists one commit per line</li>
@@ -181,8 +233,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6f04ddd Add breakpoint for large-sized screens</span><br><span class="line">50d835d Add breakpoint for medium-sized screens</span><br><span class="line">0768f3d Add space around page edge</span><br><span class="line">f9720a9 Style page header</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <h2 id="git-log-stat-Recap"><a href="#git-log-stat-Recap" class="headerlink" title="git log --stat Recap"></a><code>git log --stat</code> Recap</h2><p><code>--stat</code> is a flag</p>
 <p>To recap, the <code>--stat</code> flag is used to alter how <code>git log</code> displays information:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --stat</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log 8d3ea36  --stat</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --<span class="built_in">stat</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> 8d3ea36  --<span class="built_in">stat</span></span></span><br></pre></td></tr></table></figure>
 <p>This command:</p>
 <ul>
 <li>displays the file(s) that have been modified</li>
@@ -197,7 +249,7 @@
 <li>displays the location of the lines that have been added/removed</li>
 <li>displays the actual changes that have been made</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log -p -w</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> -p -w</span></span><br></pre></td></tr></table></figure>
 <p> With<code>-w</code>, don’t highlight lines where only whitespace changes occurred. </p>
 <h1 id="Annotated-git-log-p-Output"><a href="#Annotated-git-log-p-Output" class="headerlink" title="Annotated git log -p Output"></a>Annotated <code>git log -p</code> Output</h1><p><strong><code>git log -p</code> or <code>git log --patch</code></strong></p>
 <p><img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a37f65_ud123-l3-git-log-p-lines-removed-annotated/ud123-l3-git-log-p-lines-removed-annotated.png" alt="img"></p>
@@ -227,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cji8ezxej000z35jh3b1ic8at" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cji8kh5c0001b9vjhfpik21ik" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -279,7 +331,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cji8ezxe2000735jhqlmy3t71" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cji8kh5bk000l9vjhuikhqs1a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -317,12 +369,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo rm -fr /Applications/AppName</span><br></pre></td></tr></table></figure>
+        <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo rm -fr /Applications/AppName</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cji8ezxet001q35jhip8t3tem" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cji8kh5cb001x9vjhmo1wfdsv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -359,17 +411,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="mv-Move-and-Rename"><a href="#mv-Move-and-Rename" class="headerlink" title="mv Move and Rename"></a><code>mv</code> Move and Rename</h2><h3 id="1-Use-mv-ro-rename"><a href="#1-Use-mv-ro-rename" class="headerlink" title="1. Use mv ro rename"></a>1. Use <code>mv</code> ro rename</h3><h4 id="1-if-file1-in-Documents-and-currently-in-Documents"><a href="#1-if-file1-in-Documents-and-currently-in-Documents" class="headerlink" title="1) if file1 in Documents, and currently in Documents"></a>1) if file1 in Documents, and currently in Documents</h4><p>Rename file1 to file2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv file1 file2</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv file1 file2</span></span><br></pre></td></tr></table></figure>
 <h4 id="2-if-file1-not-in-Documents"><a href="#2-if-file1-not-in-Documents" class="headerlink" title="2) if file1 not in Documents"></a>2) if file1 not in Documents</h4><p>Move file1 to Documents and rename it to file2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv file1 file2</span><br></pre></td></tr></table></figure>
-<h4 id="Note-file1-的位置可以在GUI里拖拽到Terminal"><a href="#Note-file1-的位置可以在GUI里拖拽到Terminal" class="headerlink" title="Note: file1 的位置可以在GUI里拖拽到Terminal"></a>Note: file1 的位置可以在GUI里拖拽到Terminal</h4><h3 id="2-Move-File"><a href="#2-Move-File" class="headerlink" title="2. Move File"></a>2. Move File</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv File Diretory</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv file1 file2</span></span><br></pre></td></tr></table></figure>
+<h4 id="Note-file1-的位置可以在GUI里拖拽到Terminal"><a href="#Note-file1-的位置可以在GUI里拖拽到Terminal" class="headerlink" title="Note: file1 的位置可以在GUI里拖拽到Terminal"></a>Note: file1 的位置可以在GUI里拖拽到Terminal</h4><h3 id="2-Move-File"><a href="#2-Move-File" class="headerlink" title="2. Move File"></a>2. Move File</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File Diretory</span></span><br></pre></td></tr></table></figure>
 <p>File可以是File/Directory</p>
-<h4 id="移动文件到上一级Directory"><a href="#移动文件到上一级Directory" class="headerlink" title="移动文件到上一级Directory"></a>移动文件到上一级Directory</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv File ../</span><br></pre></td></tr></table></figure>
+<h4 id="移动文件到上一级Directory"><a href="#移动文件到上一级Directory" class="headerlink" title="移动文件到上一级Directory"></a>移动文件到上一级Directory</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File ../</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cji8ezxea000j35jhy5nmbyw9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cji8kh5bu000z9vjhu60zju00" class="article-share-link">Share</a>
       
       
     </footer>
@@ -433,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cji8ezxdu000135jhxq7ef5j9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cji8kh5b500059vjhqmbbxb6m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -470,31 +522,31 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Shell-Command"><a href="#Shell-Command" class="headerlink" title="Shell Command"></a>Shell Command</h1><h2 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h2><p>Just like <code>print</code> in Python</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> echo 'Hello, World!'</span><br></pre></td></tr></table></figure>
-<h2 id="Navigating-directories"><a href="#Navigating-directories" class="headerlink" title="Navigating directories"></a>Navigating directories</h2><h3 id="1-cd-Change-Directory"><a href="#1-cd-Change-Directory" class="headerlink" title="1. cd: Change Directory"></a>1. <code>cd</code>: Change Directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd downloads</span><br></pre></td></tr></table></figure>
-<h4 id="To-parent-directory"><a href="#To-parent-directory" class="headerlink" title="To parent directory .."></a>To parent directory <code>..</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd ..</span><br></pre></td></tr></table></figure>
-<h3 id="2-ls-list"><a href="#2-ls-list" class="headerlink" title="2. ls: list"></a>2. <code>ls</code>: list</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd Pictures; ls</span><br><span class="line"><span class="meta">#</span> chage directory to 'Pictures', and list it.</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls Pictures</span><br><span class="line"><span class="meta">#</span> list 'Pictures' Directory</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls Pictures/../Pictures</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls .</span><br><span class="line"><span class="meta">#</span> list current directory</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls ~</span><br><span class="line"><span class="meta">#</span> list home directory</span><br></pre></td></tr></table></figure>
-<h4 id="2-2-ls-Other-command"><a href="#2-2-ls-Other-command" class="headerlink" title="2.2 ls Other command"></a>2.2 <code>ls</code> Other command</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ls -l</span><br><span class="line"><span class="meta">#</span> Long information about files</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls -l Documents/*.pdf</span><br><span class="line"><span class="meta">#</span> Long information for pdf files in Documents folder</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls Sub*</span><br><span class="line"><span class="meta">#</span> Show all the files start with 'Sub'(Case Sensitive)</span><br></pre></td></tr></table></figure>
-<h3 id="3-pwd-print-working-directory"><a href="#3-pwd-print-working-directory" class="headerlink" title="3. pwd print working directory"></a>3. <code>pwd</code> print working directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> pwd</span><br><span class="line">/Users/yukizhong/Dropbox/02_Coding/Local_Blog (Path)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'Hello, World!'</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="Navigating-directories"><a href="#Navigating-directories" class="headerlink" title="Navigating directories"></a>Navigating directories</h2><h3 id="1-cd-Change-Directory"><a href="#1-cd-Change-Directory" class="headerlink" title="1. cd: Change Directory"></a>1. <code>cd</code>: Change Directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> downloads</span></span><br></pre></td></tr></table></figure>
+<h4 id="To-parent-directory"><a href="#To-parent-directory" class="headerlink" title="To parent directory .."></a>To parent directory <code>..</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ..</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-ls-list"><a href="#2-ls-list" class="headerlink" title="2. ls: list"></a>2. <code>ls</code>: list</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> Pictures; ls</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> chage directory to <span class="string">'Pictures'</span>, and list it.</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls Pictures</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> list <span class="string">'Pictures'</span> Directory</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls Pictures/../Pictures</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> list current directory</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls ~</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> list home directory</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-2-ls-Other-command"><a href="#2-2-ls-Other-command" class="headerlink" title="2.2 ls Other command"></a>2.2 <code>ls</code> Other command</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -l</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Long information about files</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -l Documents/*.pdf</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Long information <span class="keyword">for</span> pdf files <span class="keyword">in</span> Documents folder</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls Sub*</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Show all the files start with <span class="string">'Sub'</span>(Case Sensitive)</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-pwd-print-working-directory"><a href="#3-pwd-print-working-directory" class="headerlink" title="3. pwd print working directory"></a>3. <code>pwd</code> print working directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">pwd</span></span></span><br><span class="line">/Users/yukizhong/Dropbox/02_Coding/Local_Blog (Path)</span><br></pre></td></tr></table></figure>
 <h3 id="4-Directory-names"><a href="#4-Directory-names" class="headerlink" title="4.  Directory names"></a>4.  Directory names</h3><ol>
 <li><code>ls ..</code>: Parent directory</li>
 <li><code>ls .</code>: Current Directory</li>
 <li><code>ls ~</code>: Home Directory</li>
 </ol>
 <h3 id="5-mkdir-make-directory-mv-move"><a href="#5-mkdir-make-directory-mv-move" class="headerlink" title="5. mkdir make directory, mv move"></a>5. <code>mkdir</code> make directory, <code>mv</code> move</h3><p><strong>EX:</strong> Move epub files to ‘Books’ Directory</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir Documents/Books</span><br><span class="line"><span class="meta">$</span> mv Documents/*.epub Documents/Books</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir Documents/Books</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv Documents/*.epub Documents/Books</span></span><br></pre></td></tr></table></figure>
 <h2 id="curl-C-URL-—-gt-See-URL"><a href="#curl-C-URL-—-gt-See-URL" class="headerlink" title="curl: C URL —&gt;  See URL"></a><code>curl</code>: C URL —&gt;  See URL</h2><h4 id="1-Download"><a href="#1-Download" class="headerlink" title="1. Download"></a>1. Download</h4><p>to download <code>https://tinyurl.com/zeyq9vc</code> and save it as the file <code>dictionary.txt</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> curl -o dictionary.txt -L 'https://tinyurl.com/zeyq9vc'</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl -o dictionary.txt -L <span class="string">'https://tinyurl.com/zeyq9vc'</span></span></span><br></pre></td></tr></table></figure>
 <ol>
 <li><code>-o</code>  download as</li>
 <li><code>-L</code>  redirect</li>
 </ol>
-<h2 id="cat-Catenate-连接-concatenate-less"><a href="#cat-Catenate-连接-concatenate-less" class="headerlink" title="cat: Catenate (连接) /concatenate; less"></a><code>cat</code>: Catenate (连接) /concatenate; <code>less</code></h2><h3 id="1-Display-Text-Files"><a href="#1-Display-Text-Files" class="headerlink" title="1. Display Text Files"></a>1. Display Text Files</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat dictionary.txt</span><br></pre></td></tr></table></figure>
+<h2 id="cat-Catenate-连接-concatenate-less"><a href="#cat-Catenate-连接-concatenate-less" class="headerlink" title="cat: Catenate (连接) /concatenate; less"></a><code>cat</code>: Catenate (连接) /concatenate; <code>less</code></h2><h3 id="1-Display-Text-Files"><a href="#1-Display-Text-Files" class="headerlink" title="1. Display Text Files"></a>1. Display Text Files</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat dictionary.txt</span></span><br></pre></td></tr></table></figure>
 <p><strong>Multiple files also works</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat mytext.txt mytext2.txt</span><br></pre></td></tr></table></figure>
-<h3 id="2-Create-a-new-file"><a href="#2-Create-a-new-file" class="headerlink" title="2. Create a new file"></a>2. Create a new file</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat &gt; filename.txt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>....(file Content)</span><br><span class="line"><span class="meta">#</span> 键入回车</span><br><span class="line"><span class="meta">#</span> 然后 Ctrl + D 退出</span><br></pre></td></tr></table></figure>
-<h3 id="3-合并-复制文件"><a href="#3-合并-复制文件" class="headerlink" title="3. 合并/复制文件"></a>3. 合并/复制文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat file1 file2 &gt; newFile3</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> cat file4 &gt; newFile5</span><br></pre></td></tr></table></figure>
-<h3 id="4-Append-text-file"><a href="#4-Append-text-file" class="headerlink" title="4. Append text file"></a>4. Append text file</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat file1.txt &gt;&gt; To_be_appended_File.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat mytext.txt mytext2.txt</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-Create-a-new-file"><a href="#2-Create-a-new-file" class="headerlink" title="2. Create a new file"></a>2. Create a new file</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat &gt; filename.txt</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">....(file Content)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 键入回车</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 然后 Ctrl + D 退出</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-合并-复制文件"><a href="#3-合并-复制文件" class="headerlink" title="3. 合并/复制文件"></a>3. 合并/复制文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat file1 file2 &gt; newFile3</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> cat file4 &gt; newFile5</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-Append-text-file"><a href="#4-Append-text-file" class="headerlink" title="4. Append text file"></a>4. Append text file</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat file1.txt &gt;&gt; To_be_appended_File.txt</span></span><br></pre></td></tr></table></figure>
 <h2 id="rm-remove-rmdir-remove-directory"><a href="#rm-remove-rmdir-remove-directory" class="headerlink" title="rm: remove rmdir: remove directory"></a><code>rm</code>: remove <code>rmdir</code>: remove directory</h2><p><code>$ rm filenme</code> —&gt; 直接删除，可以批量删除</p>
 <p><code>$ rm -i filename</code> —&gt; 删前询问，批量的话每个文件问一遍 (i: interactive)</p>
 <p><strong>EX:</strong></p>
@@ -505,12 +557,12 @@
 <li><code>Good Name Bad Face</code></li>
 </ol>
 <p>You want to remove files 3 and 4, while leaving 1 and 2 intact. </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> rm 'Bad File' 'Good Name Bad Face'</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> rm *'Bad F'*</span><br></pre></td></tr></table></figure>
-<h3 id="rmdir-When-the-directory-is-not-empty"><a href="#rmdir-When-the-directory-is-not-empty" class="headerlink" title="rmdir (When the directory is not empty)"></a><code>rmdir</code> (When the directory is not empty)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> rm -rf filename</span><br></pre></td></tr></table></figure>
-<h3 id="mkdir-Create-new-directory"><a href="#mkdir-Create-new-directory" class="headerlink" title="mkdir Create new directory"></a><code>mkdir</code> Create new directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir newDir</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> mkdir -p newDirPath new Dir</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> mkdir -p udacity-git-course/new-git-project &amp;&amp; cd $_</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm <span class="string">'Bad File'</span> <span class="string">'Good Name Bad Face'</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> rm *<span class="string">'Bad F'</span>*</span></span><br></pre></td></tr></table></figure>
+<h3 id="rmdir-When-the-directory-is-not-empty"><a href="#rmdir-When-the-directory-is-not-empty" class="headerlink" title="rmdir (When the directory is not empty)"></a><code>rmdir</code> (When the directory is not empty)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm -rf filename</span></span><br></pre></td></tr></table></figure>
+<h3 id="mkdir-Create-new-directory"><a href="#mkdir-Create-new-directory" class="headerlink" title="mkdir Create new directory"></a><code>mkdir</code> Create new directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir newDir</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir -p newDirPath new Dir</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir -p udacity-git-course/new-git-project &amp;&amp; <span class="built_in">cd</span> <span class="variable">$_</span></span></span><br></pre></td></tr></table></figure>
 <h2 id="rename"><a href="#rename" class="headerlink" title="rename"></a><code>rename</code></h2><p>In Mac, there is no <code>rename</code> command by default. </p>
 <p>So, firstly use homebrew to install <code>rename</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install rename</span><br><span class="line"><span class="meta">$</span> rename [switches|transforms] [files]</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> brew install rename</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> rename [switches|transforms] [files]</span></span><br></pre></td></tr></table></figure>
 <h2 id="grep-Search-txt-file-wc-word-count"><a href="#grep-Search-txt-file-wc-word-count" class="headerlink" title="grep Search txt file, wc: word count"></a><code>grep</code> Search txt file, <code>wc</code>: word count</h2><ol>
 <li><code>$ grep ibo dictionary.txt</code></li>
 </ol>
@@ -529,28 +581,28 @@
 <p><strong><code>wc</code></strong>:  Count how many words</p>
 <p><strong><code>-l</code>:</strong> How many lines</p>
 <h2 id="Shell-and-environment-variables"><a href="#Shell-and-environment-variables" class="headerlink" title="Shell and environment variables"></a>Shell and environment variables</h2><p><code>$Variable</code>  distinguish it</p>
-<h3 id="1-Establish-variable"><a href="#1-Establish-variable" class="headerlink" title="1. Establish variable"></a>1. Establish variable</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> num='1,2,3'</span><br><span class="line"><span class="meta">$</span> echo $num</span><br></pre></td></tr></table></figure>
+<h3 id="1-Establish-variable"><a href="#1-Establish-variable" class="headerlink" title="1. Establish variable"></a>1. Establish variable</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> num=<span class="string">'1,2,3'</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$num</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="2-Shell-Variable"><a href="#2-Shell-Variable" class="headerlink" title="2. Shell Variable"></a>2. Shell Variable</h3><p>Shell Variable is all about fixed for shell</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> echo $LINES x $COLUMNS</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$LINES</span> x <span class="variable">$COLUMNS</span></span></span><br></pre></td></tr></table></figure>
 <p>OUTPUT: <strong>12 x 80</strong> </p>
 <h3 id="3-Environment-variable"><a href="#3-Environment-variable" class="headerlink" title="3. Environment variable"></a>3. Environment variable</h3><p>Change in diff environments</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> echo $PATH</span><br><span class="line"><span class="meta">#</span>.....</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> PATH=$PATH:/new/dir/here</span><br><span class="line"><span class="meta">#</span> add new directories in the path</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> echo $PWD</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$PATH</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">.....</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> PATH=<span class="variable">$PATH</span>:/new/dir/here</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> add new directories <span class="keyword">in</span> the path</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$PWD</span></span></span><br></pre></td></tr></table></figure>
 <h2 id="Aliases"><a href="#Aliases" class="headerlink" title="Aliases"></a>Aliases</h2><ol>
 <li>You can use Aliases just as common commands</li>
 <li>Aliases only work in this terminal window.</li>
 <li>If you hope to keep alias work for all terminal, keep it in ‘.bash_profile’</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> Give alias to a command</span><br><span class="line"><span class="meta">$</span> alias ll='ls -la'</span><br><span class="line"><span class="meta">#</span> Run 'ls -la'</span><br><span class="line"><span class="meta">$</span> ll</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Show all alias</span><br><span class="line"><span class="meta">$</span> alias</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Give <span class="built_in">alias</span> to a <span class="built_in">command</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">alias</span> ll=<span class="string">'ls -la'</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Run <span class="string">'ls -la'</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ll</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Show all <span class="built_in">alias</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">alias</span></span></span><br></pre></td></tr></table></figure>
 <h2 id="find-mdfind"><a href="#find-mdfind" class="headerlink" title="find mdfind"></a><code>find</code> <code>mdfind</code></h2><h3 id="1-find"><a href="#1-find" class="headerlink" title="1. find"></a>1. <code>find</code></h3><p>在当前文件夹下搜索</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> find filename</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> find filename</span></span><br></pre></td></tr></table></figure>
 <h3 id="2-mdfind"><a href="#2-mdfind" class="headerlink" title="2. mdfind"></a>2. <code>mdfind</code></h3><p>类似Spotlight 强大版本</p>
-<h4 id="搜索包含keyword的文件"><a href="#搜索包含keyword的文件" class="headerlink" title="搜索包含keyword的文件"></a>搜索包含keyword的文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mdfind keyword</span><br></pre></td></tr></table></figure>
-<h4 id="搜索名字为filename的"><a href="#搜索名字为filename的" class="headerlink" title="搜索名字为filename的"></a>搜索名字为filename的</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mdfind -name filename</span><br></pre></td></tr></table></figure>
+<h4 id="搜索包含keyword的文件"><a href="#搜索包含keyword的文件" class="headerlink" title="搜索包含keyword的文件"></a>搜索包含keyword的文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mdfind keyword</span></span><br></pre></td></tr></table></figure>
+<h4 id="搜索名字为filename的"><a href="#搜索名字为filename的" class="headerlink" title="搜索名字为filename的"></a>搜索名字为filename的</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mdfind -name filename</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cji8ezxeh000w35jh2m45u4em" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cji8kh5bv00119vjh5k7zcsrg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -591,7 +643,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/15/python程序运行时间/" data-id="cji8ezxeq001i35jh8o31rxzu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/15/python程序运行时间/" data-id="cji8kh5c9001s9vjh4lxukntr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -636,50 +688,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" data-id="cji8ezxeg000s35jh7lar1t18" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-String-Manipulation" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/09/String-Manipulation/" class="article-date">
-  <time datetime="2018-05-09T15:10:12.000Z" itemprop="datePublished">2018-05-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/09/String-Manipulation/">String Manipulation</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="判断是否为字母-数字-isalnum-isalpha-isnumeric"><a href="#判断是否为字母-数字-isalnum-isalpha-isnumeric" class="headerlink" title="判断是否为字母, 数字 isalnum() isalpha() isnumeric()"></a>判断是否为字母, 数字 <code>isalnum()</code> <code>isalpha()</code> <code>isnumeric()</code></h3><h4 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 判断是否整个string都由alpha and numbers 组成</span></span><br><span class="line">str.isalnum()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断是否整个string</span></span><br><span class="line">str.isalpha()</span><br></pre></td></tr></table></figure>
-<h4 id="Return-Type"><a href="#Return-Type" class="headerlink" title="Return Type"></a>Return Type</h4><p>Boolean</p>
-<h4 id="Ex"><a href="#Ex" class="headerlink" title="Ex:"></a>Ex:</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># No space in string</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">"this2018"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str.isalnum()</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Space in string</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">"this is..."</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str.isalnum()</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Check isalpha()</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">"this2018"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str.isalpha()</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/09/String-Manipulation/" data-id="cji8ezxel001635jhpu3668q4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" data-id="cji8kh5by00179vjhd4xux22z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -750,6 +759,10 @@
           </li>
         
           <li>
+            <a href="/2018/06/10/Add-Commits-To-A-Repo/"> Add Commits To A Repo</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/02/display/">Display A Repos&#39;s Commits</a>
           </li>
         
@@ -759,10 +772,6 @@
         
           <li>
             <a href="/2018/06/01/unInstall-with-command/">unInstall with command</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/29/Move-and-Rename/">Move and Rename</a>
           </li>
         
       </ul>
