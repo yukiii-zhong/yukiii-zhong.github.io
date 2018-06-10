@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Display A Repos&#39;s Commits | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. when Return a repo, Check status1$ git status 2. Display commits1$ git log Display the SHA, Auother, Date, and content Navigating The LogNavigating in Less)   to scroll down, press  j or ↓ to move">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Display A Repos&#39;s Commits">
+<meta property="og:url" content="http://yoursite.com/2018/06/02/display/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. when Return a repo, Check status1$ git status 2. Display commits1$ git log Display the SHA, Auother, Date, and content Navigating The LogNavigating in Less)   to scroll down, press  j or ↓ to move">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a37f65_ud123-l3-git-log-p-lines-removed-annotated/ud123-l3-git-log-p-lines-removed-annotated.png">
+<meta property="og:updated_time" content="2018-06-03T12:36:04.608Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Display A Repos&#39;s Commits">
+<meta name="twitter:description" content="1. when Return a repo, Check status1$ git status 2. Display commits1$ git log Display the SHA, Auother, Date, and content Navigating The LogNavigating in Less)   to scroll down, press  j or ↓ to move">
+<meta name="twitter:image" content="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a37f65_ud123-l3-git-log-p-lines-removed-annotated/ud123-l3-git-log-p-lines-removed-annotated.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-display" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/02/display/" class="article-date">
+  <time datetime="2018-06-02T14:38:20.000Z" itemprop="datePublished">2018-06-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Display A Repos&#39;s Commits
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-when-Return-a-repo-Check-status"><a href="#1-when-Return-a-repo-Check-status" class="headerlink" title="1. when Return a repo, Check status"></a>1. when Return a repo, Check status</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
+<h2 id="2-Display-commits"><a href="#2-Display-commits" class="headerlink" title="2. Display commits"></a>2. Display commits</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log</span><br></pre></td></tr></table></figure>
+<p>Display the SHA, Auother, Date, and content</p>
+<h3 id="Navigating-The-Log"><a href="#Navigating-The-Log" class="headerlink" title="Navigating The Log"></a>Navigating The Log</h3><p>Navigating in <a href="https://en.wikipedia.org/wiki/Less_(Unix" target="_blank" rel="noopener">Less</a>) </p>
+<ul>
+<li><p>to scroll down, press</p>
+<ul>
+<li><code>j</code> or <code>↓</code> to move <em>down</em> one line at a time</li>
+<li><code>d</code> to move by half the page screen</li>
+<li><code>f</code> to move by a whole page screen </li>
+</ul>
+</li>
+<li><p>to scroll up, press</p>
+<ul>
+<li><code>k</code> or <code>↑</code> to move <em>up</em> one line at a time</li>
+<li><code>u</code> to move by half the page screen</li>
+<li><code>b</code> to move by a whole page screen</li>
+</ul>
+</li>
+<li><p>press <code>q</code> to <strong>quit</strong> out of the log </p>
+<p>(returns to the regular command prompt)</p>
+</li>
+</ul>
+<h3 id="Search-commits-by-message"><a href="#Search-commits-by-message" class="headerlink" title="Search commits by message"></a>Search commits by message</h3><p>EX: Message <code>Set article timestamp color</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --grep='Set article timestamp color'</span><br></pre></td></tr></table></figure>
+<p>OUTPUT:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">commit 5de135ab4ca51b7d86b53ea1f81bca100c6eeb40</span><br><span class="line">Author: Richard Kalehoff &lt;richardkalehoff@gmail.com&gt;</span><br><span class="line">Date:   Sat Dec 3 15:42:07 2016 -0500</span><br><span class="line"></span><br><span class="line">    Set article timestamp color</span><br></pre></td></tr></table></figure>
+<h3 id="Display-commits-in-oneline"><a href="#Display-commits-in-oneline" class="headerlink" title="Display commits in oneline"></a>Display commits in oneline</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --oneline</span><br></pre></td></tr></table></figure>
+<p>This command:</p>
+<ul>
+<li>lists one commit per line</li>
+<li>shows the first 7 characters of the commit’s SHA</li>
+<li>shows the commit’s message</li>
+</ul>
+<p><strong>OUTPUT</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6f04ddd Add breakpoint for large-sized screens</span><br><span class="line">50d835d Add breakpoint for medium-sized screens</span><br><span class="line">0768f3d Add space around page edge</span><br><span class="line">f9720a9 Style page header</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h2 id="git-log-stat-Recap"><a href="#git-log-stat-Recap" class="headerlink" title="git log --stat Recap"></a><code>git log --stat</code> Recap</h2><p><code>--stat</code> is a flag</p>
+<p>To recap, the <code>--stat</code> flag is used to alter how <code>git log</code> displays information:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --stat</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log 8d3ea36  --stat</span><br></pre></td></tr></table></figure>
+<p>This command:</p>
+<ul>
+<li>displays the file(s) that have been modified</li>
+<li>displays the number of lines that have been added/removed</li>
+<li>displays a summary line with the total number of modified files and lines that have been added/removed</li>
+</ul>
+<h2 id="git-log-p-Recap"><a href="#git-log-p-Recap" class="headerlink" title="git log -p Recap"></a><code>git log -p</code> Recap</h2><p>To recap, the <code>-p</code> flag (which is the same as the <code>--patch</code> flag) is used to alter how <code>git log</code> displays information:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log -p</span><br></pre></td></tr></table></figure>
+<p>This command adds the following to the default output:</p>
+<ul>
+<li>displays the files that have been modified</li>
+<li>displays the location of the lines that have been added/removed</li>
+<li>displays the actual changes that have been made</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log -p -w</span><br></pre></td></tr></table></figure>
+<p> With<code>-w</code>, don’t highlight lines where only whitespace changes occurred. </p>
+<h1 id="Annotated-git-log-p-Output"><a href="#Annotated-git-log-p-Output" class="headerlink" title="Annotated git log -p Output"></a>Annotated <code>git log -p</code> Output</h1><p><strong><code>git log -p</code> or <code>git log --patch</code></strong></p>
+<p><img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a37f65_ud123-l3-git-log-p-lines-removed-annotated/ud123-l3-git-log-p-lines-removed-annotated.png" alt="img"></p>
+<p>Using the image above, let’s do a quick recap of the <code>git log -p</code> output:</p>
+<ul>
+<li>🔵 - the file that is being displayed</li>
+<li>🔶 - the hash of the first version of the file and the hash of the second version of the file not usually important, so it’s safe to ignore</li>
+<li>❤️ - the old version and current version of the file</li>
+<li>🔍 - the lines where the file is added and how many lines there are<ul>
+<li><code>-15,83</code> indicates that the old version (represented by the -) started at line 15 and that the file had 83 lines</li>
+<li><code>+15,85</code> indicates that the current version (represented by the +) starts at line 15 and that there are now 85 lines…these 85 lines are shown in the patch below</li>
+</ul>
+</li>
+<li>✏️ - the actual changes made in the commit<ul>
+<li>lines that are red and start with a minus (-) were in the original version of the file but have been removed by the commit</li>
+<li>lines that are green and start with a plus (+) are new lines that have been added in the commit</li>
+</ul>
+</li>
+</ul>
+<h2 id="git-show"><a href="#git-show" class="headerlink" title="git show"></a><code>git show</code></h2><p><code>git show</code> can be combined with most of the other flags we’ve looked at:</p>
+<ul>
+<li><code>--stat</code> - to show the how many files were changed and the number of lines that were added/removed</li>
+<li><code>-p</code> or <code>--patch</code> - this the default, but if <code>--stat</code> is used, the patch won’t display, so pass <code>-p</code> to add it again</li>
+<li><code>-w</code> - to ignore changes to whitespace</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cji8ezxej000z35jh3b1ic8at" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/01/Leetcode-经验/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Leetcode 经验
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/02/Create-A-Git-repo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Create A Git repo</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell-Command/">Shell Command</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XOR/">XOR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lambda/">lambda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/list/">list</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 20px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/09/01/Leetcode-经验/">Leetcode 经验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/02/display/">Display A Repos&#39;s Commits</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/02/Create-A-Git-repo/">Create A Git repo</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/01/unInstall-with-command/">unInstall with command</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/29/Move-and-Rename/">Move and Rename</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
