@@ -107,9 +107,88 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cji8tal9s0013wcjool9jlqg7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjid6ouec0012s6jh5gzptllq" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Tagging-Branching-and-Merging" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/13/Tagging-Branching-and-Merging/" class="article-date">
+  <time datetime="2018-06-13T06:52:12.000Z" itemprop="datePublished">2018-06-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/13/Tagging-Branching-and-Merging/">Tagging,Branching, and Merging</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Git-Tagging"><a href="#Git-Tagging" class="headerlink" title="Git Tagging"></a>Git Tagging</h2><h3 id="List-all-tags"><a href="#List-all-tags" class="headerlink" title="List all tags"></a>List all tags</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tag-commits"><a href="#Tag-commits" class="headerlink" title="Tag commits"></a>Tag commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -a v1.0</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>add a tag to the most recent commits</p>
+</li>
+<li><p><code>-a</code> means <code>annotated</code>, include extra information for the tag</p>
+<p>You can also <code>$ git tag v1.0</code>, but <code>-a</code> is recommended</p>
+</li>
+</ol>
+<h3 id="Tag-a-specific-commit"><a href="#Tag-a-specific-commit" class="headerlink" title="Tag a specific commit"></a>Tag a specific commit</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -a v1.0 a87984</span></span><br></pre></td></tr></table></figure>
+<h3 id="See-all-commits-with-the-tag"><a href="#See-all-commits-with-the-tag" class="headerlink" title="See all commits with the tag"></a>See all commits with the tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> v1.0</span></span><br></pre></td></tr></table></figure>
+<h3 id="Delete-a-tag"><a href="#Delete-a-tag" class="headerlink" title="Delete a tag"></a>Delete a tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -d v1.0</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-Branch"><a href="#Git-Branch" class="headerlink" title="Git Branch"></a>Git Branch</h2><h3 id="1-List-all-branches"><a href="#1-List-all-branches" class="headerlink" title="1. List all branches"></a>1. List all branches</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch</span></span><br></pre></td></tr></table></figure>
+<p>You can also find which branch you are currently in through it.</p>
+<h3 id="2-Create-a-branch"><a href="#2-Create-a-branch" class="headerlink" title="2. Create a branch"></a>2. Create a branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch sidebar</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>newly created branch <code>sidebar</code> points to the same commit as <code>master</code></li>
+</ul>
+<h4 id="2-1-Create-a-brach-points-to-a-specific-commit"><a href="#2-1-Create-a-brach-points-to-a-specific-commit" class="headerlink" title="2.1 Create a brach points to a specific commit"></a>2.1 Create a brach points to a specific commit</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch sidebar 42a69f</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-Switch-branch"><a href="#3-Switch-branch" class="headerlink" title="3.  Switch branch"></a>3.  Switch branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git checkout sidebar</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>remove all files and directories from the Working Directory that Git is tracking</p>
+<ul>
+<li>(files that Git tracks are stored in the repository, so nothing is lost)</li>
+</ul>
+</li>
+<li><p>go into the repository and pull out all of the files and directories of the commit that the branch points to</p>
+</li>
+</ul>
+<h3 id="4-See-all-commits-in-the-branch"><a href="#4-See-all-commits-in-the-branch" class="headerlink" title="4. See all commits in the branch"></a>4. See all commits in the branch</h3><ul>
+<li>Fistly, <code>checkout</code> to this branch, then: </li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span></span></span><br></pre></td></tr></table></figure>
+<p><code>HEAD--&gt;</code> points to the active branch</p>
+<h3 id="5-Delete-a-brach"><a href="#5-Delete-a-brach" class="headerlink" title="5. Delete a brach"></a>5. Delete a brach</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch -d sidebar</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-Switch-and-Create-Branch-In-One-Command"><a href="#6-Switch-and-Create-Branch-In-One-Command" class="headerlink" title="6. Switch and Create Branch In One Command"></a>6. Switch and Create Branch In One Command</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git checkout -b sidebar</span></span><br></pre></td></tr></table></figure>
+<h3 id="7-See-All-Branches-At-Once"><a href="#7-See-All-Branches-At-Once" class="headerlink" title="7. See All Branches At Once"></a>7. See All Branches At Once</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --oneline --graph --all</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjid6oued0016s6jhwng3rzzc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
     </footer>
   </div>
   
@@ -139,24 +218,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-create-the-Repo"><a href="#1-create-the-Repo" class="headerlink" title="1. create the Repo"></a>1. create the Repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git init new-git-project</span><br></pre></td></tr></table></figure>
-<h2 id="2-move-to-correct-project"><a href="#2-move-to-correct-project" class="headerlink" title="2. move to correct project"></a>2. move to correct project</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd new*</span><br></pre></td></tr></table></figure>
-<h2 id="3-Chek-Status-IMPORTANT"><a href="#3-Chek-Status-IMPORTANT" class="headerlink" title="3. Chek Status (IMPORTANT!)"></a>3. Chek Status (IMPORTANT!)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
-<h2 id="4-Make-Changes-Create-Files"><a href="#4-Make-Changes-Create-Files" class="headerlink" title="4. Make Changes (Create Files)"></a>4. Make Changes (Create Files)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> touch index.html</span><br><span class="line"><span class="meta">$</span> open -a /Applications/Subli* index.html</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir css</span><br><span class="line"><span class="meta">$</span> touch css/app.css</span><br></pre></td></tr></table></figure>
-<h2 id="5-Check-Status-Again"><a href="#5-Check-Status-Again" class="headerlink" title="5. Check Status Again"></a>5. Check Status Again</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
+        <h2 id="1-create-the-Repo"><a href="#1-create-the-Repo" class="headerlink" title="1. create the Repo"></a>1. create the Repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git init new-git-project</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-move-to-correct-project"><a href="#2-move-to-correct-project" class="headerlink" title="2. move to correct project"></a>2. move to correct project</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> new*</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-Chek-Status-IMPORTANT"><a href="#3-Chek-Status-IMPORTANT" class="headerlink" title="3. Chek Status (IMPORTANT!)"></a>3. Chek Status (IMPORTANT!)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git status</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-Make-Changes-Create-Files"><a href="#4-Make-Changes-Create-Files" class="headerlink" title="4. Make Changes (Create Files)"></a>4. Make Changes (Create Files)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> touch index.html</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> open -a /Applications/Subli* index.html</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir css</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> touch css/app.css</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-Check-Status-Again"><a href="#5-Check-Status-Again" class="headerlink" title="5. Check Status Again"></a>5. Check Status Again</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git status</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fs647h6g46j31kw0ztwke.jpg" alt="img"></p>
-<h2 id="6-Staging-Files-git-add"><a href="#6-Staging-Files-git-add" class="headerlink" title="6. Staging Files(git add)"></a>6. Staging Files(<code>git add</code>)</h2><h3 id="6-1-Staging-all-files-and-directories"><a href="#6-1-Staging-all-files-and-directories" class="headerlink" title="6.1 Staging all files and directories"></a>6.1 Staging all files and directories</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git add .</span><br></pre></td></tr></table></figure>
-<h3 id="6-2-Staging-specific-files"><a href="#6-2-Staging-specific-files" class="headerlink" title="6.2 Staging specific files"></a>6.2 Staging specific files</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git add &lt;file1&gt; &lt;file2&gt; ... &lt;fileN&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> git add index* css/app.css js/app.js</span><br></pre></td></tr></table></figure>
-<h2 id="7-Check-Status"><a href="#7-Check-Status" class="headerlink" title="7. Check Status"></a>7. Check Status</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
+<h2 id="6-Staging-Files-git-add"><a href="#6-Staging-Files-git-add" class="headerlink" title="6. Staging Files(git add)"></a>6. Staging Files(<code>git add</code>)</h2><h3 id="6-1-Staging-all-files-and-directories"><a href="#6-1-Staging-all-files-and-directories" class="headerlink" title="6.1 Staging all files and directories"></a>6.1 Staging all files and directories</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git add .</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-2-Staging-specific-files"><a href="#6-2-Staging-specific-files" class="headerlink" title="6.2 Staging specific files"></a>6.2 Staging specific files</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git add &lt;file1&gt; &lt;file2&gt; ... &lt;fileN&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> git add index* css/app.css js/app.js</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-Check-Status"><a href="#7-Check-Status" class="headerlink" title="7. Check Status"></a>7. Check Status</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git status</span></span><br></pre></td></tr></table></figure>
 <h2 id="8-Make-a-Commitment"><a href="#8-Make-a-Commitment" class="headerlink" title="8. Make a Commitment"></a>8. Make a Commitment</h2><p>If not configured, configure it first</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git config --global core.editor &lt;your-editor's-config-went-here&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git config --global core.editor &lt;your-editor<span class="string">'s-config-went-here&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>Commit it </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git commit</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git commit</span></span><br></pre></td></tr></table></figure>
 <p>Then open it in the code editor,  <strong>Edit, save and close</strong> the file, then return back to the terminal</p>
-<h4 id="Note-you-can-directly-add-message-with-m"><a href="#Note-you-can-directly-add-message-with-m" class="headerlink" title="Note: you can directly add message with -m"></a>Note: you can directly add message with <code>-m</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git commit -m 'Initial commit'</span><br></pre></td></tr></table></figure>
+<h4 id="Note-you-can-directly-add-message-with-m"><a href="#Note-you-can-directly-add-message-with-m" class="headerlink" title="Note: you can directly add message with -m"></a>Note: you can directly add message with <code>-m</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git commit -m <span class="string">'Initial commit'</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="Git-Commit-Recap"><a href="#Git-Commit-Recap" class="headerlink" title="Git Commit Recap"></a>Git Commit Recap</h3><p>The <code>git commit</code> command takes files from the Staging Index and saves them in the repository.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git commit</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git commit</span></span><br></pre></td></tr></table></figure>
 <p>This command:</p>
 <ul>
 <li>will open the code editor that is specified in your configuration<ul>
@@ -173,12 +252,12 @@
 </ul>
 <p>Then, use <code>git log</code> to review the commit you just made!</p>
 <h2 id="9-git-diff"><a href="#9-git-diff" class="headerlink" title="9. git diff"></a>9. <code>git diff</code></h2><p>see changes that have been made but haven’t been committed, yet:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git diff</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git diff</span></span><br></pre></td></tr></table></figure>
 <h2 id="10-Commit-Message"><a href="#10-Commit-Message" class="headerlink" title="10. Commit Message"></a>10. Commit Message</h2><p><a href="https://classroom.udacity.com/nanodegrees/nd004/parts/f05dd1a8-5cb0-44ce-b9e9-b30fc274bcdc/modules/6b870a4f-94d1-4e8b-986c-0ace411d63e7/lessons/5f584ce7-1b7b-4848-80c1-b559739ea363/concepts/0186fd0c-3929-4f0d-82bf-999ab24df61b" target="_blank" rel="noopener">书写建议</a></p>
 <p><a href="https://udacity.github.io/git-styleguide/" target="_blank" rel="noopener">Udacity Style (For reference)</a></p>
 <h3 id="11-Having-Git-Ignore-Files"><a href="#11-Having-Git-Ignore-Files" class="headerlink" title="11. Having Git Ignore Files"></a>11. Having Git Ignore Files</h3><p> the <code>.gitignore</code> file is used to tell Git about the files that Git should not track. This file should be placed in the same directory that the <code>.git</code> directory is in.</p>
-<h4 id="Step1-Add-file-gitignore-in-the-same-directory-as-git"><a href="#Step1-Add-file-gitignore-in-the-same-directory-as-git" class="headerlink" title="Step1: Add file .gitignore, in the same directory as .git"></a>Step1: Add file <code>.gitignore</code>, in the same directory as <code>.git</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> touch .gitignore</span><br></pre></td></tr></table></figure>
-<h4 id="Step2-write-the-ignored-file-name-in-the-gitignore"><a href="#Step2-write-the-ignored-file-name-in-the-gitignore" class="headerlink" title="Step2: write the ignored file name in the .gitignore"></a>Step2: write the ignored file name in the <code>.gitignore</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> open .gitignore</span><br></pre></td></tr></table></figure>
+<h4 id="Step1-Add-file-gitignore-in-the-same-directory-as-git"><a href="#Step1-Add-file-gitignore-in-the-same-directory-as-git" class="headerlink" title="Step1: Add file .gitignore, in the same directory as .git"></a>Step1: Add file <code>.gitignore</code>, in the same directory as <code>.git</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> touch .gitignore</span></span><br></pre></td></tr></table></figure>
+<h4 id="Step2-write-the-ignored-file-name-in-the-gitignore"><a href="#Step2-write-the-ignored-file-name-in-the-gitignore" class="headerlink" title="Step2: write the ignored file name in the .gitignore"></a>Step2: write the ignored file name in the <code>.gitignore</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> open .gitignore</span></span><br></pre></td></tr></table></figure>
 <p>Add the following line in it.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">project.docx</span><br><span class="line"></span><br><span class="line">samples/*.jpg</span><br><span class="line"># All the .jpg files in &apos;samples&apos; directory</span><br></pre></td></tr></table></figure>
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fs6cofplavj30pn0bkdh4.jpg" alt="image-20180610202156014"></p>
@@ -186,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cji8tal8y000fwcjo55zevefj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cjid6oue7000rs6jhsfjqby0i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -308,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cji8tal9x0019wcjow3x1hopf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cjid6oueo001qs6jhbbpyz1u3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -360,7 +439,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cji8tal9g000mwcjotpi8umj9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cjid6oue3000ls6jh99x34ebx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -403,7 +482,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cji8talag001uwcjob66wtbde" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cjid6oueq001ss6jhrgmxse7i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -440,18 +519,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="mv-Move-and-Rename"><a href="#mv-Move-and-Rename" class="headerlink" title="mv Move and Rename"></a><code>mv</code> Move and Rename</h2><h3 id="1-Use-mv-ro-rename"><a href="#1-Use-mv-ro-rename" class="headerlink" title="1. Use mv ro rename"></a>1. Use <code>mv</code> ro rename</h3><h4 id="1-if-file1-in-Documents-and-currently-in-Documents"><a href="#1-if-file1-in-Documents-and-currently-in-Documents" class="headerlink" title="1) if file1 in Documents, and currently in Documents"></a>1) if file1 in Documents, and currently in Documents</h4><p>Rename file1 to file2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv file1 file2</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv file1 file2</span></span><br></pre></td></tr></table></figure>
 <h4 id="2-if-file1-not-in-Documents"><a href="#2-if-file1-not-in-Documents" class="headerlink" title="2) if file1 not in Documents"></a>2) if file1 not in Documents</h4><p>Move file1 to Documents and rename it to file2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv file1 file2</span><br></pre></td></tr></table></figure>
-<h4 id="Note-file1-的位置可以在GUI里拖拽到Terminal"><a href="#Note-file1-的位置可以在GUI里拖拽到Terminal" class="headerlink" title="Note: file1 的位置可以在GUI里拖拽到Terminal"></a>Note: file1 的位置可以在GUI里拖拽到Terminal</h4><h3 id="2-Move-File"><a href="#2-Move-File" class="headerlink" title="2. Move File"></a>2. Move File</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv File Diretory</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv file1 file2</span></span><br></pre></td></tr></table></figure>
+<h4 id="Note-file1-的位置可以在GUI里拖拽到Terminal"><a href="#Note-file1-的位置可以在GUI里拖拽到Terminal" class="headerlink" title="Note: file1 的位置可以在GUI里拖拽到Terminal"></a>Note: file1 的位置可以在GUI里拖拽到Terminal</h4><h3 id="2-Move-File"><a href="#2-Move-File" class="headerlink" title="2. Move File"></a>2. Move File</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File Diretory</span></span><br></pre></td></tr></table></figure>
 <p>File可以是File/Directory</p>
-<h4 id="移动文件到上一级Directory"><a href="#移动文件到上一级Directory" class="headerlink" title="移动文件到上一级Directory"></a>移动文件到上一级Directory</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv File ../</span><br></pre></td></tr></table></figure>
-<h4 id="移动到当前文件夹"><a href="#移动到当前文件夹" class="headerlink" title="移动到当前文件夹"></a>移动到当前文件夹</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv File .</span><br></pre></td></tr></table></figure>
+<h4 id="移动文件到上一级Directory"><a href="#移动文件到上一级Directory" class="headerlink" title="移动文件到上一级Directory"></a>移动文件到上一级Directory</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File ../</span></span><br></pre></td></tr></table></figure>
+<h4 id="移动到当前文件夹"><a href="#移动到当前文件夹" class="headerlink" title="移动到当前文件夹"></a>移动到当前文件夹</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File .</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cji8tal9j000swcjo9hlovofr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cjid6oue9000us6jhy4od9zkz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -515,7 +594,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cji8tal8m0006wcjo3553oxbd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cjid6oudw000as6jhlurnjcl3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -632,7 +711,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cji8tal9q0012wcjo045w8dwo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cjid6oueg001ds6jhc4uydzk5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -673,52 +752,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/15/python程序运行时间/" data-id="cji8talac001qwcjo3agufw0b" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Tree-Traversals-Inorder-Preorder-and-Postorder" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" class="article-date">
-  <time datetime="2018-05-11T10:45:45.000Z" itemprop="datePublished">2018-05-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/">Tree Traversals (Inorder, Preorder and Postorder)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Object-Binary-Tree"><a href="#Object-Binary-Tree" class="headerlink" title="Object: Binary Tree"></a>Object: Binary Tree</h3><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fr7lcqqw6ag307704cglf.gif" alt="tree12"></p>
-<p><strong>Depth First Traversals:</strong> </p>
-<p>(a) <strong>Inorder</strong> (Left, Root, Right) : 4 2 5 1 3 </p>
-<p>(b) <strong>Preorder</strong> (Root, Left, Right) : 1 2 4 5 3 </p>
-<p>(c) <strong>Postorder</strong> (Left, Right, Root) : 4 5 2 3 1</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" data-id="cji8tal9v0017wcjo592eesk7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/15/python程序运行时间/" data-id="cjid6ouer001vs6jhic6qkfyk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -789,6 +823,10 @@
           </li>
         
           <li>
+            <a href="/2018/06/13/Tagging-Branching-and-Merging/">Tagging,Branching, and Merging</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/10/Add-Commits-To-A-Repo/"> Add Commits To A Repo</a>
           </li>
         
@@ -798,10 +836,6 @@
         
           <li>
             <a href="/2018/06/02/Create-A-Git-repo/">Create A Git repo</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/01/unInstall-with-command/">unInstall with command</a>
           </li>
         
       </ul>
