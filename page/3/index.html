@@ -62,6 +62,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-二进制十进制转换-bin()-int(String,2)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/" class="article-date">
+  <time datetime="2018-05-01T17:06:11.000Z" itemprop="datePublished">2018-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/">二进制十进制转换 bin() int(String,2)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="二进制十进制转换"><a href="#二进制十进制转换" class="headerlink" title="二进制十进制转换"></a>二进制十进制转换</h1><h2 id="1-十进制—-gt-二进制-bin-函数-in-Python"><a href="#1-十进制—-gt-二进制-bin-函数-in-Python" class="headerlink" title="1. 十进制—&gt;二进制  bin() 函数 in Python"></a>1. 十进制—&gt;二进制  <code>bin()</code> 函数 in Python</h2><p><strong>Input type:</strong>  int/ long int</p>
+<p><strong>Return type:</strong> String</p>
+<p>将int/ long int 转换为：二进制表示的<strong>String</strong>, 数字前面+ <strong>“0b”</strong>, 表示二进制</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">S = bin(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># S = '0b10'</span></span><br><span class="line"><span class="comment">#'0b'--&gt;表示二进制， '10'--&gt;2的二进制表示方法</span></span><br></pre></td></tr></table></figure>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>既然返回值为String，就可以用String的方式来使用</p>
+<p>EX：<code>ans = bin(2^3).count(&quot;1&quot;)</code></p>
+<p><code>bin(2^3)</code> —&gt; <code>0b111</code></p>
+<p><code>&quot;0b111&quot;.count(&quot;1&quot;)</code>—&gt;<code>3</code></p>
+<h2 id="2-二进制-—-gt-十进制-int-函数-in-Python"><a href="#2-二进制-—-gt-十进制-int-函数-in-Python" class="headerlink" title="2. 二进制 —&gt; 十进制: int(,)函数 in Python"></a>2. 二进制 —&gt; 十进制: <code>int(,)</code>函数 in Python</h2><p><code>int(String 二进制表示，2)</code></p>
+<p>The Input String can directly be the number, or the <code>bin()</code> represents</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">I1 = int(<span class="string">'11'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment"># I1 = 3</span></span><br><span class="line"></span><br><span class="line">I1 = int(<span class="string">'0b11'</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment"># I1 = 3</span></span><br></pre></td></tr></table></figure>
+<h2 id="EX-Leetcode-461-Hamming-Distance"><a href="#EX-Leetcode-461-Hamming-Distance" class="headerlink" title="EX: Leetcode 461. Hamming Distance"></a>EX: Leetcode 461. Hamming Distance</h2><blockquote>
+<p>The <a href="https://en.wikipedia.org/wiki/Hamming_distance" target="_blank" rel="noopener">Hamming distance</a> between two integers is the number of positions at which the corresponding bits are different.</p>
+<p>Given two integers <code>x</code> and <code>y</code>, calculate the Hamming distance.</p>
+<p><strong>Note:</strong><br>0 ≤ <code>x</code>, <code>y</code> &lt; 231.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: x = 1, y = 4</span><br><span class="line">&gt;</span><br><span class="line">&gt; Output: 2</span><br><span class="line">&gt;</span><br><span class="line">&gt; Explanation:</span><br><span class="line">&gt; 1   (0 0 0 1)</span><br><span class="line">&gt; 4   (0 1 0 0)</span><br><span class="line">&gt;        ↑   ↑</span><br><span class="line">&gt;</span><br><span class="line">&gt; The above arrows point to positions where the corresponding bits are different.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingDistance</span><span class="params">(self, x, y)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :type y: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">return</span> bin(x^y).count(<span class="string">"1"</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjifqjr5r001zjojht6qrflui" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-按位与、或、异或等运算方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/30/按位与、或、异或等运算方法/" class="article-date">
@@ -130,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjid6ouet001zs6jhi7hxstq0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjifqjr5u0025jojh0nojmrju" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -191,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjid6oudh0000s6jha619pepx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjifqjr2a0000jojh7f0t219n" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XOR/">XOR</a></li></ul>
@@ -242,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjid6ouef0019s6jhcrmkudg7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjifqjr58001gjojh8z01w6ga" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -274,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjid6oudx000bs6jhk4easx7l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjifqjr4t0015jojh104xyvr9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjid6oues001xs6jhh9hq337l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjifqjr5p001yjojhjdxzgg26" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/list/">list</a></li></ul>
@@ -388,52 +449,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjid6oue5000ps6jhjhyr2jgh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjifqjr5g001mjojh50scidxd" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ArrayList-Example" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/24/ArrayList-Example/" class="article-date">
-  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/ArrayList-Example/">ArrayList Example</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Basic-Use-Example"><a href="#Basic-Use-Example" class="headerlink" title="Basic Use Example"></a>Basic Use Example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; generate(<span class="keyword">int</span> numRows) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">0</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        List&lt;Integer&gt; row1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        row1.add(<span class="number">1</span>);</span><br><span class="line">        ans.add(row1);</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">1</span>) <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            List&lt;Integer&gt; theRow = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            List&lt;Integer&gt; prevRow = ans.get(i-<span class="number">1</span>);</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt;i;j++) &#123;</span><br><span class="line">                theRow.add(prevRow.get(j-<span class="number">1</span>) + prevRow.get(j));</span><br><span class="line">            &#125;</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            ans.add(theRow);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjid6oue1000is6jh8orld2tc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li></ul>
-
     </footer>
   </div>
   
@@ -472,10 +490,53 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjid6oueb0010s6jhj73s43m3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjifqjr4n000yjojh7itdp7k5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArrayList-Example" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/24/ArrayList-Example/" class="article-date">
+  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/24/ArrayList-Example/">ArrayList Example</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Basic-Use-Example"><a href="#Basic-Use-Example" class="headerlink" title="Basic Use Example"></a>Basic Use Example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; generate(<span class="keyword">int</span> numRows) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">0</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        List&lt;Integer&gt; row1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        row1.add(<span class="number">1</span>);</span><br><span class="line">        ans.add(row1);</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">1</span>) <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            List&lt;Integer&gt; theRow = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            List&lt;Integer&gt; prevRow = ans.get(i-<span class="number">1</span>);</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt;i;j++) &#123;</span><br><span class="line">                theRow.add(prevRow.get(j-<span class="number">1</span>) + prevRow.get(j));</span><br><span class="line">            &#125;</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            ans.add(theRow);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjifqjr30000ljojhyorlterk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li></ul>
 
     </footer>
   </div>
@@ -523,7 +584,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjid6ouek001js6jh2ahjmlzw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjifqjr5k001rjojh0viafdp3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -594,6 +655,10 @@
           </li>
         
           <li>
+            <a href="/2018/06/15/Git-Undoing-Changes/">Git: Undoing Changes</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/13/Tagging-Branching-and-Merging/">Tagging,Branching, and Merging</a>
           </li>
         
@@ -603,10 +668,6 @@
         
           <li>
             <a href="/2018/06/02/display/">Display A Repos&#39;s Commits</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/02/Create-A-Git-repo/">Create A Git repo</a>
           </li>
         
       </ul>
