@@ -5,19 +5,20 @@
   
 
   
-  <title>math.log(243,3) problem | Hexo</title>
+  <title>Git: Working with Remotes | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ProblemIn python:  1234&amp;gt;&amp;gt;&amp;gt; import math&amp;gt;&amp;gt;&amp;gt; math.log(243,3)4.999999999999999# Expected: 5 Solution 123&amp;gt;&amp;gt;&amp;gt; import math&amp;gt;&amp;gt;&amp;gt; math.log10(243)/math.log10(3)5  123456789&amp;gt;">
+  <meta name="description" content="1$ git remote PartA. Add A Remote Repository1. Create A Simple Project Create a Project directory   git init to turn it into a Git repository   Create a README.md file  Create other files   2. Hosting">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="math.log(243,3) problem">
-<meta property="og:url" content="http://yoursite.com/2018/05/07/math-log-243-3-problem/index.html">
+<meta property="og:title" content="Git: Working with Remotes">
+<meta property="og:url" content="http://yoursite.com/2018/07/07/Git-Working-with-Remotes/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ProblemIn python:  1234&amp;gt;&amp;gt;&amp;gt; import math&amp;gt;&amp;gt;&amp;gt; math.log(243,3)4.999999999999999# Expected: 5 Solution 123&amp;gt;&amp;gt;&amp;gt; import math&amp;gt;&amp;gt;&amp;gt; math.log10(243)/math.log10(3)5  123456789&amp;gt;">
+<meta property="og:description" content="1$ git remote PartA. Add A Remote Repository1. Create A Simple Project Create a Project directory   git init to turn it into a Git repository   Create a README.md file  Create other files   2. Hosting">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-07T11:25:12.119Z">
+<meta property="og:updated_time" content="2018-07-07T06:35:18.787Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="math.log(243,3) problem">
-<meta name="twitter:description" content="ProblemIn python:  1234&amp;gt;&amp;gt;&amp;gt; import math&amp;gt;&amp;gt;&amp;gt; math.log(243,3)4.999999999999999# Expected: 5 Solution 123&amp;gt;&amp;gt;&amp;gt; import math&amp;gt;&amp;gt;&amp;gt; math.log10(243)/math.log10(3)5  123456789&amp;gt;">
+<meta name="twitter:title" content="Git: Working with Remotes">
+<meta name="twitter:description" content="1$ git remote PartA. Add A Remote Repository1. Create A Simple Project Create a Project directory   git init to turn it into a Git repository   Create a README.md file  Create other files   2. Hosting">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-math-log-243-3-problem" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Git-Working-with-Remotes" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/05/07/math-log-243-3-problem/" class="article-date">
-  <time datetime="2018-05-07T11:19:53.000Z" itemprop="datePublished">2018-05-07</time>
+    <a href="/2018/07/07/Git-Working-with-Remotes/" class="article-date">
+  <time datetime="2018-07-07T06:04:42.000Z" itemprop="datePublished">2018-07-07</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
+    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
   </div>
 
   </div>
@@ -82,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      math.log(243,3) problem
+      Git: Working with Remotes
     </h1>
   
 
@@ -90,40 +91,64 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>In python: </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> math</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>math.log(<span class="number">243</span>,<span class="number">3</span>)</span><br><span class="line"><span class="number">4.999999999999999</span></span><br><span class="line"><span class="comment"># Expected: 5</span></span><br></pre></td></tr></table></figure>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol>
-<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> math</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>math.log10(<span class="number">243</span>)/math.log10(<span class="number">3</span>)</span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+        <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git remote</span><br></pre></td></tr></table></figure>
+<h2 id="PartA-Add-A-Remote-Repository"><a href="#PartA-Add-A-Remote-Repository" class="headerlink" title="PartA. Add A Remote Repository"></a>PartA. Add A Remote Repository</h2><h3 id="1-Create-A-Simple-Project"><a href="#1-Create-A-Simple-Project" class="headerlink" title="1. Create A Simple Project"></a>1. Create A Simple Project</h3><ol>
+<li><p>Create a Project directory </p>
 </li>
-<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> math</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = math.log(<span class="number">243</span>,<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Judge whether an int</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>judge = (round(x)-x) &lt; <span class="number">0.0000001</span></span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># get the Int value</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>round(x)</span><br></pre></td></tr></table></figure>
+<li><p><code>git init</code> to turn it into a Git repository </p>
+</li>
+<li><p>Create a <code>README.md</code> file</p>
+</li>
+<li><p>Create other files</p>
 </li>
 </ol>
+<h3 id="2-Hosting-on-GitHub"><a href="#2-Hosting-on-GitHub" class="headerlink" title="2. Hosting on GitHub"></a>2. Hosting on GitHub</h3><p>Creat the repo on GitHub</p>
+<h3 id="3-Manage-the-Repository-git-remote"><a href="#3-Manage-the-Repository-git-remote" class="headerlink" title="3. Manage the Repository: git remote"></a>3. Manage the Repository: <code>git remote</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git remote</span><br></pre></td></tr></table></figure>
+<ul>
+<li>It’s possible to have links to multiple different remote repositories.</li>
+<li>A shortname is the name that’s used to refer to a remote repository’s location. Typically the location is a URL, but it could be a file path on the same computer.</li>
+<li><code>git remote add</code> is used to add a connection to a new remote repository.</li>
+<li><code>git remote -v</code> is used to see the details about a connection to a remote.</li>
+</ul>
+<h2 id="PartB-Push-Changes-To-A-Remote"><a href="#PartB-Push-Changes-To-A-Remote" class="headerlink" title="PartB. Push Changes To A Remote"></a>PartB. Push Changes To A Remote</h2><h3 id="1-Check-the-commits"><a href="#1-Check-the-commits" class="headerlink" title="1. Check the commits"></a>1. Check the commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --oneline --graph --all</span><br></pre></td></tr></table></figure>
+<h3 id="2-Push-the-commits"><a href="#2-Push-the-commits" class="headerlink" title="2. Push the commits"></a>2. Push the commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git push &lt;remote-shortname&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> EX:</span><br><span class="line"><span class="meta">$</span> git push origin master</span><br></pre></td></tr></table></figure>
+<h2 id="PartC-Pulling-Changes-From-A-Remote"><a href="#PartC-Pulling-Changes-From-A-Remote" class="headerlink" title="PartC: Pulling Changes From A Remote"></a>PartC: Pulling Changes From A Remote</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git pull origin master</span><br></pre></td></tr></table></figure>
+<p>When <code>git pull</code> is run, the following things happen:</p>
+<ul>
+<li>the commit(s) on the remote branch are copied to the local repository</li>
+<li>the local tracking branch (<code>origin/master</code>) is moved to point to the most recent commit</li>
+<li>the local tracking branch (<code>origin/master</code>) is merged into the local branch (<code>master</code>)</li>
+</ul>
+<h2 id="PartD-Pull-vs-Fetch"><a href="#PartD-Pull-vs-Fetch" class="headerlink" title="PartD: Pull vs Fetch"></a>PartD: Pull vs Fetch</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git fetch origin master</span><br></pre></td></tr></table></figure>
+<p><code>fetch</code> the changes, but not <code>merge</code> them</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/07/math-log-243-3-problem/" data-id="cjjb1c194001rcjjhaa1abjcw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/07/Git-Working-with-Remotes/" data-id="cjjb1c18l000ocjjhf35hb1hp" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2018/05/08/float-to-int-float-精度转换/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/09/01/Leetcode-经验/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          float to int &amp; float 精度转换
+          Leetcode 经验
         
       </div>
     </a>
   
   
-    <a href="/2018/05/03/ASCII-ord-chr/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/06/15/Git-Undoing-Changes/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">ASCII ord() chr()</div>
+      <div class="article-nav-title">Git: Undoing Changes</div>
     </a>
   
 </nav>

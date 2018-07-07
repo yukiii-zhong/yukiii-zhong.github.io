@@ -94,8 +94,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Git-Tagging"><a href="#Git-Tagging" class="headerlink" title="Git Tagging"></a>Git Tagging</h2><h3 id="List-all-tags"><a href="#List-all-tags" class="headerlink" title="List all tags"></a>List all tags</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git tag</span><br></pre></td></tr></table></figure>
-<h3 id="Tag-commits"><a href="#Tag-commits" class="headerlink" title="Tag commits"></a>Tag commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git tag -a v1.0</span><br></pre></td></tr></table></figure>
+        <h2 id="Git-Tagging"><a href="#Git-Tagging" class="headerlink" title="Git Tagging"></a>Git Tagging</h2><h3 id="List-all-tags"><a href="#List-all-tags" class="headerlink" title="List all tags"></a>List all tags</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tag-commits"><a href="#Tag-commits" class="headerlink" title="Tag commits"></a>Tag commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -a v1.0</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li><p>add a tag to the most recent commits</p>
 </li>
@@ -103,17 +103,17 @@
 <p>You can also <code>$ git tag v1.0</code>, but <code>-a</code> is recommended</p>
 </li>
 </ol>
-<h3 id="Tag-a-specific-commit"><a href="#Tag-a-specific-commit" class="headerlink" title="Tag a specific commit"></a>Tag a specific commit</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git tag -a v1.0 a87984</span><br></pre></td></tr></table></figure>
-<h3 id="See-all-commits-with-the-tag"><a href="#See-all-commits-with-the-tag" class="headerlink" title="See all commits with the tag"></a>See all commits with the tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log v1.0</span><br></pre></td></tr></table></figure>
-<h3 id="Delete-a-tag"><a href="#Delete-a-tag" class="headerlink" title="Delete a tag"></a>Delete a tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git tag -d v1.0</span><br></pre></td></tr></table></figure>
-<h2 id="Git-Branch"><a href="#Git-Branch" class="headerlink" title="Git Branch"></a>Git Branch</h2><h3 id="1-List-all-branches"><a href="#1-List-all-branches" class="headerlink" title="1. List all branches"></a>1. List all branches</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git branch</span><br></pre></td></tr></table></figure>
+<h3 id="Tag-a-specific-commit"><a href="#Tag-a-specific-commit" class="headerlink" title="Tag a specific commit"></a>Tag a specific commit</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -a v1.0 a87984</span></span><br></pre></td></tr></table></figure>
+<h3 id="See-all-commits-with-the-tag"><a href="#See-all-commits-with-the-tag" class="headerlink" title="See all commits with the tag"></a>See all commits with the tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> v1.0</span></span><br></pre></td></tr></table></figure>
+<h3 id="Delete-a-tag"><a href="#Delete-a-tag" class="headerlink" title="Delete a tag"></a>Delete a tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -d v1.0</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-Branch"><a href="#Git-Branch" class="headerlink" title="Git Branch"></a>Git Branch</h2><h3 id="1-List-all-branches"><a href="#1-List-all-branches" class="headerlink" title="1. List all branches"></a>1. List all branches</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch</span></span><br></pre></td></tr></table></figure>
 <p>You can also find which branch you are currently in through it.</p>
-<h3 id="2-Create-a-branch"><a href="#2-Create-a-branch" class="headerlink" title="2. Create a branch"></a>2. Create a branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git branch sidebar</span><br></pre></td></tr></table></figure>
+<h3 id="2-Create-a-branch"><a href="#2-Create-a-branch" class="headerlink" title="2. Create a branch"></a>2. Create a branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch sidebar</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>newly created branch <code>sidebar</code> points to the same commit as <code>master</code></li>
 </ul>
-<h4 id="2-1-Create-a-brach-points-to-a-specific-commit"><a href="#2-1-Create-a-brach-points-to-a-specific-commit" class="headerlink" title="2.1 Create a brach points to a specific commit"></a>2.1 Create a brach points to a specific commit</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git branch sidebar 42a69f</span><br></pre></td></tr></table></figure>
-<h3 id="3-Switch-branch"><a href="#3-Switch-branch" class="headerlink" title="3.  Switch branch"></a>3.  Switch branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git checkout sidebar</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-Create-a-brach-points-to-a-specific-commit"><a href="#2-1-Create-a-brach-points-to-a-specific-commit" class="headerlink" title="2.1 Create a brach points to a specific commit"></a>2.1 Create a brach points to a specific commit</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch sidebar 42a69f</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-Switch-branch"><a href="#3-Switch-branch" class="headerlink" title="3.  Switch branch"></a>3.  Switch branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git checkout sidebar</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>remove all files and directories from the Working Directory that Git is tracking</p>
 <ul>
@@ -126,12 +126,12 @@
 <h3 id="4-See-all-commits-in-the-branch"><a href="#4-See-all-commits-in-the-branch" class="headerlink" title="4. See all commits in the branch"></a>4. See all commits in the branch</h3><ul>
 <li>Fistly, <code>checkout</code> to this branch, then: </li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span></span></span><br></pre></td></tr></table></figure>
 <p><code>HEAD--&gt;</code> points to the active branch</p>
-<h3 id="5-Delete-a-brach"><a href="#5-Delete-a-brach" class="headerlink" title="5. Delete a brach"></a>5. Delete a brach</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git branch -d sidebar</span><br></pre></td></tr></table></figure>
-<h3 id="6-Switch-and-Create-Branch-In-One-Command"><a href="#6-Switch-and-Create-Branch-In-One-Command" class="headerlink" title="6. Switch and Create Branch In One Command"></a>6. Switch and Create Branch In One Command</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git checkout -b sidebar</span><br></pre></td></tr></table></figure>
-<h3 id="7-See-All-Branches-At-Once"><a href="#7-See-All-Branches-At-Once" class="headerlink" title="7. See All Branches At Once"></a>7. See All Branches At Once</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --oneline --graph --all</span><br></pre></td></tr></table></figure>
-<h2 id="Git-Merging"><a href="#Git-Merging" class="headerlink" title="Git Merging"></a>Git Merging</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git merge &lt;name-of-branch-to-merge-in&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="5-Delete-a-brach"><a href="#5-Delete-a-brach" class="headerlink" title="5. Delete a brach"></a>5. Delete a brach</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch -d sidebar</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-Switch-and-Create-Branch-In-One-Command"><a href="#6-Switch-and-Create-Branch-In-One-Command" class="headerlink" title="6. Switch and Create Branch In One Command"></a>6. Switch and Create Branch In One Command</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git checkout -b sidebar</span></span><br></pre></td></tr></table></figure>
+<h3 id="7-See-All-Branches-At-Once"><a href="#7-See-All-Branches-At-Once" class="headerlink" title="7. See All Branches At Once"></a>7. See All Branches At Once</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --oneline --graph --all</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-Merging"><a href="#Git-Merging" class="headerlink" title="Git Merging"></a>Git Merging</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git merge &lt;name-of-branch-to-merge-in&gt;</span></span><br></pre></td></tr></table></figure>
 <p>In the branch A, <code>git merge B</code>, then merge branch B to A</p>
 <ul>
 <li>Fast-forward Merge</li>
@@ -157,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjifqjr4q0011jojhrv0ts0lc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjjb1c18y001ecjjhn8f3dhe7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -216,7 +216,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 20px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
+      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 15px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
     </div>
   </div>
 
@@ -225,7 +225,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
     </div>
   </div>
 
@@ -242,6 +242,10 @@
           </li>
         
           <li>
+            <a href="/2018/07/07/Git-Working-with-Remotes/">Git: Working with Remotes</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/15/Git-Undoing-Changes/">Git: Undoing Changes</a>
           </li>
         
@@ -251,10 +255,6 @@
         
           <li>
             <a href="/2018/06/10/Add-Commits-To-A-Repo/"> Add Commits To A Repo</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/02/display/">Display A Repos&#39;s Commits</a>
           </li>
         
       </ul>

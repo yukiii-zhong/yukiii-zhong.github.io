@@ -62,6 +62,103 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-476-Number-Complement" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/02/476-Number-Complement/" class="article-date">
+  <time datetime="2018-05-01T17:58:39.000Z" itemprop="datePublished">2018-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/02/476-Number-Complement/">476. Number Complement</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="476-Number-Complement"><a href="#476-Number-Complement" class="headerlink" title="476. Number Complement"></a>476. Number Complement</h1><blockquote>
+<p>Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.</p>
+<p><strong>Note:</strong></p>
+<ol>
+<li>The given integer is guaranteed to fit within the range of a 32-bit signed integer.</li>
+<li>You could assume no leading zero bit in the integer’s binary representation.</li>
+</ol>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: 5</span><br><span class="line">&gt; Output: 2</span><br><span class="line">&gt; Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: 1</span><br><span class="line">&gt; Output: 0</span><br><span class="line">&gt; Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="Method1"><a href="#Method1" class="headerlink" title="Method1:"></a>Method1:</h2><h4 id="阶段1"><a href="#阶段1" class="headerlink" title="阶段1"></a>阶段1</h4><p>1 ^ 1 = 0</p>
+<p>0 ^ 1 = 1</p>
+<p>==&gt; 11111 ^ 10101 = 01010  —&gt; The answer</p>
+<p>==&gt; <strong>Target:</strong> Establish 1111111 (len == num的二进制数字）</p>
+<h4 id="阶段2"><a href="#阶段2" class="headerlink" title="阶段2"></a>阶段2</h4><p><code>n = len(bin(num))-2</code> 设定num的二进制长度n 为 6</p>
+<p>6个1: $111111 —&gt; 2^0 + 2^1 + 2^2 + 2^3 + 2^4 + 2^5= 2^6 -1$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">findComplement</span><span class="params">(self, num)</span>:</span></span><br><span class="line">        n = len(bin(num))<span class="number">-2</span></span><br><span class="line">        temp = <span class="number">2</span>**n <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> num ^ temp</span><br></pre></td></tr></table></figure>
+<h2 id="Method2"><a href="#Method2" class="headerlink" title="Method2:"></a>Method2:</h2><h4 id="Step1-翻转-Target"><a href="#Step1-翻转-Target" class="headerlink" title="Step1. 翻转, Target"></a>Step1. 翻转, Target</h4><p>设定为5</p>
+<table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>2进制</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>…000101</td>
+<td></td>
+</tr>
+<tr>
+<td>~5</td>
+<td>…111010</td>
+<td>010部分为ans</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>…111000</td>
+<td>Target^ ~num为ans</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Step2"><a href="#Step2" class="headerlink" title="Step2"></a>Step2</h4><p>Target: …..111000</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mask = ~<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(bin(num))<span class="number">-2</span>):</span><br><span class="line">    mask &lt;&lt; <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">findComplement</span><span class="params">(self, num)</span>:</span></span><br><span class="line">		<span class="comment"># Find mask</span></span><br><span class="line">        mask = ~<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(bin(num))<span class="number">-2</span>):</span><br><span class="line">            mask &lt;&lt;= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">		<span class="comment"># Get ans</span></span><br><span class="line">        <span class="keyword">return</span> ~num ^ mask</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjjb1c1880005cjjhqsrce9u6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-二进制十进制转换-bin()-int(String,2)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/02/二进制十进制转换-bin()-int(String,2)/" class="article-date">
@@ -111,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjifqjr5r001zjojht6qrflui" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjjb1c19c0025cjjhct0mf0mb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -191,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjifqjr5u0025jojh0nojmrju" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjjb1c19b0022cjjhjw8y30lt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -252,7 +349,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjifqjr2a0000jojh7f0t219n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjjb1c1860004cjjh9ywd5fb7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XOR/">XOR</a></li></ul>
@@ -303,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjifqjr58001gjojh8z01w6ga" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjjb1c190001jcjjh4j4r3w7h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -335,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjifqjr4t0015jojh104xyvr9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjjb1c18p000vcjjh860n0pcc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -388,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjifqjr5p001yjojhjdxzgg26" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjjb1c19a001zcjjhyexsjtfx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dictionary/">dictionary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/list/">list</a></li></ul>
@@ -449,52 +546,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjifqjr5g001mjojh50scidxd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjjb1c18m000rcjjhigmo9vnu" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Set-Example" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/24/Set-Example/" class="article-date">
-  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/Set-Example/">Set Example</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Set-Example"><a href="#Set-Example" class="headerlink" title="Set Example"></a>Set Example</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Contains_Duplicate_II_219</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(nums[i])) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            set.add(nums[i]);</span><br><span class="line">            <span class="keyword">if</span> (set.size()&gt;k) set.remove(nums[i-k]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjifqjr4n000yjojh7itdp7k5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
-
     </footer>
   </div>
   
@@ -533,7 +587,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjifqjr30000ljojhyorlterk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjjb1c18g000icjjhbmkr9fd8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li></ul>
@@ -545,14 +599,14 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Set-Example" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/24/hello-world/" class="article-date">
-  <time datetime="2018-04-24T13:33:22.918Z" itemprop="datePublished">2018-04-24</time>
+    <a href="/2018/04/24/Set-Example/" class="article-date">
+  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    <a class="article-category-link" href="/categories/Java/">Java</a>
   </div>
 
   </div>
@@ -563,7 +617,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/hello-world/">Hello World</a>
+      <a class="article-title" href="/2018/04/24/Set-Example/">Set Example</a>
     </h1>
   
 
@@ -571,22 +625,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Set-Example"><a href="#Set-Example" class="headerlink" title="Set Example"></a>Set Example</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Contains_Duplicate_II_219</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(nums[i])) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            set.add(nums[i]);</span><br><span class="line">            <span class="keyword">if</span> (set.size()&gt;k) set.remove(nums[i-k]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjifqjr5k001rjojh0viafdp3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjjb1c18t0015cjjh001fesu3" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
+
     </footer>
   </div>
   
@@ -598,7 +646,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -629,7 +677,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 20px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
+      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 15px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
     </div>
   </div>
 
@@ -638,7 +686,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
     </div>
   </div>
 
@@ -655,6 +703,10 @@
           </li>
         
           <li>
+            <a href="/2018/07/07/Git-Working-with-Remotes/">Git: Working with Remotes</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/15/Git-Undoing-Changes/">Git: Undoing Changes</a>
           </li>
         
@@ -664,10 +716,6 @@
         
           <li>
             <a href="/2018/06/10/Add-Commits-To-A-Repo/"> Add Commits To A Repo</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/02/display/">Display A Repos&#39;s Commits</a>
           </li>
         
       </ul>

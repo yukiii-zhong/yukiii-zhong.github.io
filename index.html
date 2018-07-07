@@ -107,9 +107,81 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjifqjr4v0018jojhyoim8oax" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjjb1c18s0011cjjhb6oq3dog" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git-Working-with-Remotes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/07/Git-Working-with-Remotes/" class="article-date">
+  <time datetime="2018-07-07T06:04:42.000Z" itemprop="datePublished">2018-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/07/Git-Working-with-Remotes/">Git: Working with Remotes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git remote</span><br></pre></td></tr></table></figure>
+<h2 id="PartA-Add-A-Remote-Repository"><a href="#PartA-Add-A-Remote-Repository" class="headerlink" title="PartA. Add A Remote Repository"></a>PartA. Add A Remote Repository</h2><h3 id="1-Create-A-Simple-Project"><a href="#1-Create-A-Simple-Project" class="headerlink" title="1. Create A Simple Project"></a>1. Create A Simple Project</h3><ol>
+<li><p>Create a Project directory </p>
+</li>
+<li><p><code>git init</code> to turn it into a Git repository </p>
+</li>
+<li><p>Create a <code>README.md</code> file</p>
+</li>
+<li><p>Create other files</p>
+</li>
+</ol>
+<h3 id="2-Hosting-on-GitHub"><a href="#2-Hosting-on-GitHub" class="headerlink" title="2. Hosting on GitHub"></a>2. Hosting on GitHub</h3><p>Creat the repo on GitHub</p>
+<h3 id="3-Manage-the-Repository-git-remote"><a href="#3-Manage-the-Repository-git-remote" class="headerlink" title="3. Manage the Repository: git remote"></a>3. Manage the Repository: <code>git remote</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git remote</span><br></pre></td></tr></table></figure>
+<ul>
+<li>It’s possible to have links to multiple different remote repositories.</li>
+<li>A shortname is the name that’s used to refer to a remote repository’s location. Typically the location is a URL, but it could be a file path on the same computer.</li>
+<li><code>git remote add</code> is used to add a connection to a new remote repository.</li>
+<li><code>git remote -v</code> is used to see the details about a connection to a remote.</li>
+</ul>
+<h2 id="PartB-Push-Changes-To-A-Remote"><a href="#PartB-Push-Changes-To-A-Remote" class="headerlink" title="PartB. Push Changes To A Remote"></a>PartB. Push Changes To A Remote</h2><h3 id="1-Check-the-commits"><a href="#1-Check-the-commits" class="headerlink" title="1. Check the commits"></a>1. Check the commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --oneline --graph --all</span><br></pre></td></tr></table></figure>
+<h3 id="2-Push-the-commits"><a href="#2-Push-the-commits" class="headerlink" title="2. Push the commits"></a>2. Push the commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git push &lt;remote-shortname&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> EX:</span><br><span class="line"><span class="meta">$</span> git push origin master</span><br></pre></td></tr></table></figure>
+<h2 id="PartC-Pulling-Changes-From-A-Remote"><a href="#PartC-Pulling-Changes-From-A-Remote" class="headerlink" title="PartC: Pulling Changes From A Remote"></a>PartC: Pulling Changes From A Remote</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git pull origin master</span><br></pre></td></tr></table></figure>
+<p>When <code>git pull</code> is run, the following things happen:</p>
+<ul>
+<li>the commit(s) on the remote branch are copied to the local repository</li>
+<li>the local tracking branch (<code>origin/master</code>) is moved to point to the most recent commit</li>
+<li>the local tracking branch (<code>origin/master</code>) is merged into the local branch (<code>master</code>)</li>
+</ul>
+<h2 id="PartD-Pull-vs-Fetch"><a href="#PartD-Pull-vs-Fetch" class="headerlink" title="PartD: Pull vs Fetch"></a>PartD: Pull vs Fetch</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git fetch origin master</span><br></pre></td></tr></table></figure>
+<p><code>fetch</code> the changes, but not <code>merge</code> them</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/07/Git-Working-with-Remotes/" data-id="cjjb1c18l000ocjjhf35hb1hp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
     </footer>
   </div>
   
@@ -123,6 +195,10 @@
   <time datetime="2018-06-15T08:52:59.000Z" itemprop="datePublished">2018-06-15</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -139,13 +215,66 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git Documentation</a></p>
+<h2 id="1-Modifying-the-last-commit"><a href="#1-Modifying-the-last-commit" class="headerlink" title="1. Modifying the last commit"></a>1. Modifying the last commit</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git commit -- amend</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-1-Changing-The-last-Commit"><a href="#1-1-Changing-The-last-Commit" class="headerlink" title="1.1 Changing The last Commit"></a>1.1 Changing The last Commit</h3><p>running <code>git commit --amend</code>, your code editor will open up, and let you edit it. </p>
+<h3 id="1-2-Add-Forgotten-Files-To-Commit"><a href="#1-2-Add-Forgotten-Files-To-Commit" class="headerlink" title="1.2 Add Forgotten Files To Commit"></a>1.2 Add Forgotten Files To Commit</h3><ul>
+<li><p>edit the file(s)</p>
+</li>
+<li><p>save the file(s)</p>
+</li>
+<li><p>stage the file(s)</p>
+</li>
+<li><p>and run <code>git commit --amend</code></p>
+</li>
+</ul>
+<h2 id="2-Reverting-a-commit"><a href="#2-Reverting-a-commit" class="headerlink" title="2. Reverting a commit"></a>2. Reverting a commit</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git revert &lt;SHA-of-commit-to-revert&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>will undo the changes that were made by the provided commit</p>
+</li>
+<li><p>creates a new commit to record the change</p>
+</li>
+</ul>
+<h2 id="3-Resetting-Commits"><a href="#3-Resetting-Commits" class="headerlink" title="3. Resetting Commits"></a>3. Resetting Commits</h2><p><strong>IMPOTANT:</strong> It’s recommended to establish <code>$ git branch backup</code> before reset commits.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git reset &lt;reference-to-commit&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> EX:</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git reset --hard HEAD~3</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>erase</strong> commits with the <code>--hard</code> flag</p>
+</li>
+<li><p>moves committed changes <strong>to the staging index</strong> with the <code>--soft</code> flag</p>
+</li>
+<li><p><strong>unstages</strong> committed changes <code>--mixed</code> flag</p>
+<hr>
+</li>
+<li><p><code>^</code> – indicates the parent commit</p>
+</li>
+<li><p><code>~</code> – indicates the first parent commit</p>
+<p><strong>EX</strong></p>
+</li>
+</ul>
+<ul>
+<li>the parent commit<ul>
+<li>HEAD^</li>
+<li>HEAD~</li>
+<li>HEAD~1</li>
+</ul>
+</li>
+<li>the great-grandparent commit<ul>
+<li>HEAD^^^</li>
+<li>HEAD~3</li>
+</ul>
+</li>
+<li><code>HEAD^^^2</code>: <code>^2</code> : the merged other parent branch commit</li>
+</ul>
+<h2 id="4-restore-working-tree-files"><a href="#4-restore-working-tree-files" class="headerlink" title="4. restore working tree files"></a>4. restore working tree files</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git checkout</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/Git-Undoing-Changes/" data-id="cjifqjr2s000bjojh5t7sswl3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/15/Git-Undoing-Changes/" data-id="cjjb1c18q000zcjjhnkvu1mww" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
     </footer>
   </div>
   
@@ -179,8 +308,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Git-Tagging"><a href="#Git-Tagging" class="headerlink" title="Git Tagging"></a>Git Tagging</h2><h3 id="List-all-tags"><a href="#List-all-tags" class="headerlink" title="List all tags"></a>List all tags</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git tag</span><br></pre></td></tr></table></figure>
-<h3 id="Tag-commits"><a href="#Tag-commits" class="headerlink" title="Tag commits"></a>Tag commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git tag -a v1.0</span><br></pre></td></tr></table></figure>
+        <h2 id="Git-Tagging"><a href="#Git-Tagging" class="headerlink" title="Git Tagging"></a>Git Tagging</h2><h3 id="List-all-tags"><a href="#List-all-tags" class="headerlink" title="List all tags"></a>List all tags</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tag-commits"><a href="#Tag-commits" class="headerlink" title="Tag commits"></a>Tag commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -a v1.0</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li><p>add a tag to the most recent commits</p>
 </li>
@@ -188,17 +317,17 @@
 <p>You can also <code>$ git tag v1.0</code>, but <code>-a</code> is recommended</p>
 </li>
 </ol>
-<h3 id="Tag-a-specific-commit"><a href="#Tag-a-specific-commit" class="headerlink" title="Tag a specific commit"></a>Tag a specific commit</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git tag -a v1.0 a87984</span><br></pre></td></tr></table></figure>
-<h3 id="See-all-commits-with-the-tag"><a href="#See-all-commits-with-the-tag" class="headerlink" title="See all commits with the tag"></a>See all commits with the tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log v1.0</span><br></pre></td></tr></table></figure>
-<h3 id="Delete-a-tag"><a href="#Delete-a-tag" class="headerlink" title="Delete a tag"></a>Delete a tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git tag -d v1.0</span><br></pre></td></tr></table></figure>
-<h2 id="Git-Branch"><a href="#Git-Branch" class="headerlink" title="Git Branch"></a>Git Branch</h2><h3 id="1-List-all-branches"><a href="#1-List-all-branches" class="headerlink" title="1. List all branches"></a>1. List all branches</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git branch</span><br></pre></td></tr></table></figure>
+<h3 id="Tag-a-specific-commit"><a href="#Tag-a-specific-commit" class="headerlink" title="Tag a specific commit"></a>Tag a specific commit</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -a v1.0 a87984</span></span><br></pre></td></tr></table></figure>
+<h3 id="See-all-commits-with-the-tag"><a href="#See-all-commits-with-the-tag" class="headerlink" title="See all commits with the tag"></a>See all commits with the tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> v1.0</span></span><br></pre></td></tr></table></figure>
+<h3 id="Delete-a-tag"><a href="#Delete-a-tag" class="headerlink" title="Delete a tag"></a>Delete a tag</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git tag -d v1.0</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-Branch"><a href="#Git-Branch" class="headerlink" title="Git Branch"></a>Git Branch</h2><h3 id="1-List-all-branches"><a href="#1-List-all-branches" class="headerlink" title="1. List all branches"></a>1. List all branches</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch</span></span><br></pre></td></tr></table></figure>
 <p>You can also find which branch you are currently in through it.</p>
-<h3 id="2-Create-a-branch"><a href="#2-Create-a-branch" class="headerlink" title="2. Create a branch"></a>2. Create a branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git branch sidebar</span><br></pre></td></tr></table></figure>
+<h3 id="2-Create-a-branch"><a href="#2-Create-a-branch" class="headerlink" title="2. Create a branch"></a>2. Create a branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch sidebar</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>newly created branch <code>sidebar</code> points to the same commit as <code>master</code></li>
 </ul>
-<h4 id="2-1-Create-a-brach-points-to-a-specific-commit"><a href="#2-1-Create-a-brach-points-to-a-specific-commit" class="headerlink" title="2.1 Create a brach points to a specific commit"></a>2.1 Create a brach points to a specific commit</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git branch sidebar 42a69f</span><br></pre></td></tr></table></figure>
-<h3 id="3-Switch-branch"><a href="#3-Switch-branch" class="headerlink" title="3.  Switch branch"></a>3.  Switch branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git checkout sidebar</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-Create-a-brach-points-to-a-specific-commit"><a href="#2-1-Create-a-brach-points-to-a-specific-commit" class="headerlink" title="2.1 Create a brach points to a specific commit"></a>2.1 Create a brach points to a specific commit</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch sidebar 42a69f</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-Switch-branch"><a href="#3-Switch-branch" class="headerlink" title="3.  Switch branch"></a>3.  Switch branch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git checkout sidebar</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>remove all files and directories from the Working Directory that Git is tracking</p>
 <ul>
@@ -211,12 +340,12 @@
 <h3 id="4-See-all-commits-in-the-branch"><a href="#4-See-all-commits-in-the-branch" class="headerlink" title="4. See all commits in the branch"></a>4. See all commits in the branch</h3><ul>
 <li>Fistly, <code>checkout</code> to this branch, then: </li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span></span></span><br></pre></td></tr></table></figure>
 <p><code>HEAD--&gt;</code> points to the active branch</p>
-<h3 id="5-Delete-a-brach"><a href="#5-Delete-a-brach" class="headerlink" title="5. Delete a brach"></a>5. Delete a brach</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git branch -d sidebar</span><br></pre></td></tr></table></figure>
-<h3 id="6-Switch-and-Create-Branch-In-One-Command"><a href="#6-Switch-and-Create-Branch-In-One-Command" class="headerlink" title="6. Switch and Create Branch In One Command"></a>6. Switch and Create Branch In One Command</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git checkout -b sidebar</span><br></pre></td></tr></table></figure>
-<h3 id="7-See-All-Branches-At-Once"><a href="#7-See-All-Branches-At-Once" class="headerlink" title="7. See All Branches At Once"></a>7. See All Branches At Once</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --oneline --graph --all</span><br></pre></td></tr></table></figure>
-<h2 id="Git-Merging"><a href="#Git-Merging" class="headerlink" title="Git Merging"></a>Git Merging</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git merge &lt;name-of-branch-to-merge-in&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="5-Delete-a-brach"><a href="#5-Delete-a-brach" class="headerlink" title="5. Delete a brach"></a>5. Delete a brach</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git branch -d sidebar</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-Switch-and-Create-Branch-In-One-Command"><a href="#6-Switch-and-Create-Branch-In-One-Command" class="headerlink" title="6. Switch and Create Branch In One Command"></a>6. Switch and Create Branch In One Command</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git checkout -b sidebar</span></span><br></pre></td></tr></table></figure>
+<h3 id="7-See-All-Branches-At-Once"><a href="#7-See-All-Branches-At-Once" class="headerlink" title="7. See All Branches At Once"></a>7. See All Branches At Once</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --oneline --graph --all</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-Merging"><a href="#Git-Merging" class="headerlink" title="Git Merging"></a>Git Merging</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git merge &lt;name-of-branch-to-merge-in&gt;</span></span><br></pre></td></tr></table></figure>
 <p>In the branch A, <code>git merge B</code>, then merge branch B to A</p>
 <ul>
 <li>Fast-forward Merge</li>
@@ -242,7 +371,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjifqjr4q0011jojhrv0ts0lc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjjb1c18y001ecjjhn8f3dhe7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -323,7 +452,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cjifqjr2w000ijojhfwhpqn41" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cjjb1c18f000fcjjh75rekl4w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -361,8 +490,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-when-Return-a-repo-Check-status"><a href="#1-when-Return-a-repo-Check-status" class="headerlink" title="1. when Return a repo, Check status"></a>1. when Return a repo, Check status</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
-<h2 id="2-Display-commits"><a href="#2-Display-commits" class="headerlink" title="2. Display commits"></a>2. Display commits</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log</span><br></pre></td></tr></table></figure>
+        <h2 id="1-when-Return-a-repo-Check-status"><a href="#1-when-Return-a-repo-Check-status" class="headerlink" title="1. when Return a repo, Check status"></a>1. when Return a repo, Check status</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git status</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-Display-commits"><a href="#2-Display-commits" class="headerlink" title="2. Display commits"></a>2. Display commits</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span></span></span><br></pre></td></tr></table></figure>
 <p>Display the SHA, Auother, Date, and content</p>
 <h3 id="Navigating-The-Log"><a href="#Navigating-The-Log" class="headerlink" title="Navigating The Log"></a>Navigating The Log</h3><p>Navigating in <a href="https://en.wikipedia.org/wiki/Less_(Unix" target="_blank" rel="noopener">Less</a>) </p>
 <ul>
@@ -385,10 +514,10 @@
 </li>
 </ul>
 <h3 id="Search-commits-by-message"><a href="#Search-commits-by-message" class="headerlink" title="Search commits by message"></a>Search commits by message</h3><p>EX: Message <code>Set article timestamp color</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --grep='Set article timestamp color'</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --grep=<span class="string">'Set article timestamp color'</span></span></span><br></pre></td></tr></table></figure>
 <p>OUTPUT:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">commit 5de135ab4ca51b7d86b53ea1f81bca100c6eeb40</span><br><span class="line">Author: Richard Kalehoff &lt;richardkalehoff@gmail.com&gt;</span><br><span class="line">Date:   Sat Dec 3 15:42:07 2016 -0500</span><br><span class="line"></span><br><span class="line">    Set article timestamp color</span><br></pre></td></tr></table></figure>
-<h3 id="Display-commits-in-oneline"><a href="#Display-commits-in-oneline" class="headerlink" title="Display commits in oneline"></a>Display commits in oneline</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --oneline</span><br></pre></td></tr></table></figure>
+<h3 id="Display-commits-in-oneline"><a href="#Display-commits-in-oneline" class="headerlink" title="Display commits in oneline"></a>Display commits in oneline</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --oneline</span></span><br></pre></td></tr></table></figure>
 <p>This command:</p>
 <ul>
 <li>lists one commit per line</li>
@@ -399,8 +528,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6f04ddd Add breakpoint for large-sized screens</span><br><span class="line">50d835d Add breakpoint for medium-sized screens</span><br><span class="line">0768f3d Add space around page edge</span><br><span class="line">f9720a9 Style page header</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <h2 id="git-log-stat-Recap"><a href="#git-log-stat-Recap" class="headerlink" title="git log --stat Recap"></a><code>git log --stat</code> Recap</h2><p><code>--stat</code> is a flag</p>
 <p>To recap, the <code>--stat</code> flag is used to alter how <code>git log</code> displays information:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --stat</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log 8d3ea36  --stat</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --<span class="built_in">stat</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> 8d3ea36  --<span class="built_in">stat</span></span></span><br></pre></td></tr></table></figure>
 <p>This command:</p>
 <ul>
 <li>displays the file(s) that have been modified</li>
@@ -415,7 +544,7 @@
 <li>displays the location of the lines that have been added/removed</li>
 <li>displays the actual changes that have been made</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log -p -w</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> -p -w</span></span><br></pre></td></tr></table></figure>
 <p> With<code>-w</code>, don’t highlight lines where only whitespace changes occurred. </p>
 <h1 id="Annotated-git-log-p-Output"><a href="#Annotated-git-log-p-Output" class="headerlink" title="Annotated git log -p Output"></a>Annotated <code>git log -p</code> Output</h1><p><strong><code>git log -p</code> or <code>git log --patch</code></strong></p>
 <p><img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58a37f65_ud123-l3-git-log-p-lines-removed-annotated/ud123-l3-git-log-p-lines-removed-annotated.png" alt="img"></p>
@@ -445,7 +574,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cjifqjr56001ejojhugzyu77a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cjjb1c198001xcjjhd9y8f1gt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -497,7 +626,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cjifqjr4k000xjojhva2xar20" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cjjb1c18j000mcjjhnxeqlqku" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -540,7 +669,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cjifqjr5t0022jojh3fhel1a1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cjjb1c19d0028cjjh1o7b96u3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -577,18 +706,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="mv-Move-and-Rename"><a href="#mv-Move-and-Rename" class="headerlink" title="mv Move and Rename"></a><code>mv</code> Move and Rename</h2><h3 id="1-Use-mv-ro-rename"><a href="#1-Use-mv-ro-rename" class="headerlink" title="1. Use mv ro rename"></a>1. Use <code>mv</code> ro rename</h3><h4 id="1-if-file1-in-Documents-and-currently-in-Documents"><a href="#1-if-file1-in-Documents-and-currently-in-Documents" class="headerlink" title="1) if file1 in Documents, and currently in Documents"></a>1) if file1 in Documents, and currently in Documents</h4><p>Rename file1 to file2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv file1 file2</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv file1 file2</span></span><br></pre></td></tr></table></figure>
 <h4 id="2-if-file1-not-in-Documents"><a href="#2-if-file1-not-in-Documents" class="headerlink" title="2) if file1 not in Documents"></a>2) if file1 not in Documents</h4><p>Move file1 to Documents and rename it to file2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv file1 file2</span><br></pre></td></tr></table></figure>
-<h4 id="Note-file1-的位置可以在GUI里拖拽到Terminal"><a href="#Note-file1-的位置可以在GUI里拖拽到Terminal" class="headerlink" title="Note: file1 的位置可以在GUI里拖拽到Terminal"></a>Note: file1 的位置可以在GUI里拖拽到Terminal</h4><h3 id="2-Move-File"><a href="#2-Move-File" class="headerlink" title="2. Move File"></a>2. Move File</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv File Diretory</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv file1 file2</span></span><br></pre></td></tr></table></figure>
+<h4 id="Note-file1-的位置可以在GUI里拖拽到Terminal"><a href="#Note-file1-的位置可以在GUI里拖拽到Terminal" class="headerlink" title="Note: file1 的位置可以在GUI里拖拽到Terminal"></a>Note: file1 的位置可以在GUI里拖拽到Terminal</h4><h3 id="2-Move-File"><a href="#2-Move-File" class="headerlink" title="2. Move File"></a>2. Move File</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File Diretory</span></span><br></pre></td></tr></table></figure>
 <p>File可以是File/Directory</p>
-<h4 id="移动文件到上一级Directory"><a href="#移动文件到上一级Directory" class="headerlink" title="移动文件到上一级Directory"></a>移动文件到上一级Directory</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv File ../</span><br></pre></td></tr></table></figure>
-<h4 id="移动到当前文件夹"><a href="#移动到当前文件夹" class="headerlink" title="移动到当前文件夹"></a>移动到当前文件夹</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mv File .</span><br></pre></td></tr></table></figure>
+<h4 id="移动文件到上一级Directory"><a href="#移动文件到上一级Directory" class="headerlink" title="移动文件到上一级Directory"></a>移动文件到上一级Directory</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File ../</span></span><br></pre></td></tr></table></figure>
+<h4 id="移动到当前文件夹"><a href="#移动到当前文件夹" class="headerlink" title="移动到当前文件夹"></a>移动到当前文件夹</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File .</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cjifqjr4r0013jojhk0hbb3n9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cjjb1c18v0017cjjhyt5y04h2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -652,124 +781,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cjifqjr2n0006jojhkwtao2kz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Shell-Command" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/27/Shell-Command/" class="article-date">
-  <time datetime="2018-05-27T08:32:33.000Z" itemprop="datePublished">2018-05-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/27/Shell-Command/">Shell Command</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Shell-Command"><a href="#Shell-Command" class="headerlink" title="Shell Command"></a>Shell Command</h1><h2 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h2><p>Just like <code>print</code> in Python</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> echo 'Hello, World!'</span><br></pre></td></tr></table></figure>
-<h2 id="Navigating-directories"><a href="#Navigating-directories" class="headerlink" title="Navigating directories"></a>Navigating directories</h2><h3 id="1-cd-Change-Directory"><a href="#1-cd-Change-Directory" class="headerlink" title="1. cd: Change Directory"></a>1. <code>cd</code>: Change Directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd downloads</span><br></pre></td></tr></table></figure>
-<h4 id="To-parent-directory"><a href="#To-parent-directory" class="headerlink" title="To parent directory .."></a>To parent directory <code>..</code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd ..</span><br></pre></td></tr></table></figure>
-<h3 id="2-ls-list"><a href="#2-ls-list" class="headerlink" title="2. ls: list"></a>2. <code>ls</code>: list</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd Pictures; ls</span><br><span class="line"><span class="meta">#</span> chage directory to 'Pictures', and list it.</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls Pictures</span><br><span class="line"><span class="meta">#</span> list 'Pictures' Directory</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls Pictures/../Pictures</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls .</span><br><span class="line"><span class="meta">#</span> list current directory</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls ~</span><br><span class="line"><span class="meta">#</span> list home directory</span><br></pre></td></tr></table></figure>
-<h4 id="2-2-ls-Other-command"><a href="#2-2-ls-Other-command" class="headerlink" title="2.2 ls Other command"></a>2.2 <code>ls</code> Other command</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ls -l</span><br><span class="line"><span class="meta">#</span> Long information about files</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls -l Documents/*.pdf</span><br><span class="line"><span class="meta">#</span> Long information for pdf files in Documents folder</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> ls Sub*</span><br><span class="line"><span class="meta">#</span> Show all the files start with 'Sub'(Case Sensitive)</span><br></pre></td></tr></table></figure>
-<h3 id="3-pwd-print-working-directory"><a href="#3-pwd-print-working-directory" class="headerlink" title="3. pwd print working directory"></a>3. <code>pwd</code> print working directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> pwd</span><br><span class="line">/Users/yukizhong/Dropbox/02_Coding/Local_Blog (Path)</span><br></pre></td></tr></table></figure>
-<h3 id="4-Directory-names"><a href="#4-Directory-names" class="headerlink" title="4.  Directory names"></a>4.  Directory names</h3><ol>
-<li><code>ls ..</code>: Parent directory</li>
-<li><code>ls .</code>: Current Directory</li>
-<li><code>ls ~</code>: Home Directory</li>
-</ol>
-<h3 id="5-mkdir-make-directory-mv-move"><a href="#5-mkdir-make-directory-mv-move" class="headerlink" title="5. mkdir make directory, mv move"></a>5. <code>mkdir</code> make directory, <code>mv</code> move</h3><p><strong>EX:</strong> Move epub files to ‘Books’ Directory</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir Documents/Books</span><br><span class="line"><span class="meta">$</span> mv Documents/*.epub Documents/Books</span><br></pre></td></tr></table></figure>
-<h2 id="curl-C-URL-—-gt-See-URL"><a href="#curl-C-URL-—-gt-See-URL" class="headerlink" title="curl: C URL —&gt;  See URL"></a><code>curl</code>: C URL —&gt;  See URL</h2><h4 id="1-Download"><a href="#1-Download" class="headerlink" title="1. Download"></a>1. Download</h4><p>to download <code>https://tinyurl.com/zeyq9vc</code> and save it as the file <code>dictionary.txt</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> curl -o dictionary.txt -L 'https://tinyurl.com/zeyq9vc'</span><br></pre></td></tr></table></figure>
-<ol>
-<li><code>-o</code>  download as</li>
-<li><code>-L</code>  redirect</li>
-</ol>
-<h2 id="cat-Catenate-连接-concatenate-less"><a href="#cat-Catenate-连接-concatenate-less" class="headerlink" title="cat: Catenate (连接) /concatenate; less"></a><code>cat</code>: Catenate (连接) /concatenate; <code>less</code></h2><h3 id="1-Display-Text-Files"><a href="#1-Display-Text-Files" class="headerlink" title="1. Display Text Files"></a>1. Display Text Files</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat dictionary.txt</span><br></pre></td></tr></table></figure>
-<p><strong>Multiple files also works</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat mytext.txt mytext2.txt</span><br></pre></td></tr></table></figure>
-<h3 id="2-Create-a-new-file"><a href="#2-Create-a-new-file" class="headerlink" title="2. Create a new file"></a>2. Create a new file</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat &gt; filename.txt</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>....(file Content)</span><br><span class="line"><span class="meta">#</span> 键入回车</span><br><span class="line"><span class="meta">#</span> 然后 Ctrl + D 退出</span><br></pre></td></tr></table></figure>
-<h3 id="3-合并-复制文件"><a href="#3-合并-复制文件" class="headerlink" title="3. 合并/复制文件"></a>3. 合并/复制文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat file1 file2 &gt; newFile3</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> cat file4 &gt; newFile5</span><br></pre></td></tr></table></figure>
-<h3 id="4-Append-text-file"><a href="#4-Append-text-file" class="headerlink" title="4. Append text file"></a>4. Append text file</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat file1.txt &gt;&gt; To_be_appended_File.txt</span><br></pre></td></tr></table></figure>
-<h2 id="rm-remove-rmdir-remove-directory"><a href="#rm-remove-rmdir-remove-directory" class="headerlink" title="rm: remove rmdir: remove directory"></a><code>rm</code>: remove <code>rmdir</code>: remove directory</h2><p><code>$ rm filenme</code> —&gt; 直接删除，可以批量删除</p>
-<p><code>$ rm -i filename</code> —&gt; 删前询问，批量的话每个文件问一遍 (i: interactive)</p>
-<p><strong>EX:</strong></p>
-<ol>
-<li><code>Good File</code></li>
-<li><code>Bad Name Good File</code></li>
-<li><code>Bad File</code></li>
-<li><code>Good Name Bad Face</code></li>
-</ol>
-<p>You want to remove files 3 and 4, while leaving 1 and 2 intact. </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> rm 'Bad File' 'Good Name Bad Face'</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> rm *'Bad F'*</span><br></pre></td></tr></table></figure>
-<h3 id="rmdir-When-the-directory-is-not-empty"><a href="#rmdir-When-the-directory-is-not-empty" class="headerlink" title="rmdir (When the directory is not empty)"></a><code>rmdir</code> (When the directory is not empty)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> rm -rf filename</span><br></pre></td></tr></table></figure>
-<h3 id="mkdir-Create-new-directory"><a href="#mkdir-Create-new-directory" class="headerlink" title="mkdir Create new directory"></a><code>mkdir</code> Create new directory</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir newDir</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> mkdir -p newDirPath new Dir</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> mkdir -p udacity-git-course/new-git-project &amp;&amp; cd $_</span><br></pre></td></tr></table></figure>
-<h2 id="rename"><a href="#rename" class="headerlink" title="rename"></a><code>rename</code></h2><p>In Mac, there is no <code>rename</code> command by default. </p>
-<p>So, firstly use homebrew to install <code>rename</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install rename</span><br><span class="line"><span class="meta">$</span> rename [switches|transforms] [files]</span><br></pre></td></tr></table></figure>
-<h2 id="grep-Search-txt-file-wc-word-count"><a href="#grep-Search-txt-file-wc-word-count" class="headerlink" title="grep Search txt file, wc: word count"></a><code>grep</code> Search txt file, <code>wc</code>: word count</h2><ol>
-<li><code>$ grep ibo dictionary.txt</code></li>
-</ol>
-<p>OUTPUT: all the words containing ‘ibo’ in the file</p>
-<ol start="2">
-<li><code>$ grep ibo dictionary.txt | less</code></li>
-</ol>
-<p>Pip to less, show only one page</p>
-<ol start="3">
-<li><code>$ grep -c ibo dictionary.txt</code></li>
-</ol>
-<p>OUTPUT: <strong>Count</strong> how many words containing ‘ibo’</p>
-<ol start="4">
-<li><code>$ curl -L https://tinyurl.com | grep fish | wc -l</code></li>
-</ol>
-<p><strong><code>wc</code></strong>:  Count how many words</p>
-<p><strong><code>-l</code>:</strong> How many lines</p>
-<h2 id="Shell-and-environment-variables"><a href="#Shell-and-environment-variables" class="headerlink" title="Shell and environment variables"></a>Shell and environment variables</h2><p><code>$Variable</code>  distinguish it</p>
-<h3 id="1-Establish-variable"><a href="#1-Establish-variable" class="headerlink" title="1. Establish variable"></a>1. Establish variable</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> num='1,2,3'</span><br><span class="line"><span class="meta">$</span> echo $num</span><br></pre></td></tr></table></figure>
-<h3 id="2-Shell-Variable"><a href="#2-Shell-Variable" class="headerlink" title="2. Shell Variable"></a>2. Shell Variable</h3><p>Shell Variable is all about fixed for shell</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> echo $LINES x $COLUMNS</span><br></pre></td></tr></table></figure>
-<p>OUTPUT: <strong>12 x 80</strong> </p>
-<h3 id="3-Environment-variable"><a href="#3-Environment-variable" class="headerlink" title="3. Environment variable"></a>3. Environment variable</h3><p>Change in diff environments</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> echo $PATH</span><br><span class="line"><span class="meta">#</span>.....</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> PATH=$PATH:/new/dir/here</span><br><span class="line"><span class="meta">#</span> add new directories in the path</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> echo $PWD</span><br></pre></td></tr></table></figure>
-<h2 id="Aliases"><a href="#Aliases" class="headerlink" title="Aliases"></a>Aliases</h2><ol>
-<li>You can use Aliases just as common commands</li>
-<li>Aliases only work in this terminal window.</li>
-<li>If you hope to keep alias work for all terminal, keep it in ‘.bash_profile’</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> Give alias to a command</span><br><span class="line"><span class="meta">$</span> alias ll='ls -la'</span><br><span class="line"><span class="meta">#</span> Run 'ls -la'</span><br><span class="line"><span class="meta">$</span> ll</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Show all alias</span><br><span class="line"><span class="meta">$</span> alias</span><br></pre></td></tr></table></figure>
-<h2 id="find-mdfind"><a href="#find-mdfind" class="headerlink" title="find mdfind"></a><code>find</code> <code>mdfind</code></h2><h3 id="1-find"><a href="#1-find" class="headerlink" title="1. find"></a>1. <code>find</code></h3><p>在当前文件夹下搜索</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> find filename</span><br></pre></td></tr></table></figure>
-<h3 id="2-mdfind"><a href="#2-mdfind" class="headerlink" title="2. mdfind"></a>2. <code>mdfind</code></h3><p>类似Spotlight 强大版本</p>
-<h4 id="搜索包含keyword的文件"><a href="#搜索包含keyword的文件" class="headerlink" title="搜索包含keyword的文件"></a>搜索包含keyword的文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mdfind keyword</span><br></pre></td></tr></table></figure>
-<h4 id="搜索名字为filename的"><a href="#搜索名字为filename的" class="headerlink" title="搜索名字为filename的"></a>搜索名字为filename的</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mdfind -name filename</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cjifqjr52001ajojhrccnq3gw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cjjb1c1890006cjjhtym7zpi9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -783,7 +795,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -814,7 +826,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 20px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
+      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 15px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a> <a href="/tags/XOR/" style="font-size: 10px;">XOR</a> <a href="/tags/dictionary/" style="font-size: 10px;">dictionary</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/list/" style="font-size: 10px;">list</a>
     </div>
   </div>
 
@@ -823,7 +835,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
     </div>
   </div>
 
@@ -840,6 +852,10 @@
           </li>
         
           <li>
+            <a href="/2018/07/07/Git-Working-with-Remotes/">Git: Working with Remotes</a>
+          </li>
+        
+          <li>
             <a href="/2018/06/15/Git-Undoing-Changes/">Git: Undoing Changes</a>
           </li>
         
@@ -849,10 +865,6 @@
         
           <li>
             <a href="/2018/06/10/Add-Commits-To-A-Repo/"> Add Commits To A Repo</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/02/display/">Display A Repos&#39;s Commits</a>
           </li>
         
       </ul>
