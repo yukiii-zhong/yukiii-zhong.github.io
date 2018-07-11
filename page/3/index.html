@@ -62,6 +62,89 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-191-Number-of-1-Bits" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/02/191-Number-of-1-Bits/" class="article-date">
+  <time datetime="2018-05-02T09:40:01.000Z" itemprop="datePublished">2018-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/02/191-Number-of-1-Bits/">191. Number of 1 Bits</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the <a href="http://en.wikipedia.org/wiki/Hamming_weight" target="_blank" rel="noopener">Hamming weight</a>).</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: 11</span><br><span class="line">&gt; Output: 3</span><br><span class="line">&gt; Explanation: Integer 11 has binary representation 00000000000000000000000000001011 </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; Input: 128</span><br><span class="line">&gt; Output: 1</span><br><span class="line">&gt; Explanation: Integer 128 has binary representation 00000000000000000000000010000000</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="Method1"><a href="#Method1" class="headerlink" title="Method1"></a>Method1</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingWeight</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">return</span> bin(n).count(<span class="string">"1"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Method2"><a href="#Method2" class="headerlink" title="Method2"></a>Method2</h2><h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p><code>Int</code>一共32为，每位数字检验是否为1</p>
+<p>具体操作：检验最后一个数字，检验完右移，一共32次</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingWeight2</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">32</span>):</span><br><span class="line">            ans += n &amp; <span class="number">1</span></span><br><span class="line">            n &gt;&gt;= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<h2 id="Method3"><a href="#Method3" class="headerlink" title="Method3"></a>Method3</h2><h3 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h3><p><strong><code>N = N &amp; (N-1)</code>可以消除N的二进制表示的最后一个1</strong></p>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>N-1</th>
+<th>N &amp; (N-1)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1011</td>
+<td>1010</td>
+<td>1010</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>1001</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>0111</td>
+<td>0000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">hammingWeight3</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> n != <span class="number">0</span>:</span><br><span class="line">            n = n &amp; (n<span class="number">-1</span>)</span><br><span class="line">            count +=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> count</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/02/191-Number-of-1-Bits/" data-id="cjjgx4dzl0003l6jhqqrj8xnz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-476-Number-Complement" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/02/476-Number-Complement/" class="article-date">
@@ -147,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjjb273d70004xdjhbo838ic9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjjgx4dzo0006l6jhf30e7p3s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -208,7 +291,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjjb273e30027xdjh8zxxhqi0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjjgx4e1i002al6jhkvldfyny" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -288,7 +371,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjjb273e10022xdjhd55rpnmo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjjgx4e1e0024l6jhwjl4xcu8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -349,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjjb273cy0000xdjh8qfa1mdg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjjgx4dzf0000l6jhi2250fko" class="article-share-link">Share</a>
       
       
     </footer>
@@ -398,7 +481,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjjb273du001lxdjh4qq9ufb7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjjgx4e15001ql6jhssz3so3f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -430,7 +513,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjjb273dm000yxdjhqjgh7kq3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjjgx4e0d0012l6jh56zfvxrz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -483,7 +566,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjjb273e00020xdjhv4nf3h1j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjjgx4e1b0020l6jhvqd04cex" class="article-share-link">Share</a>
       
       
     </footer>
@@ -542,7 +625,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjjb273dk000uxdjhovvyb3ik" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjjgx4e08000sl6jhc1y3unmm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -583,53 +666,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjjb273dp0017xdjhgwtwb4e5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjjgx4e10001il6jhoto315f7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ArrayList-Example" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/24/ArrayList-Example/" class="article-date">
-  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/ArrayList-Example/">ArrayList Example</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Basic-Use-Example"><a href="#Basic-Use-Example" class="headerlink" title="Basic Use Example"></a>Basic Use Example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; generate(<span class="keyword">int</span> numRows) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">0</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        List&lt;Integer&gt; row1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        row1.add(<span class="number">1</span>);</span><br><span class="line">        ans.add(row1);</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">1</span>) <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            List&lt;Integer&gt; theRow = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            List&lt;Integer&gt; prevRow = ans.get(i-<span class="number">1</span>);</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt;i;j++) &#123;</span><br><span class="line">                theRow.add(prevRow.get(j-<span class="number">1</span>) + prevRow.get(j));</span><br><span class="line">            &#125;</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            ans.add(theRow);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjjb273dh000lxdjhmvkzqh1s" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayList/">ArrayList</a></li></ul>
 
     </footer>
   </div>
@@ -663,7 +703,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Set/">Set</a></li></ul>
     </div>
   </div>
 
@@ -673,7 +713,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ArrayList/" style="font-size: 10px;">ArrayList</a> <a href="/tags/Bit-Manipulation/" style="font-size: 15px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a>
+      <a href="/tags/Bit-Manipulation/" style="font-size: 15px;">Bit Manipulation</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Set/" style="font-size: 10px;">Set</a>
     </div>
   </div>
 
@@ -699,6 +739,10 @@
           </li>
         
           <li>
+            <a href="/2018/07/11/93-Restore-IP-Addresses/">93. Restore IP Addresses</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/07/Git-Working-with-Remotes/">Git: Working with Remotes</a>
           </li>
         
@@ -708,10 +752,6 @@
         
           <li>
             <a href="/2018/06/13/Tagging-Branching-and-Merging/">Tagging,Branching, and Merging</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/10/Add-Commits-To-A-Repo/"> Add Commits To A Repo</a>
           </li>
         
       </ul>

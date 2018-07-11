@@ -5,15 +5,19 @@
   
 
   
-  <title>Tag: Set | Hexo</title>
+  <title>93. Restore IP Addresses | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/Set/index.html">
+  <meta name="description" content="前提规则 IP地址由32位二进制数组成，为便于使用，常以XXX.XXX.XXX.XXX形式表现，每组XXX代表小于或等于255的10进制数。所以说IP地址总共有四段，每一段可能有一位，两位或者三位，范围是[0, 255] 当只有一位时，0可以成某一段，如果有两位或三位时，像 00， 01， 001， 011， 000等都是不合法的  思路 Split String according to len">
+<meta property="og:type" content="article">
+<meta property="og:title" content="93. Restore IP Addresses">
+<meta property="og:url" content="http://yoursite.com/2018/07/11/93-Restore-IP-Addresses/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前提规则 IP地址由32位二进制数组成，为便于使用，常以XXX.XXX.XXX.XXX形式表现，每组XXX代表小于或等于255的10进制数。所以说IP地址总共有四段，每一段可能有一位，两位或者三位，范围是[0, 255] 当只有一位时，0可以成某一段，如果有两位或三位时，像 00， 01， 001， 011， 000等都是不合法的  思路 Split String according to len">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-11T09:24:24.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="93. Restore IP Addresses">
+<meta name="twitter:description" content="前提规则 IP地址由32位二进制数组成，为便于使用，常以XXX.XXX.XXX.XXX形式表现，每组XXX代表小于或等于255的10进制数。所以说IP地址总共有四段，每一段可能有一位，两位或者三位，范围是[0, 255] 当只有一位时，0可以成某一段，如果有两位或三位时，像 00， 01， 001， 011， 000等都是不合法的  思路 Split String according to len">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,40 +64,73 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/04/24/Set-Example/" class="archive-article-date">
-  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">Apr 24</time>
+        <section id="main"><article id="post-93-Restore-IP-Addresses" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/11/93-Restore-IP-Addresses/" class="article-date">
+  <time datetime="2018-07-11T09:22:10.000Z" itemprop="datePublished">2018-07-11</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/24/Set-Example/">Set Example</a>
+    <h1 class="article-title" itemprop="name">
+      93. Restore IP Addresses
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前提规则"><a href="#前提规则" class="headerlink" title="前提规则"></a>前提规则</h3><ol>
+<li>IP地址由32位二进制数组成，为便于使用，常以XXX.XXX.XXX.XXX形式表现，每组XXX代表小于或等于255的10进制数。所以说IP地址总共有四段，每一段可能有一位，两位或者三位，范围是<code>[0, 255]</code></li>
+<li>当只有一位时，0可以成某一段，如果有两位或三位时，像 00， 01， 001， 011， 000等都是不合法的</li>
+</ol>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>Split String according to length combinations</li>
+<li>Judge whether each split is valid</li>
+<li>Return valid res.</li>
+</ol>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/11/93-Restore-IP-Addresses/" data-id="cjjgx4dzi0001l6jhe6y6de1u" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/01/Leetcode-经验/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Leetcode 经验
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/07/Git-Working-with-Remotes/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Git: Working with Remotes</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
