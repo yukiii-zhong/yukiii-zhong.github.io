@@ -107,7 +107,105 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjjgx4e0b000zl6jhuf0xfy2j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/01/Leetcode-经验/" data-id="cjjhdmzx30017hhjhlnlsvrvi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Forking-Repo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/12/Forking-Repo/" class="article-date">
+  <time datetime="2018-07-11T16:34:45.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/Forking-Repo/">Forking Repo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-Fork-the-Repo"><a href="#1-Fork-the-Repo" class="headerlink" title="1. Fork the Repo"></a>1. Fork the Repo</h2><h3 id="1-1-fork-the-Repo-to-your-own"><a href="#1-1-fork-the-Repo-to-your-own" class="headerlink" title="1.1 fork the Repo to your own."></a>1.1 fork the Repo to your own.</h3><p><img src="/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180712003555025.png" alt="image-20180712003555025"></p>
+<h3 id="1-2-Clone-it-from-your-own"><a href="#1-2-Clone-it-from-your-own" class="headerlink" title="1.2 Clone it from your own."></a>1.2 Clone it from your own.</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/yukiii-zhong/lighthouse.git</span><br></pre></td></tr></table></figure>
+<h2 id="2-Filtering-Collaborator’s-Commits"><a href="#2-Filtering-Collaborator’s-Commits" class="headerlink" title="2. Filtering Collaborator’s Commits"></a>2. Filtering Collaborator’s Commits</h2><h3 id="2-1-Group-By-Commit-Author"><a href="#2-1-Group-By-Commit-Author" class="headerlink" title="2.1 Group By Commit Author"></a>2.1 Group By Commit Author</h3><h4 id="a-common"><a href="#a-common" class="headerlink" title="a. common"></a>a. common</h4> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git shortlog</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1ft6ej6roypj31kw0t3aim.jpg" alt="img"></p>
+<h4 id="b-only-see-number-of-commits"><a href="#b-only-see-number-of-commits" class="headerlink" title="b. only see number of commits"></a>b. only see number of commits</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git shortlog -s -n</span><br></pre></td></tr></table></figure>
+<p><code>-s</code> –&gt; just show the number of commits</p>
+<p><code>-n</code> –&gt; sort them numerically</p>
+<p><img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/April/58f94565_ud456-l2-03-git-shortlog-flags/ud456-l2-03-git-shortlog-flags.png" alt="img"></p>
+<h4 id="c-only-show-specific-author-commits"><a href="#c-only-show-specific-author-commits" class="headerlink" title="c. only show specific author commits"></a>c. only show specific author commits</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git shortlog --author=Paul</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-Filter-Commits-By-Search"><a href="#2-2-Filter-Commits-By-Search" class="headerlink" title="2.2 Filter Commits By Search"></a>2.2 Filter Commits By Search</h3> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --grep=bug</span><br><span class="line"><span class="meta">$</span> git log --grep bug</span><br></pre></td></tr></table></figure>
+<p>if you were to run <code>git log --grep &quot;fort&quot;</code>, then Git will display only the commits that have the character <code>f</code> followed by the character <code>o</code> followed by <code>r</code> followed by <code>t</code>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/12/Forking-Repo/" data-id="cjjhdmzwq000lhhjhm5awxns0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-186-Reverse-Words-in-a-String-II" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/11/186-Reverse-Words-in-a-String-II/" class="article-date">
+  <time datetime="2018-07-11T12:50:09.000Z" itemprop="datePublished">2018-07-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/11/186-Reverse-Words-in-a-String-II/">186. Reverse Words in a String II</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>We need to reverse the string word by word</p>
+<ol>
+<li>Reverse the whole string</li>
+<li>Reverse back each word in the string.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/11/186-Reverse-Words-in-a-String-II/" data-id="cjjhdmzw90003hhjhlwzal2zp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -156,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/11/93-Restore-IP-Addresses/" data-id="cjjgx4dzi0001l6jhe6y6de1u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/11/93-Restore-IP-Addresses/" data-id="cjjhdmzwj000ehhjhhcr2gd7h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +324,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/07/Git-Working-with-Remotes/" data-id="cjjgx4dzw000gl6jhxak61h5k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/07/Git-Working-with-Remotes/" data-id="cjjhdmzwr000nhhjhx4k0kntc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -319,7 +417,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/15/Git-Undoing-Changes/" data-id="cjjgx4e00000kl6jht24d8v3i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/15/Git-Undoing-Changes/" data-id="cjjhdmzww000vhhjhttw8x9gu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -420,7 +518,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjjgx4e12001kl6jhi90zx8b4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjjhdmzxa001nhhjhxfyvqpvw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -501,7 +599,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cjjgx4e04000nl6jh8hujq6zn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cjjhdmzwt000qhhjhq05ijt9c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -623,7 +721,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cjjgx4e1c0022l6jhsfu53h4c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cjjhdmzxe001shhjhum6q42og" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -665,110 +763,21 @@
 <li>手动Create你的项目文件夹 <code>the_Repo</code></li>
 <li>运行：</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> the_Repo</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git init</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd the_Repo</span><br><span class="line"><span class="meta">$</span> git init</span><br></pre></td></tr></table></figure>
 <h3 id="2-Clone-An-Existing-Repo"><a href="#2-Clone-An-Existing-Repo" class="headerlink" title="2. Clone An Existing Repo"></a>2. Clone An Existing Repo</h3><p>一下命令将会在定位Directory下，新建子Repo</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/udacity/course-git-blog-project</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/udacity/course-git-blog-project</span><br></pre></td></tr></table></figure>
 <p>Then Don’t forget to <code>cd</code> to the Repo</p>
-<h4 id="如果需要Rename-the-project"><a href="#如果需要Rename-the-project" class="headerlink" title="如果需要Rename the project"></a>如果需要Rename the project</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/udacity/course-git-blog-project Project_Name</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-Determine-A-Repo’s-Status"><a href="#3-Determine-A-Repo’s-Status" class="headerlink" title="3. Determine A Repo’s Status"></a>3. Determine A Repo’s Status</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git status</span></span><br></pre></td></tr></table></figure>
+<h4 id="如果需要Rename-the-project"><a href="#如果需要Rename-the-project" class="headerlink" title="如果需要Rename the project"></a>如果需要Rename the project</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/udacity/course-git-blog-project Project_Name</span><br></pre></td></tr></table></figure>
+<h3 id="3-Determine-A-Repo’s-Status"><a href="#3-Determine-A-Repo’s-Status" class="headerlink" title="3. Determine A Repo’s Status"></a>3. Determine A Repo’s Status</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cjjgx4e0a000wl6jhc0q6zvw4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cjjhdmzwu000thhjhr8csylzx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-unInstall-with-command" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/01/unInstall-with-command/" class="article-date">
-  <time datetime="2018-05-31T17:20:54.000Z" itemprop="datePublished">2018-06-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/01/unInstall-with-command/">unInstall with command</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo rm -fr /Applications/AppName</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cjjgx4e1f0027l6jhu5ttysmi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Move-and-Rename" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/29/Move-and-Rename/" class="article-date">
-  <time datetime="2018-05-29T14:31:18.000Z" itemprop="datePublished">2018-05-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/29/Move-and-Rename/">Move and Rename</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="mv-Move-and-Rename"><a href="#mv-Move-and-Rename" class="headerlink" title="mv Move and Rename"></a><code>mv</code> Move and Rename</h2><h3 id="1-Use-mv-ro-rename"><a href="#1-Use-mv-ro-rename" class="headerlink" title="1. Use mv ro rename"></a>1. Use <code>mv</code> ro rename</h3><h4 id="1-if-file1-in-Documents-and-currently-in-Documents"><a href="#1-if-file1-in-Documents-and-currently-in-Documents" class="headerlink" title="1) if file1 in Documents, and currently in Documents"></a>1) if file1 in Documents, and currently in Documents</h4><p>Rename file1 to file2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv file1 file2</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-if-file1-not-in-Documents"><a href="#2-if-file1-not-in-Documents" class="headerlink" title="2) if file1 not in Documents"></a>2) if file1 not in Documents</h4><p>Move file1 to Documents and rename it to file2</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv file1 file2</span></span><br></pre></td></tr></table></figure>
-<h4 id="Note-file1-的位置可以在GUI里拖拽到Terminal"><a href="#Note-file1-的位置可以在GUI里拖拽到Terminal" class="headerlink" title="Note: file1 的位置可以在GUI里拖拽到Terminal"></a>Note: file1 的位置可以在GUI里拖拽到Terminal</h4><h3 id="2-Move-File"><a href="#2-Move-File" class="headerlink" title="2. Move File"></a>2. Move File</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File Diretory</span></span><br></pre></td></tr></table></figure>
-<p>File可以是File/Directory</p>
-<h4 id="移动文件到上一级Directory"><a href="#移动文件到上一级Directory" class="headerlink" title="移动文件到上一级Directory"></a>移动文件到上一级Directory</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File ../</span></span><br></pre></td></tr></table></figure>
-<h4 id="移动到当前文件夹"><a href="#移动到当前文件夹" class="headerlink" title="移动到当前文件夹"></a>移动到当前文件夹</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv File .</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cjjgx4e0w001el6jhfmqhrtx2" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -837,19 +846,19 @@
           </li>
         
           <li>
+            <a href="/2018/07/12/Forking-Repo/">Forking Repo</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/11/186-Reverse-Words-in-a-String-II/">186. Reverse Words in a String II</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/11/93-Restore-IP-Addresses/">93. Restore IP Addresses</a>
           </li>
         
           <li>
             <a href="/2018/07/07/Git-Working-with-Remotes/">Git: Working with Remotes</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/15/Git-Undoing-Changes/">Git: Undoing Changes</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/13/Tagging-Branching-and-Merging/">Tagging,Branching, and Merging</a>
           </li>
         
       </ul>

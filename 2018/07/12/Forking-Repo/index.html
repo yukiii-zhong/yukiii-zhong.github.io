@@ -5,20 +5,24 @@
   
 
   
-  <title>Git: Working with Remotes | Hexo</title>
+  <title>Forking Repo | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1$ git remote PartA. Add A Remote Repository1. Create A Simple Project Create a Project directory   git init to turn it into a Git repository   Create a README.md file  Create other files   2. Hosting">
+  <meta name="description" content="1. Fork the Repo1.1 fork the Repo to your own. 1.2 Clone it from your own.1$ git clone https://github.com/yukiii-zhong/lighthouse.git 2. Filtering Collaborator’s Commits2.1 Group By Commit Authora. co">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git: Working with Remotes">
-<meta property="og:url" content="http://yoursite.com/2018/07/07/Git-Working-with-Remotes/index.html">
+<meta property="og:title" content="Forking Repo">
+<meta property="og:url" content="http://yoursite.com/2018/07/12/Forking-Repo/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1$ git remote PartA. Add A Remote Repository1. Create A Simple Project Create a Project directory   git init to turn it into a Git repository   Create a README.md file  Create other files   2. Hosting">
+<meta property="og:description" content="1. Fork the Repo1.1 fork the Repo to your own. 1.2 Clone it from your own.1$ git clone https://github.com/yukiii-zhong/lighthouse.git 2. Filtering Collaborator’s Commits2.1 Group By Commit Authora. co">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-07T06:35:18.787Z">
+<meta property="og:image" content="http://yoursite.com/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180712003555025.png">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1ft6ej6roypj31kw0t3aim.jpg">
+<meta property="og:image" content="https://d17h27t6h515a5.cloudfront.net/topher/2017/April/58f94565_ud456-l2-03-git-shortlog-flags/ud456-l2-03-git-shortlog-flags.png">
+<meta property="og:updated_time" content="2018-07-11T16:51:36.228Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git: Working with Remotes">
-<meta name="twitter:description" content="1$ git remote PartA. Add A Remote Repository1. Create A Simple Project Create a Project directory   git init to turn it into a Git repository   Create a README.md file  Create other files   2. Hosting">
+<meta name="twitter:title" content="Forking Repo">
+<meta name="twitter:description" content="1. Fork the Repo1.1 fork the Repo to your own. 1.2 Clone it from your own.1$ git clone https://github.com/yukiii-zhong/lighthouse.git 2. Filtering Collaborator’s Commits2.1 Group By Commit Authora. co">
+<meta name="twitter:image" content="http://yoursite.com/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180712003555025.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -65,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Git-Working-with-Remotes" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Forking-Repo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/07/Git-Working-with-Remotes/" class="article-date">
-  <time datetime="2018-07-07T06:04:42.000Z" itemprop="datePublished">2018-07-07</time>
+    <a href="/2018/07/12/Forking-Repo/" class="article-date">
+  <time datetime="2018-07-11T16:34:45.000Z" itemprop="datePublished">2018-07-12</time>
 </a>
     
   <div class="article-category">
@@ -83,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Git: Working with Remotes
+      Forking Repo
     </h1>
   
 
@@ -91,41 +95,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git remote</span><br></pre></td></tr></table></figure>
-<h2 id="PartA-Add-A-Remote-Repository"><a href="#PartA-Add-A-Remote-Repository" class="headerlink" title="PartA. Add A Remote Repository"></a>PartA. Add A Remote Repository</h2><h3 id="1-Create-A-Simple-Project"><a href="#1-Create-A-Simple-Project" class="headerlink" title="1. Create A Simple Project"></a>1. Create A Simple Project</h3><ol>
-<li><p>Create a Project directory </p>
-</li>
-<li><p><code>git init</code> to turn it into a Git repository </p>
-</li>
-<li><p>Create a <code>README.md</code> file</p>
-</li>
-<li><p>Create other files</p>
-</li>
-</ol>
-<h3 id="2-Hosting-on-GitHub"><a href="#2-Hosting-on-GitHub" class="headerlink" title="2. Hosting on GitHub"></a>2. Hosting on GitHub</h3><p>Creat the repo on GitHub</p>
-<h3 id="3-Manage-the-Repository-git-remote"><a href="#3-Manage-the-Repository-git-remote" class="headerlink" title="3. Manage the Repository: git remote"></a>3. Manage the Repository: <code>git remote</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git remote</span><br></pre></td></tr></table></figure>
-<ul>
-<li>It’s possible to have links to multiple different remote repositories.</li>
-<li>A shortname is the name that’s used to refer to a remote repository’s location. Typically the location is a URL, but it could be a file path on the same computer.</li>
-<li><code>git remote add</code> is used to add a connection to a new remote repository.</li>
-<li><code>git remote -v</code> is used to see the details about a connection to a remote.</li>
-</ul>
-<h2 id="PartB-Push-Changes-To-A-Remote"><a href="#PartB-Push-Changes-To-A-Remote" class="headerlink" title="PartB. Push Changes To A Remote"></a>PartB. Push Changes To A Remote</h2><h3 id="1-Check-the-commits"><a href="#1-Check-the-commits" class="headerlink" title="1. Check the commits"></a>1. Check the commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --oneline --graph --all</span><br></pre></td></tr></table></figure>
-<h3 id="2-Push-the-commits"><a href="#2-Push-the-commits" class="headerlink" title="2. Push the commits"></a>2. Push the commits</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git push &lt;remote-shortname&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> EX:</span><br><span class="line"><span class="meta">$</span> git push origin master</span><br></pre></td></tr></table></figure>
-<h2 id="PartC-Pulling-Changes-From-A-Remote"><a href="#PartC-Pulling-Changes-From-A-Remote" class="headerlink" title="PartC: Pulling Changes From A Remote"></a>PartC: Pulling Changes From A Remote</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git pull origin master</span><br></pre></td></tr></table></figure>
-<p>When <code>git pull</code> is run, the following things happen:</p>
-<ul>
-<li>the commit(s) on the remote branch are copied to the local repository</li>
-<li>the local tracking branch (<code>origin/master</code>) is moved to point to the most recent commit</li>
-<li>the local tracking branch (<code>origin/master</code>) is merged into the local branch (<code>master</code>)</li>
-</ul>
-<h2 id="PartD-Pull-vs-Fetch"><a href="#PartD-Pull-vs-Fetch" class="headerlink" title="PartD: Pull vs Fetch"></a>PartD: Pull vs Fetch</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git fetch origin master</span><br></pre></td></tr></table></figure>
-<p><code>fetch</code> the changes, but not <code>merge</code> them</p>
+        <h2 id="1-Fork-the-Repo"><a href="#1-Fork-the-Repo" class="headerlink" title="1. Fork the Repo"></a>1. Fork the Repo</h2><h3 id="1-1-fork-the-Repo-to-your-own"><a href="#1-1-fork-the-Repo-to-your-own" class="headerlink" title="1.1 fork the Repo to your own."></a>1.1 fork the Repo to your own.</h3><p><img src="/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180712003555025.png" alt="image-20180712003555025"></p>
+<h3 id="1-2-Clone-it-from-your-own"><a href="#1-2-Clone-it-from-your-own" class="headerlink" title="1.2 Clone it from your own."></a>1.2 Clone it from your own.</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/yukiii-zhong/lighthouse.git</span><br></pre></td></tr></table></figure>
+<h2 id="2-Filtering-Collaborator’s-Commits"><a href="#2-Filtering-Collaborator’s-Commits" class="headerlink" title="2. Filtering Collaborator’s Commits"></a>2. Filtering Collaborator’s Commits</h2><h3 id="2-1-Group-By-Commit-Author"><a href="#2-1-Group-By-Commit-Author" class="headerlink" title="2.1 Group By Commit Author"></a>2.1 Group By Commit Author</h3><h4 id="a-common"><a href="#a-common" class="headerlink" title="a. common"></a>a. common</h4> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git shortlog</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1ft6ej6roypj31kw0t3aim.jpg" alt="img"></p>
+<h4 id="b-only-see-number-of-commits"><a href="#b-only-see-number-of-commits" class="headerlink" title="b. only see number of commits"></a>b. only see number of commits</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git shortlog -s -n</span><br></pre></td></tr></table></figure>
+<p><code>-s</code> –&gt; just show the number of commits</p>
+<p><code>-n</code> –&gt; sort them numerically</p>
+<p><img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/April/58f94565_ud456-l2-03-git-shortlog-flags/ud456-l2-03-git-shortlog-flags.png" alt="img"></p>
+<h4 id="c-only-show-specific-author-commits"><a href="#c-only-show-specific-author-commits" class="headerlink" title="c. only show specific author commits"></a>c. only show specific author commits</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git shortlog --author=Paul</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-Filter-Commits-By-Search"><a href="#2-2-Filter-Commits-By-Search" class="headerlink" title="2.2 Filter Commits By Search"></a>2.2 Filter Commits By Search</h3> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git log --grep=bug</span><br><span class="line"><span class="meta">$</span> git log --grep bug</span><br></pre></td></tr></table></figure>
+<p>if you were to run <code>git log --grep &quot;fort&quot;</code>, then Git will display only the commits that have the character <code>f</code> followed by the character <code>o</code> followed by <code>r</code> followed by <code>t</code>.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/07/Git-Working-with-Remotes/" data-id="cjjhdmzwr000nhhjhx4k0kntc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/12/Forking-Repo/" data-id="cjjhdmzwq000lhhjhm5awxns0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -136,19 +121,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/07/11/93-Restore-IP-Addresses/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/09/01/Leetcode-经验/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          93. Restore IP Addresses
+          Leetcode 经验
         
       </div>
     </a>
   
   
-    <a href="/2018/06/15/Git-Undoing-Changes/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/07/11/186-Reverse-Words-in-a-String-II/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Git: Undoing Changes</div>
+      <div class="article-nav-title">186. Reverse Words in a String II</div>
     </a>
   
 </nav>

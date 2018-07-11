@@ -62,6 +62,111 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-math-log-243-3-problem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/07/math-log-243-3-problem/" class="article-date">
+  <time datetime="2018-05-07T11:19:53.000Z" itemprop="datePublished">2018-05-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/07/math-log-243-3-problem/">math.log(243,3) problem</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>In python: </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> math</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>math.log(<span class="number">243</span>,<span class="number">3</span>)</span><br><span class="line"><span class="number">4.999999999999999</span></span><br><span class="line"><span class="comment"># Expected: 5</span></span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> math</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>math.log10(<span class="number">243</span>)/math.log10(<span class="number">3</span>)</span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> math</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = math.log(<span class="number">243</span>,<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Judge whether an int</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>judge = (round(x)-x) &lt; <span class="number">0.0000001</span></span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># get the Int value</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>round(x)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/07/math-log-243-3-problem/" data-id="cjjhdmzxl0021hhjhbb7w5icl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ASCII-ord-chr" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/03/ASCII-ord-chr/" class="article-date">
+  <time datetime="2018-05-03T08:51:53.000Z" itemprop="datePublished">2018-05-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/03/ASCII-ord-chr/">ASCII ord() chr()</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p><code>ord()</code> 和<code>chr()</code>, <code>unichr()</code>相反</p>
+<p><code>ord(&#39;A&#39;)</code> : ‘A ‘ —&gt; 65</p>
+<p><code>ord(u&#39;\u2020&#39;)</code> : return 8224</p>
+<p><code>chr(65)</code> : 65 —&gt; A</p>
+</li>
+<li><p>ASCII code for ‘A’ is 65, ‘a’ is 97</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>ord(<span class="string">'A'</span>)</span><br><span class="line"><span class="number">65</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>ord(<span class="string">'a'</span>)</span><br><span class="line"><span class="number">97</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(<span class="number">65</span>)</span><br><span class="line"><span class="string">'A'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(<span class="number">97</span>)</span><br><span class="line"><span class="string">'a'</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>Note: </p>
+<p>if {A:1, B:2, ….}</p>
+<p><code>ord(&#39;A&#39;)-64</code></p>
+<p>注意最开始A为65，如果设定A为1，则 <strong>- 64</strong></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/05/03/ASCII-ord-chr/" data-id="cjjhdmzwp000ihhjhele8xchf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-191-Number-of-1-Bits" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/02/191-Number-of-1-Bits/" class="article-date">
@@ -133,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/191-Number-of-1-Bits/" data-id="cjjgx4dzl0003l6jhqqrj8xnz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/191-Number-of-1-Bits/" data-id="cjjhdmzw50001hhjhworwrzgu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -230,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjjgx4dzo0006l6jhf30e7p3s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/476-Number-Complement/" data-id="cjjhdmzwd0008hhjhsd7f6iyh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -291,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjjgx4e1i002al6jhkvldfyny" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/02/二进制十进制转换-bin()-int(String,2)/" data-id="cjjhdmzxo0027hhjhrjyxrvit" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -371,7 +476,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjjgx4e1e0024l6jhwjl4xcu8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjjhdmzxr002chhjh9292gm0f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -432,7 +537,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjjgx4dzf0000l6jhi2250fko" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjjhdmzvy0000hhjh2d80dta3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -481,7 +586,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjjgx4e15001ql6jhssz3so3f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjjhdmzxc001phhjh4stvgl1j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -513,7 +618,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjjgx4e0d0012l6jh56zfvxrz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjjhdmzwz0012hhjhr15a8ln3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -566,111 +671,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjjgx4e1b0020l6jhvqd04cex" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjjhdmzxn0025hhjh76oaeinn" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Hexo操作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/25/Hexo操作/" class="article-date">
-  <time datetime="2018-04-25T08:20:52.000Z" itemprop="datePublished">2018-04-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/25/Hexo操作/">Hexo操作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="常规使用"><a href="#常规使用" class="headerlink" title="常规使用"></a>常规使用</h2><h3 id="1-定位到即将使用的文件夹"><a href="#1-定位到即将使用的文件夹" class="headerlink" title="1. 定位到即将使用的文件夹"></a>1. 定位到即将使用的文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /Users/yukizhong/Dropbox/02_Coding/Local_Blog</span><br></pre></td></tr></table></figure>
-<h3 id="2-Create-a-new-post"><a href="#2-Create-a-new-post" class="headerlink" title="2. Create a new post"></a>2. Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="3-Generate-static-files"><a href="#3-Generate-static-files" class="headerlink" title="3. Generate static files"></a>3. Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="4-Deploy-to-remote-sites"><a href="#4-Deploy-to-remote-sites" class="headerlink" title="4. Deploy to remote sites"></a>4. Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h2 id="文档使用细节"><a href="#文档使用细节" class="headerlink" title="文档使用细节"></a>文档使用细节</h2><h3 id="1-Add-multiple-tags"><a href="#1-Add-multiple-tags" class="headerlink" title="1. Add multiple tags"></a>1. Add multiple tags</h3><p>在文档开头定义中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: [tag1, tag2, tag3]</span><br></pre></td></tr></table></figure>
-<h2 id="2-Locate-the-Category"><a href="#2-Locate-the-Category" class="headerlink" title="2. Locate the Category"></a>2. Locate the Category</h2><p>将Blog放在Python下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">category: Python</span><br></pre></td></tr></table></figure>
-<h2 id="详细指南"><a href="#详细指南" class="headerlink" title="详细指南"></a>详细指南</h2><p><a href="https://madongqiang2201.github.io/2016/07/21/Mac%E4%B8%8BHexo%EF%BC%8Bgithub-pages%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">https://madongqiang2201.github.io/2016/07/21/Mac%E4%B8%8BHexo%EF%BC%8Bgithub-pages%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</a></p>
-<h2 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h2><h3 id="1-hexo-s-Error"><a href="#1-hexo-s-Error" class="headerlink" title="1. hexo s Error"></a>1. <code>hexo s</code> Error</h3><p>Error: Port 4000 has been used. Try other port instead.</p>
-<p>Command: <code>sudo hexo s -p 5000</code></p>
-<h3 id="2-上传失败-hexo-d"><a href="#2-上传失败-hexo-d" class="headerlink" title="2. 上传失败 hexo d"></a>2. 上传失败 <code>hexo d</code></h3><p>ERROR</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access &apos;https://github.com/.../&apos;: Could not resolve host: github.com</span><br></pre></td></tr></table></figure>
-<p>问题：不该用代理的时候用了代理，最简单粗暴：断了VPN</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjjgx4e08000sl6jhc1y3unmm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Set-Example" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/24/Set-Example/" class="article-date">
-  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/Set-Example/">Set Example</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Set-Example"><a href="#Set-Example" class="headerlink" title="Set Example"></a>Set Example</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Contains_Duplicate_II_219</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(nums[i])) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            set.add(nums[i]);</span><br><span class="line">            <span class="keyword">if</span> (set.size()&gt;k) set.remove(nums[i-k]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjjgx4e10001il6jhoto315f7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
-
     </footer>
   </div>
   
@@ -739,19 +742,19 @@
           </li>
         
           <li>
+            <a href="/2018/07/12/Forking-Repo/">Forking Repo</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/11/186-Reverse-Words-in-a-String-II/">186. Reverse Words in a String II</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/11/93-Restore-IP-Addresses/">93. Restore IP Addresses</a>
           </li>
         
           <li>
             <a href="/2018/07/07/Git-Working-with-Remotes/">Git: Working with Remotes</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/15/Git-Undoing-Changes/">Git: Undoing Changes</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/13/Tagging-Branching-and-Merging/">Tagging,Branching, and Merging</a>
           </li>
         
       </ul>
