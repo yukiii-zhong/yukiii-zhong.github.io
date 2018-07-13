@@ -5,19 +5,15 @@
   
 
   
-  <title>ASCII ord() chr() | Hexo</title>
+  <title>Category: Uncategorized | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ord() 和chr(), unichr()相反 ord(&amp;#39;A&amp;#39;) : ‘A ‘ —&amp;gt; 65 ord(u&amp;#39;\u2020&amp;#39;) : return 8224 chr(65) : 65 —&amp;gt; A  ASCII code for ‘A’ is 65, ‘a’ is 97   1234567891011&amp;gt;&amp;gt;&amp;gt; ord(&apos;A&apos;)65&amp;gt;&amp;gt;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ASCII ord() chr()">
-<meta property="og:url" content="http://yoursite.com/2018/05/03/ASCII-ord-chr/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/categories/Uncategorized/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ord() 和chr(), unichr()相反 ord(&amp;#39;A&amp;#39;) : ‘A ‘ —&amp;gt; 65 ord(u&amp;#39;\u2020&amp;#39;) : return 8224 chr(65) : 65 —&amp;gt; A  ASCII code for ‘A’ is 65, ‘a’ is 97   1234567891011&amp;gt;&amp;gt;&amp;gt; ord(&apos;A&apos;)65&amp;gt;&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-03T09:11:41.034Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ASCII ord() chr()">
-<meta name="twitter:description" content="ord() 和chr(), unichr()相反 ord(&amp;#39;A&amp;#39;) : ‘A ‘ —&amp;gt; 65 ord(u&amp;#39;\u2020&amp;#39;) : return 8224 chr(65) : 65 —&amp;gt; A  ASCII code for ‘A’ is 65, ‘a’ is 97   1234567891011&amp;gt;&amp;gt;&amp;gt; ord(&apos;A&apos;)65&amp;gt;&amp;gt;">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,81 +60,40 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-ASCII-ord-chr" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/03/ASCII-ord-chr/" class="article-date">
-  <time datetime="2018-05-03T08:51:53.000Z" itemprop="datePublished">2018-05-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      ASCII ord() chr()
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2018/07/13/Build-Flask-Environment/" class="archive-article-date">
+  <time datetime="2018-07-13T11:35:32.000Z" itemprop="datePublished">Jul 13</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/07/13/Build-Flask-Environment/">Build Flask Environment</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p><code>ord()</code> 和<code>chr()</code>, <code>unichr()</code>相反</p>
-<p><code>ord(&#39;A&#39;)</code> : ‘A ‘ —&gt; 65</p>
-<p><code>ord(u&#39;\u2020&#39;)</code> : return 8224</p>
-<p><code>chr(65)</code> : 65 —&gt; A</p>
-</li>
-<li><p>ASCII code for ‘A’ is 65, ‘a’ is 97</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>ord(<span class="string">'A'</span>)</span><br><span class="line"><span class="number">65</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>ord(<span class="string">'a'</span>)</span><br><span class="line"><span class="number">97</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(<span class="number">65</span>)</span><br><span class="line"><span class="string">'A'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(<span class="number">97</span>)</span><br><span class="line"><span class="string">'a'</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li><p>Note: </p>
-<p>if {A:1, B:2, ….}</p>
-<p><code>ord(&#39;A&#39;)-64</code></p>
-<p>注意最开始A为65，如果设定A为1，则 <strong>- 64</strong></p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/03/ASCII-ord-chr/" data-id="cjjk3gafv000fw0jhag1bu5hu" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/05/07/math-log-243-3-problem/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          math.log(243,3) problem
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/05/02/191-Number-of-1-Bits/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">191. Number of 1 Bits</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
+
 
 </section>
         

@@ -62,6 +62,89 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Graph" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/26/Graph/" class="article-date">
+  <time datetime="2018-04-25T16:50:03.810Z" itemprop="datePublished">2018-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h1><h3 id="Basic-Concepts"><a href="#Basic-Concepts" class="headerlink" title="Basic Concepts"></a>Basic Concepts</h3><p><img src="/Users/yukizhong/Desktop/屏幕快照 2018-04-26 上午12.39.49.png" alt="屏幕快照 2018-04-26 上午12.39.49"></p>
+<h3 id="Simplification-Integer-Vertices"><a href="#Simplification-Integer-Vertices" class="headerlink" title="Simplification: Integer Vertices"></a>Simplification: Integer Vertices</h3><p><img src="/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005730989.png" alt="image-20180426005730989"></p>
+<h2 id="Graph-API"><a href="#Graph-API" class="headerlink" title="Graph API"></a>Graph API</h2><p><img src="/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005346623.png" alt="image-20180426005346623"></p>
+<p><img src="/var/folders/xj/x7t_xj850yv1z8td6xr3g0sh0000gn/T/abnerworks.Typora/image-20180426005535592.png" alt="image-20180426005535592"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjjk3gag90011w0jhp3w97uvk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-sorting-with-lambda" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/25/sorting-with-lambda/" class="article-date">
+  <time datetime="2018-04-25T15:43:00.000Z" itemprop="datePublished">2018-04-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/25/sorting-with-lambda/">Sorting with lambda</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Sorting-list-Dic-with-lambda"><a href="#Sorting-list-Dic-with-lambda" class="headerlink" title="Sorting list/Dic with lambda"></a>Sorting list/Dic with lambda</h1><h3 id="1-Sort-a-List"><a href="#1-Sort-a-List" class="headerlink" title="1. Sort a List"></a>1. Sort a List</h3><p><code>sorted</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sorted(iterable[,key][,reverse])</span><br></pre></td></tr></table></figure>
+<h4 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h4><p><code>list.sort()</code>—&gt; sort the list</p>
+<p><code>sorted(list)</code>—&gt; return a sorted list</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Original list</span></span><br><span class="line">L = [<span class="string">'c'</span>,<span class="string">'a'</span>,<span class="string">'b'</span>]</span><br><span class="line"></span><br><span class="line">l2 = sorted(list)</span><br><span class="line"><span class="comment"># return a sorted list, but original list is not changed</span></span><br><span class="line"><span class="comment"># L2:['a', 'b', 'c']</span></span><br><span class="line"></span><br><span class="line">l3 = sorted(list,reverse = <span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># L3: ['c','b','a']</span></span><br><span class="line"></span><br><span class="line">L.sort()</span><br><span class="line"><span class="comment"># L itself has been sorted</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-Sort-a-dict"><a href="#2-Sort-a-dict" class="headerlink" title="2. Sort a dict?"></a>2. Sort a dict?</h3><p>Actually you cannot sort a dictionary, itself has no order.</p>
+<p>But you can return a new sorted list</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;<span class="string">'c'</span>:<span class="number">1</span>, <span class="string">'b'</span>:<span class="number">2</span>,<span class="string">'a'</span>:<span class="number">3</span>&#125;</span><br><span class="line"></span><br><span class="line">L1 = sorted(dic)</span><br><span class="line"><span class="comment"># L1: ['a', 'b', 'c']</span></span><br><span class="line"><span class="comment"># sorted by key values and return to a list of keys</span></span><br><span class="line"></span><br><span class="line">L2 = sorted(dic.values())</span><br><span class="line"><span class="comment"># L2:[1,2,3]</span></span><br><span class="line"></span><br><span class="line">L3 = sorted(dic.items())</span><br><span class="line"><span class="comment"># L3: [('a', 3), ('b', 2), ('c', 1)]</span></span><br><span class="line"><span class="comment"># Return the list of the item tuples</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-Use-lambda"><a href="#2-Use-lambda" class="headerlink" title="2. Use lambda"></a>2. Use lambda</h3><h4 id="Sort-a-list"><a href="#Sort-a-list" class="headerlink" title="Sort a list"></a>Sort a list</h4><p><strong>Example: </strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">L = [</span><br><span class="line">    &#123;<span class="string">'x'</span>: <span class="number">3</span>, <span class="string">'y'</span>: <span class="number">2</span>, <span class="string">'z'</span>: <span class="number">1</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'x'</span>: <span class="number">2</span>, <span class="string">'y'</span>: <span class="number">1</span>, <span class="string">'z'</span>: <span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">3</span>, <span class="string">'z'</span>: <span class="number">2</span>&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">#此处dic的意义：Every element in the list</span></span><br><span class="line">L2 = sorted(L,key = <span class="keyword">lambda</span> dic:dic[<span class="string">'y'</span>])</span><br><span class="line"><span class="comment"># L2: [&#123;'x': 2, 'y': 1, 'z': 3&#125;, &#123;'x': 3, 'y': 2, 'z': 1&#125;, &#123;'x': 1, 'y': 3, 'z': 2&#125;]</span></span><br><span class="line"></span><br><span class="line">L.sort(key=<span class="keyword">lambda</span> dic: dic[z])</span><br><span class="line"><span class="comment"># L: </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 用Method</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">getKey</span><span class="params">(item)</span>:</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> item[<span class="number">0</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>l = [[<span class="number">2</span>, <span class="number">3</span>], [<span class="number">6</span>, <span class="number">7</span>], [<span class="number">3</span>, <span class="number">34</span>], [<span class="number">24</span>, <span class="number">64</span>], [<span class="number">1</span>, <span class="number">43</span>]]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sorted(l, key=getKey)</span><br><span class="line">[[<span class="number">1</span>, <span class="number">43</span>], [<span class="number">2</span>, <span class="number">3</span>], [<span class="number">3</span>, <span class="number">34</span>], [<span class="number">6</span>, <span class="number">7</span>], [<span class="number">24</span>, <span class="number">64</span>]]</span><br></pre></td></tr></table></figure>
+<h4 id="Sort-a-dict-return-a-list"><a href="#Sort-a-dict-return-a-list" class="headerlink" title="Sort a dict (return a list)"></a>Sort a dict (return a list)</h4><p><strong>Example</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dic = &#123;</span><br><span class="line">    <span class="string">'a'</span>: &#123;<span class="string">'x'</span>: <span class="number">3</span>, <span class="string">'y'</span>: <span class="number">2</span>, <span class="string">'z'</span>: <span class="number">1</span>&#125;,</span><br><span class="line">    <span class="string">'b'</span>: &#123;<span class="string">'x'</span>: <span class="number">2</span>, <span class="string">'y'</span>: <span class="number">1</span>, <span class="string">'z'</span>: <span class="number">3</span>&#125;,</span><br><span class="line">    <span class="string">'c'</span>: &#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">3</span>, <span class="string">'z'</span>: <span class="number">2</span>&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">L = sorted(dic, key = <span class="keyword">lambda</span> k: dic[k][<span class="string">'y'</span>])</span><br><span class="line"><span class="comment"># 推测：k是指every key value</span></span><br><span class="line"><span class="comment"># L:['b', 'a', 'c']</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjjk3gagw0027w0jhogoiukry" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Hexo操作" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/25/Hexo操作/" class="article-date">
@@ -111,7 +194,48 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjjhdmzwy0010hhjh183ubzlc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjjk3gagt0021w0jh36xhsqrw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ArrayList-Example" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/24/ArrayList-Example/" class="article-date">
+  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/24/ArrayList-Example/">ArrayList Example</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Basic-Use-Example"><a href="#Basic-Use-Example" class="headerlink" title="Basic Use Example"></a>Basic Use Example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; generate(<span class="keyword">int</span> numRows) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">0</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        List&lt;Integer&gt; row1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        row1.add(<span class="number">1</span>);</span><br><span class="line">        ans.add(row1);</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">1</span>) <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            List&lt;Integer&gt; theRow = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            List&lt;Integer&gt; prevRow = ans.get(i-<span class="number">1</span>);</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt;i;j++) &#123;</span><br><span class="line">                theRow.add(prevRow.get(j-<span class="number">1</span>) + prevRow.get(j));</span><br><span class="line">            &#125;</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            ans.add(theRow);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjjk3gafx000iw0jhpoqk083s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,52 +276,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjjhdmzx8001hhhjhvawc4oh9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjjk3gagl001nw0jhjpo6k45j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ArrayList-Example" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/24/ArrayList-Example/" class="article-date">
-  <time datetime="2018-04-24T14:29:10.000Z" itemprop="datePublished">2018-04-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/ArrayList-Example/">ArrayList Example</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Basic-Use-Example"><a href="#Basic-Use-Example" class="headerlink" title="Basic Use Example"></a>Basic Use Example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; generate(<span class="keyword">int</span> numRows) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">0</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        List&lt;Integer&gt; row1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        row1.add(<span class="number">1</span>);</span><br><span class="line">        ans.add(row1);</span><br><span class="line">        <span class="keyword">if</span> (numRows == <span class="number">1</span>) <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            List&lt;Integer&gt; theRow = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            List&lt;Integer&gt; prevRow = ans.get(i-<span class="number">1</span>);</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>;j&lt;i;j++) &#123;</span><br><span class="line">                theRow.add(prevRow.get(j-<span class="number">1</span>) + prevRow.get(j));</span><br><span class="line">            &#125;</span><br><span class="line">            theRow.add(<span class="number">1</span>);</span><br><span class="line">            ans.add(theRow);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjjhdmzwn000ghhjhbhoslr8x" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -244,7 +327,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjjhdmzxj001yhhjh0h5glnz5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjjk3gah2002gw0jht0lrk49i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -269,7 +352,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell-Command/">Shell Command</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Front-end/">Front-end</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Front-end/Html/">Html</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell-Command/">Shell Command</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li></ul>
     </div>
   </div>
 
@@ -315,19 +398,19 @@
           </li>
         
           <li>
+            <a href="/2018/07/13/HTML-Basics/">HTML Basics</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/13/Build-Flask-Environment/">Build Flask Environment</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/12/Forking-Repo/">Forking Repo</a>
           </li>
         
           <li>
             <a href="/2018/07/11/186-Reverse-Words-in-a-String-II/">186. Reverse Words in a String II</a>
-          </li>
-        
-          <li>
-            <a href="/2018/07/11/93-Restore-IP-Addresses/">93. Restore IP Addresses</a>
-          </li>
-        
-          <li>
-            <a href="/2018/07/07/Git-Working-with-Remotes/">Git: Working with Remotes</a>
           </li>
         
       </ul>
