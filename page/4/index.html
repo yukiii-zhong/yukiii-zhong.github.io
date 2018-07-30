@@ -62,86 +62,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-按位与、或、异或等运算方法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/30/按位与、或、异或等运算方法/" class="article-date">
-  <time datetime="2018-04-30T09:07:01.000Z" itemprop="datePublished">2018-04-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/30/按位与、或、异或等运算方法/">按位与、或、异或等二进制运算方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="与-amp-AND"><a href="#与-amp-AND" class="headerlink" title="与 &amp; AND"></a>与 &amp; AND</h2><h3 id="运算规则"><a href="#运算规则" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 &amp; 0 = 0</p>
-<p>0 &amp; 1 = 0</p>
-<p>1 &amp; 0 = 0</p>
-<p>1 &amp; 1 = 1</p>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 &amp; 5:</p>
-<p>3:       0011</p>
-<p>5:       0101</p>
-<p>3&amp;5:  0001</p>
-<h3 id="负数"><a href="#负数" class="headerlink" title="负数"></a>负数</h3><p>负数按补码参与按位与运算。</p>
-<h2 id="或-OR"><a href="#或-OR" class="headerlink" title="或 | OR"></a>或 | OR</h2><h3 id="运算规则-1"><a href="#运算规则-1" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 | 0 = 0</p>
-<p>0 | 1 = 1</p>
-<p>1 | 0 = 0</p>
-<p>1 | 1 = 1</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 | 5:</p>
-<p>3:       0011</p>
-<p>5:       0101</p>
-<p>3|5:   0111</p>
-<h2 id="异或-XOR"><a href="#异或-XOR" class="headerlink" title="异或 ^ XOR"></a>异或 ^ XOR</h2><h3 id="运算规则-2"><a href="#运算规则-2" class="headerlink" title="运算规则"></a>运算规则</h3><p>0 ^ 0 = 0</p>
-<p>0 ^ 1 = 1</p>
-<p>1 ^ 0 = 0</p>
-<p>1 ^ 1 = 0</p>
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h3><p>Calculate 3 ^ 5:</p>
-<p>3:       0011</p>
-<p>5:       0101</p>
-<p>3^5:   0110</p>
-<h2 id="取反-NOT"><a href="#取反-NOT" class="headerlink" title="取反 ~ NOT"></a>取反 ~ NOT</h2><h3 id="运算规则-3"><a href="#运算规则-3" class="headerlink" title="运算规则"></a>运算规则</h3><p>~ 0 = 1</p>
-<p>~ 1 = 0</p>
-<h2 id="左移-lt-lt-，右移-gt-gt"><a href="#左移-lt-lt-，右移-gt-gt" class="headerlink" title="左移 &lt;&lt;，右移 &gt;&gt;"></a>左移 &lt;&lt;，右移 &gt;&gt;</h2><h3 id="运算规则-4"><a href="#运算规则-4" class="headerlink" title="运算规则"></a>运算规则</h3><p>按二进制左/右移 N位</p>
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example"></a>Example</h3><p>1 &lt;&lt; 3</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	0001 &lt;&lt; 3 </span><br><span class="line">=	1000</span><br></pre></td></tr></table></figure>
-<p>10 &gt;&gt; 2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	1010 &gt;&gt; 2 </span><br><span class="line">=	0010</span><br></pre></td></tr></table></figure>
-<h2 id="EX-Leetcode371-Sum-of-Two-Integers"><a href="#EX-Leetcode371-Sum-of-Two-Integers" class="headerlink" title="EX: Leetcode371. Sum of Two Integers"></a>EX: Leetcode371. Sum of Two Integers</h2><blockquote>
-<p>Calculate the sum of two integers <em>a</em> and <em>b</em>, but you are <strong>not allowed</strong> to use the operator <code>+</code> and <code>-</code>.</p>
-<p><strong>Example:</strong><br>Given <em>a</em> = 1 and <em>b</em> = 2, return 3.</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># 该用法适用于JAVA, C++，但Python负数使用有问题</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSum2</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type a: int</span></span><br><span class="line"><span class="string">        :type b: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">        temp = a ^b</span><br><span class="line">        carry = (a &amp;b )&lt;&lt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.getSum(temp, carry)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用mask解决负数问题</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">getSum</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">       <span class="string">"""</span></span><br><span class="line"><span class="string">       :type a: int</span></span><br><span class="line"><span class="string">       :type b: int</span></span><br><span class="line"><span class="string">       :rtype: int</span></span><br><span class="line"><span class="string">       """</span></span><br><span class="line">       MAX = <span class="number">0x7FFFFFFF</span></span><br><span class="line">       MIN = <span class="number">0x80000000</span></span><br><span class="line">       mask = <span class="number">0xFFFFFFFF</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">while</span> b !=<span class="number">0</span>:</span><br><span class="line">           a, b = (a^b) &amp; mask, ((a&amp;b)&lt;&lt;<span class="number">1</span>) &amp; mask</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> a <span class="keyword">if</span> a &lt;= MAX <span class="keyword">else</span> ~(a ^ mask)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/30/按位与、或、异或等运算方法/" data-id="cjk845sde002w4fjhkb9aw8j7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-136-Single-Number" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/29/136-Single-Number/" class="article-date">
@@ -191,7 +111,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjk845sb400014fjhodgvroib" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/136-Single-Number/" data-id="cjk84dqe80003a4jh866var6r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -240,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjk845sc9001w4fjhcihdb73e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/29/XOR/" data-id="cjk84dqf60022a4jhevrz9hkv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a></li></ul>
@@ -272,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjk845sbz001a4fjhxvtzst5u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/26/Graph/" data-id="cjk84dqes0014a4jhe6k8o1dl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -325,7 +245,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjk845sdc002s4fjhnipo96p4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/sorting-with-lambda/" data-id="cjk84dqff002ga4jhtbfu939r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -384,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjk845sc2001f4fjh33p0thfj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/25/Hexo操作/" data-id="cjk84dqev001da4jhp1bpfx14" class="article-share-link">Share</a>
       
       
     </footer>
@@ -425,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjk845sc3001h4fjhbdzxfn4j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Set-Example/" data-id="cjk84dqey001ka4jh403cqscn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Set/">Set</a></li></ul>
@@ -468,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjk845sby00174fjhz35wpll9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/ArrayList-Example/" data-id="cjk84dqej000ja4jhhr1ccwso" class="article-share-link">Share</a>
       
       
     </footer>
@@ -517,7 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjk845sdb002p4fjh247no6kk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/hello-world/" data-id="cjk84dqfa002aa4jh10okvqel" class="article-share-link">Share</a>
       
       
     </footer>
@@ -588,10 +508,6 @@
           </li>
         
           <li>
-            <a href="/2018/07/30/Virtual-Environment-Basics/">Virtual Environment_Basics</a>
-          </li>
-        
-          <li>
             <a href="/2018/07/24/Set-Max-and-Min-in-Python/">Set Max and Min in Python</a>
           </li>
         
@@ -601,6 +517,10 @@
         
           <li>
             <a href="/2018/07/13/HTML-Basics/">HTML Basics</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/13/Build-Flask-Environment/">Build Flask Environment</a>
           </li>
         
       </ul>
