@@ -62,6 +62,99 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Git-Undoing-Changes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/15/Git-Undoing-Changes/" class="article-date">
+  <time datetime="2018-06-15T08:52:59.000Z" itemprop="datePublished">2018-06-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Shell-Command/">Shell Command</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/15/Git-Undoing-Changes/">Git: Undoing Changes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git Documentation</a></p>
+<h2 id="1-Modifying-the-last-commit"><a href="#1-Modifying-the-last-commit" class="headerlink" title="1. Modifying the last commit"></a>1. Modifying the last commit</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git commit -- amend</span><br></pre></td></tr></table></figure>
+<h3 id="1-1-Changing-The-last-Commit"><a href="#1-1-Changing-The-last-Commit" class="headerlink" title="1.1 Changing The last Commit"></a>1.1 Changing The last Commit</h3><p>running <code>git commit --amend</code>, your code editor will open up, and let you edit it. </p>
+<h3 id="1-2-Add-Forgotten-Files-To-Commit"><a href="#1-2-Add-Forgotten-Files-To-Commit" class="headerlink" title="1.2 Add Forgotten Files To Commit"></a>1.2 Add Forgotten Files To Commit</h3><ul>
+<li><p>edit the file(s)</p>
+</li>
+<li><p>save the file(s)</p>
+</li>
+<li><p>stage the file(s)</p>
+</li>
+<li><p>and run <code>git commit --amend</code></p>
+</li>
+</ul>
+<h2 id="2-Reverting-a-commit"><a href="#2-Reverting-a-commit" class="headerlink" title="2. Reverting a commit"></a>2. Reverting a commit</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git revert &lt;SHA-of-commit-to-revert&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>will undo the changes that were made by the provided commit</p>
+</li>
+<li><p>creates a new commit to record the change</p>
+</li>
+</ul>
+<h2 id="3-Resetting-Commits"><a href="#3-Resetting-Commits" class="headerlink" title="3. Resetting Commits"></a>3. Resetting Commits</h2><p><strong>IMPOTANT:</strong> It’s recommended to establish <code>$ git branch backup</code> before reset commits.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git reset &lt;reference-to-commit&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> EX:</span><br><span class="line"><span class="meta">$</span> git reset --hard HEAD~3</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>erase</strong> commits with the <code>--hard</code> flag</p>
+</li>
+<li><p>moves committed changes <strong>to the staging index</strong> with the <code>--soft</code> flag</p>
+</li>
+<li><p><strong>unstages</strong> committed changes <code>--mixed</code> flag</p>
+<hr>
+</li>
+<li><p><code>^</code> – indicates the parent commit</p>
+</li>
+<li><p><code>~</code> – indicates the first parent commit</p>
+<p><strong>EX</strong></p>
+</li>
+</ul>
+<ul>
+<li>the parent commit<ul>
+<li>HEAD^</li>
+<li>HEAD~</li>
+<li>HEAD~1</li>
+</ul>
+</li>
+<li>the great-grandparent commit<ul>
+<li>HEAD^^^</li>
+<li>HEAD~3</li>
+</ul>
+</li>
+<li><code>HEAD^^^2</code>: <code>^2</code> : the merged other parent branch commit</li>
+</ul>
+<h2 id="4-restore-working-tree-files"><a href="#4-restore-working-tree-files" class="headerlink" title="4. restore working tree files"></a>4. restore working tree files</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git checkout</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/15/Git-Undoing-Changes/" data-id="cjk8p0qxp000y1ojhpgzepqab" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Tagging-Branching-and-Merging" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/06/13/Tagging-Branching-and-Merging/" class="article-date">
@@ -151,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjk84dqf4001va4jhrcmpoqvb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/13/Tagging-Branching-and-Merging/" data-id="cjk8p0qya001v1ojh23mvvrk5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -232,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cjk84dqek000la4jh52fpft8u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/10/Add-Commits-To-A-Repo/" data-id="cjk8p0qxm000s1ojhy6jkf0yq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -354,7 +447,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cjk84dqf80024a4jhjdmxnhup" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/display/" data-id="cjk8p0qyk002b1ojhwazanwwp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -406,7 +499,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cjk84dqel000na4jhg8nt04bd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/02/Create-A-Git-repo/" data-id="cjk8p0qxl000q1ojhp1bay1yl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -449,7 +542,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cjk84dqfi002ka4jhl8dk5son" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/01/unInstall-with-command/" data-id="cjk8p0qyo002j1ojhqfo87pfa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -497,7 +590,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cjk84dqex001ia4jh5gsn2ws1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/Move-and-Rename/" data-id="cjk8p0qy1001j1ojh4j02wgtc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -561,7 +654,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cjk84dqed0008a4jhxs5st8vo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/29/49-Group-Anagrams/" data-id="cjk8p0qx800051ojhm7ywzsma" class="article-share-link">Share</a>
       
       
     </footer>
@@ -678,7 +771,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cjk84dqf2001ta4jhslgtt5ut" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/27/Shell-Command/" data-id="cjk8p0qy8001t1ojhodsib3mi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -719,52 +812,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/15/python程序运行时间/" data-id="cjk84dqfc002ea4jh02u5x9b0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Tree-Traversals-Inorder-Preorder-and-Postorder" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" class="article-date">
-  <time datetime="2018-05-11T10:45:45.000Z" itemprop="datePublished">2018-05-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Leetcode/">Leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/">Tree Traversals (Inorder, Preorder and Postorder)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Object-Binary-Tree"><a href="#Object-Binary-Tree" class="headerlink" title="Object: Binary Tree"></a>Object: Binary Tree</h3><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fr7lcqqw6ag307704cglf.gif" alt="tree12"></p>
-<p><strong>Depth First Traversals:</strong> </p>
-<p>(a) <strong>Inorder</strong> (Left, Root, Right) : 4 2 5 1 3 </p>
-<p>(b) <strong>Preorder</strong> (Root, Left, Right) : 1 2 4 5 3 </p>
-<p>(c) <strong>Postorder</strong> (Left, Right, Root) : 4 5 2 3 1</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/11/Tree-Traversals-Inorder-Preorder-and-Postorder/" data-id="cjk84dqf5001za4jh5nzt6nxi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/15/python程序运行时间/" data-id="cjk8p0qyd00221ojh3qewxo1x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -789,7 +837,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Front-end/">Front-end</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell-Command/">Shell Command</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Front-end/">Front-end</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-leetcode/">python, leetcode</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Leetcode/">Leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell-Command/">Shell Command</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Back-end/">Back-end</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Back-end/Django/">Django</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Front-end/">Front-end</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li></ul>
     </div>
   </div>
 
@@ -835,6 +883,10 @@
           </li>
         
           <li>
+            <a href="/2018/07/30/Establish-a-django-project/">Establish a django project</a>
+          </li>
+        
+          <li>
             <a href="/2018/07/24/Set-Max-and-Min-in-Python/">Set Max and Min in Python</a>
           </li>
         
@@ -844,10 +896,6 @@
         
           <li>
             <a href="/2018/07/13/HTML-Basics/">HTML Basics</a>
-          </li>
-        
-          <li>
-            <a href="/2018/07/13/Build-Flask-Environment/">Build Flask Environment</a>
           </li>
         
       </ul>
